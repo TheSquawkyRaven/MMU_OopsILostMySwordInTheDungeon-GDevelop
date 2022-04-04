@@ -78,6 +78,11 @@
     }
   ],
   "eventsFunctionsExtensions": [],
-  "externalLayouts": [],
+  "externalLayouts": [
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/game-layout"
+    }
+  ],
   "externalSourceFiles": []
 }

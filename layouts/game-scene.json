@@ -1,16 +1,16 @@
 {
-  "b": 209,
+  "b": 184,
   "disableInputWhenNotFocused": true,
   "mangledName": "Game_32Scene",
   "name": "Game Scene",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
-  "r": 209,
+  "r": 230,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
   "title": "",
-  "v": 209,
+  "v": 184,
   "uiSettings": {
     "grid": false,
     "gridType": "rectangular",
@@ -21,14 +21,46 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 1,
+    "zoomFactor": 0.8199999999999998,
     "windowMask": false
   },
   "objectsGroups": [],
   "variables": [],
   "instances": [],
   "objects": [],
-  "events": [],
+  "events": [
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+          },
+          "parameters": [
+            "",
+            "\"Game Layout\"",
+            "0",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Generation"
+    }
+  ],
   "layers": [
     {
       "ambientLightColorB": 32,

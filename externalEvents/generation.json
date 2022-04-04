@@ -23,12 +23,12 @@
         {
           "type": {
             "inverted": false,
-            "value": "Noise::SetSeed"
+            "value": "ModVarGlobal"
           },
           "parameters": [
-            "",
-            "1",
-            ""
+            "Seed",
+            "=",
+            "1"
           ],
           "subInstructions": []
         },
@@ -40,12 +40,140 @@
           "parameters": [
             "SeedText",
             "=",
-            "\"Seed: \" + ToString(Noise::Seed())"
+            "\"Seed: \" + GlobalVariableString(Seed)"
           ],
           "subInstructions": []
         }
       ],
-      "events": []
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "y",
+                "=",
+                "Variable(mapOriginY)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "infiniteLoopWarning": true,
+          "type": "BuiltinCommonInstructions::While",
+          "whileConditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "y",
+                "<",
+                "Variable(mapWidth)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "x",
+                "=",
+                "Variable(mapOriginX)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "infiniteLoopWarning": true,
+              "type": "BuiltinCommonInstructions::While",
+              "whileConditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "x",
+                    "<",
+                    "Variable(mapWidth)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "x",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Map[Variable(x)][Variable(y)]",
+                    "=",
+                    "Rand::Num(0, 255)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "y",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        }
+      ]
     },
     {
       "disabled": false,
@@ -67,7 +195,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "2D Loop",
+      "comment": "2D Loop To Set Tiles",
       "comment2": ""
     },
     {
@@ -165,7 +293,19 @@
                   "parameters": [
                     "value",
                     "=",
-                    "ExtendedMath::Map(Noise::Noise2d(\"\", Variable(x), Variable(y)), -1, 1, 0, 255)"
+                    "Variable(Map[Variable(x)][Variable(y)])"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "value1",
+                    "=",
+                    "round(Variable(value))"
                   ],
                   "subInstructions": []
                 },
@@ -193,8 +333,8 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "value",
-                        "<",
+                        "value1",
+                        "=",
                         "128"
                       ],
                       "subInstructions": []

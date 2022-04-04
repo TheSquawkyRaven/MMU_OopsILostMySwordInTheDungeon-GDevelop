@@ -70,6 +70,21 @@
       "name": "value",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "value1",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "Map",
+      "type": "array",
+      "children": []
+    },
+    {
+      "name": "MapRow",
+      "type": "array",
+      "children": []
     }
   ],
   "instances": [],

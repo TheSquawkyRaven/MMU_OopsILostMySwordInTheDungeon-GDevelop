@@ -21,13 +21,160 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.8199999999999998,
+    "zoomFactor": 0.8799999999999999,
     "windowMask": false
   },
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "x",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "ifelse",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "tileSize",
+      "type": "number",
+      "value": 16
+    },
+    {
+      "name": "mapWidth",
+      "type": "number",
+      "value": 90
+    },
+    {
+      "name": "mapHeight",
+      "type": "number",
+      "value": 57
+    },
+    {
+      "name": "mapOriginX",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "mapOriginY",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "value",
+      "type": "number",
+      "value": 0
+    }
+  ],
   "instances": [],
-  "objects": [],
+  "objects": [
+    {
+      "name": "Wall",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Tiles\\WallTest.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Floor",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Tiles\\FloorTest.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "SeedText",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "Seed:",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 18,
+        "g": 18,
+        "r": 241
+      }
+    }
+  ],
   "events": [
     {
       "disabled": false,
@@ -63,6 +210,28 @@
   ],
   "layers": [
     {
+      "ambientLightColorB": 7575768,
+      "ambientLightColorG": 6033120,
+      "ambientLightColorR": 7318808,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "Floor",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 7575768,
+      "ambientLightColorG": 6033120,
+      "ambientLightColorR": 7318808,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "Wall",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
       "ambientLightColorB": 32,
       "ambientLightColorG": 0,
       "ambientLightColorR": 0,
@@ -82,6 +251,17 @@
           "width": 0
         }
       ],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 7575768,
+      "ambientLightColorG": 6033120,
+      "ambientLightColorR": 7318808,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "HUD",
+      "visibility": true,
+      "cameras": [],
       "effects": []
     }
   ],

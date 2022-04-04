@@ -77,6 +77,33 @@
         "name": "Assets\\Tiles\\FloorTest.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/FloorMarkRed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\FloorMarkRed.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/FloorMarkGreen.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\FloorMarkGreen.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/FloorMarkBlue.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\FloorMarkBlue.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

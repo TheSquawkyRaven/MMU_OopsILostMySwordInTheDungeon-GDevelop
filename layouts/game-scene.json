@@ -57,16 +57,6 @@
       "value": 57
     },
     {
-      "name": "mapOriginX",
-      "type": "number",
-      "value": 0
-    },
-    {
-      "name": "mapOriginY",
-      "type": "number",
-      "value": 0
-    },
-    {
       "name": "value",
       "type": "number",
       "value": 0
@@ -82,9 +72,76 @@
       "children": []
     },
     {
-      "name": "MapRow",
-      "type": "array",
-      "children": []
+      "name": "width",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "height",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "roomSmall",
+      "type": "structure",
+      "children": [
+        {
+          "name": "maxH",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "maxW",
+          "type": "number",
+          "value": 5
+        },
+        {
+          "name": "minH",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "minW",
+          "type": "number",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "name": "i",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "j",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "roomBig",
+      "type": "structure",
+      "children": [
+        {
+          "name": "maxH",
+          "type": "number",
+          "value": 8
+        },
+        {
+          "name": "maxW",
+          "type": "number",
+          "value": 10
+        },
+        {
+          "name": "minH",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "minW",
+          "type": "number",
+          "value": 4
+        }
+      ]
     }
   ],
   "instances": [],
@@ -188,6 +245,126 @@
         "g": 18,
         "r": 241
       }
+    },
+    {
+      "name": "FloorMarkRed",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Tiles\\FloorMarkRed.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FloorMarkGreen",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Tiles\\FloorMarkGreen.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FloorMarkBlue",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Tiles\\FloorMarkBlue.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [

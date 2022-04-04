@@ -1,3 +1,4 @@
 #Krita Filter
 *.kra
-game.json.autosave
+#GDevelop Autosave Filter
+*.json.autosave

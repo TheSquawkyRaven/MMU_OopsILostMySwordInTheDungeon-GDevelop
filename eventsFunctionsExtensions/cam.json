@@ -1,0 +1,91 @@
+{
+  "author": "",
+  "category": "",
+  "description": "",
+  "extensionNamespace": "",
+  "fullName": "",
+  "helpPath": "",
+  "iconUrl": "",
+  "name": "Cam",
+  "previewIconUrl": "",
+  "shortDescription": "",
+  "version": "",
+  "tags": [],
+  "authorIds": [],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "",
+      "fullName": "Zoom The Camera On All Specific Layers",
+      "functionType": "Action",
+      "group": "",
+      "name": "Zoom",
+      "private": false,
+      "sentence": "Zoom the camera by x_PARAM1_",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ZoomCamera"
+              },
+              "parameters": [
+                "",
+                "GetArgumentAsNumber(\"zoom\")",
+                "\"\"",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ZoomCamera"
+              },
+              "parameters": [
+                "",
+                "GetArgumentAsNumber(\"zoom\")",
+                "\"Floor\"",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ZoomCamera"
+              },
+              "parameters": [
+                "",
+                "GetArgumentAsNumber(\"zoom\")",
+                "\"Wall\"",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Zoom Level",
+          "longDescription": "",
+          "name": "zoom",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": []
+}

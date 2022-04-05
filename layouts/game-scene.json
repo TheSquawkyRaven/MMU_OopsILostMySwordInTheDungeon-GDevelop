@@ -1,16 +1,16 @@
 {
-  "b": 184,
+  "b": 0,
   "disableInputWhenNotFocused": true,
   "mangledName": "Game_32Scene",
   "name": "Game Scene",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
-  "r": 230,
+  "r": 0,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
   "title": "",
-  "v": 184,
+  "v": 0,
   "uiSettings": {
     "grid": false,
     "gridType": "rectangular",
@@ -485,6 +485,27 @@
             "\"Game Layout\"",
             "0",
             "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cam::Zoom"
+          },
+          "parameters": [
+            "",
+            "2",
+            ""
           ],
           "subInstructions": []
         }

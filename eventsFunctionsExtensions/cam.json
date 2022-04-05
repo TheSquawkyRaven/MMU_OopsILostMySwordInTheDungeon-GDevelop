@@ -70,6 +70,26 @@
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cam::EnforceBoundary"
+              },
+              "parameters": [
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "parameters": [
@@ -84,6 +104,372 @@
           "type": "expression"
         }
       ],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "Camera Follow A Position",
+      "functionType": "Action",
+      "group": "",
+      "name": "Follow",
+      "private": false,
+      "sentence": "Follow x:_PARAM1_, y:_PARAM2_",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCameraX"
+              },
+              "parameters": [
+                "",
+                "=",
+                "GetArgumentAsNumber(\"x\")",
+                "\"\"",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCameraY"
+              },
+              "parameters": [
+                "",
+                "=",
+                "GetArgumentAsNumber(\"y\")",
+                "\"\"",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCameraX"
+              },
+              "parameters": [
+                "",
+                "=",
+                "GetArgumentAsNumber(\"x\")",
+                "\"Floor\"",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCameraY"
+              },
+              "parameters": [
+                "",
+                "=",
+                "GetArgumentAsNumber(\"y\")",
+                "\"Floor\"",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCameraX"
+              },
+              "parameters": [
+                "",
+                "=",
+                "GetArgumentAsNumber(\"x\")",
+                "\"Wall\"",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCameraY"
+              },
+              "parameters": [
+                "",
+                "=",
+                "GetArgumentAsNumber(\"y\")",
+                "\"Wall\"",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cam::EnforceBoundary"
+              },
+              "parameters": [
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "X Position",
+          "longDescription": "",
+          "name": "x",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Y Position",
+          "longDescription": "",
+          "name": "y",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "Sets The Camera Boundary",
+      "functionType": "Action",
+      "group": "",
+      "name": "SetBoundary",
+      "private": false,
+      "sentence": "Sets The Camera Boundary, left:_PARAM1_, top:_PARAM2_, right:_PARAM3_, bottom:_PARAM4_",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "Boundary.left",
+                "=",
+                "GetArgumentAsNumber(\"left\")"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "Boundary.right",
+                "=",
+                "GetArgumentAsNumber(\"right\")"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "Boundary.top",
+                "=",
+                "GetArgumentAsNumber(\"top\")"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "Boundary.bottom",
+                "=",
+                "GetArgumentAsNumber(\"bottom\")"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cam::EnforceBoundary"
+              },
+              "parameters": [
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Left X Boundary",
+          "longDescription": "",
+          "name": "left",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Top Y Boundary",
+          "longDescription": "",
+          "name": "top",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Right X Boundary",
+          "longDescription": "",
+          "name": "right",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Bottom Y Boundary",
+          "longDescription": "",
+          "name": "bottom",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "Enforce Boundary For The Camera",
+      "functionType": "Action",
+      "group": "",
+      "name": "EnforceBoundary",
+      "private": false,
+      "sentence": "Enforces Boundary of Camera",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ClampCamera"
+              },
+              "parameters": [
+                "",
+                "GlobalVariable(Boundary.left)",
+                "GlobalVariable(Boundary.top)",
+                "GlobalVariable(Boundary.right)",
+                "GlobalVariable(Boundary.bottom)",
+                "\"\"",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ClampCamera"
+              },
+              "parameters": [
+                "",
+                "GlobalVariable(Boundary.left)",
+                "GlobalVariable(Boundary.top)",
+                "GlobalVariable(Boundary.right)",
+                "GlobalVariable(Boundary.bottom)",
+                "\"Floor\"",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ClampCamera"
+              },
+              "parameters": [
+                "",
+                "GlobalVariable(Boundary.left)",
+                "GlobalVariable(Boundary.top)",
+                "GlobalVariable(Boundary.right)",
+                "GlobalVariable(Boundary.bottom)",
+                "\"Wall\"",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": [],
       "objectGroups": []
     }
   ],

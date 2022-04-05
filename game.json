@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "Game Scene",
   "gdVersion": {
     "build": 99,
     "major": 4,
@@ -66,7 +66,7 @@
         "kind": "image",
         "metadata": "",
         "name": "Assets\\Tiles\\WallTest.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -75,7 +75,7 @@
         "kind": "image",
         "metadata": "",
         "name": "Assets\\Tiles\\FloorTest.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": false
       },
       {
@@ -84,7 +84,7 @@
         "kind": "image",
         "metadata": "",
         "name": "Assets\\Tiles\\FloorMarkRed.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": false
       },
       {
@@ -93,7 +93,7 @@
         "kind": "image",
         "metadata": "",
         "name": "Assets\\Tiles\\FloorMarkGreen.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": false
       },
       {
@@ -102,7 +102,223 @@
         "kind": "image",
         "metadata": "",
         "name": "Assets\\Tiles\\FloorMarkBlue.png",
-        "smoothed": true,
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/TopLeftMarker.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\TopLeftMarker.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/BottomRightMarker.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\BottomRightMarker.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_mid.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_mid.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_side_mid_left.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_side_mid_left.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_side_mid_right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_side_mid_right.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_top_mid.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_top_mid.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_side_front_left.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_side_front_left.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Floor/floor_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Floor\\floor_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Floor/floor_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Floor\\floor_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Floor/floor_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Floor\\floor_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Floor/floor_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Floor\\floor_4.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Floor/floor_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Floor\\floor_5.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Floor/floor_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Floor\\floor_6.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Floor/floor_7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Floor\\floor_7.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Floor/floor_8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Floor\\floor_8.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_side_front_right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_side_front_right.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_corner_bottom_left.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_corner_bottom_left.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_corner_bottom_right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_corner_bottom_right.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_side_top_left.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_side_top_left.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_side_top_right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_side_top_right.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_top_left.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_top_left.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_corner_top_right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_corner_top_right.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_right.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_left.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_left.png",
+        "smoothed": false,
         "userAdded": false
       }
     ],
@@ -126,7 +342,11 @@
   "externalEvents": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalEvents/generation"
+      "referenceTo": "/externalEvents/generation-not-used"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/mapfiller"
     }
   ],
   "eventsFunctionsExtensions": [
@@ -150,7 +370,11 @@
   "externalLayouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/game-layout"
+      "referenceTo": "/externalLayouts/level-2"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/level-1"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

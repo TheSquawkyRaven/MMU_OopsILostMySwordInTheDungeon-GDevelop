@@ -21,7 +21,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.8799999999999999,
+    "zoomFactor": 0.4599999999999995,
     "windowMask": false
   },
   "objectsGroups": [],
@@ -69,7 +69,12 @@
     {
       "name": "Map",
       "type": "array",
-      "children": []
+      "children": [
+        {
+          "type": "array",
+          "children": []
+        }
+      ]
     },
     {
       "name": "width",
@@ -142,6 +147,102 @@
           "value": 4
         }
       ]
+    },
+    {
+      "name": "Rooms",
+      "type": "array",
+      "children": [
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "h",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "index",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "size",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "type",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "w",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "roomsCount",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "xi",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "yi",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "xj",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "yj",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "xk",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "yk",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "xl",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "yl",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "ifelse2",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [],

@@ -320,6 +320,42 @@
         "name": "Assets\\Tiles\\Wall\\wall_left.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/doors_frame_top.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\doors_frame_top.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_corner_top_left.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_corner_top_left.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_top_right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_top_right.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_top_full.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_top_full.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

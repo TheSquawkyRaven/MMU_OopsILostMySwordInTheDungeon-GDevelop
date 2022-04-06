@@ -67,6 +67,19 @@
                 "0"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ZoomCamera"
+              },
+              "parameters": [
+                "",
+                "GetArgumentAsNumber(\"zoom\")",
+                "\"Wall Lines\"",
+                "0"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -219,6 +232,43 @@
                 "=",
                 "GetArgumentAsNumber(\"y\")",
                 "\"Wall\"",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCameraX"
+              },
+              "parameters": [
+                "",
+                "=",
+                "GetArgumentAsNumber(\"x\")",
+                "\"Wall Lines\"",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetCameraY"
+              },
+              "parameters": [
+                "",
+                "=",
+                "GetArgumentAsNumber(\"y\")",
+                "\"Wall Lines\"",
                 "0"
               ],
               "subInstructions": []
@@ -461,6 +511,22 @@
                 "GlobalVariable(Boundary.right)",
                 "GlobalVariable(Boundary.bottom)",
                 "\"Wall\"",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ClampCamera"
+              },
+              "parameters": [
+                "",
+                "GlobalVariable(Boundary.left)",
+                "GlobalVariable(Boundary.top)",
+                "GlobalVariable(Boundary.right)",
+                "GlobalVariable(Boundary.bottom)",
+                "\"Wall Lines\"",
                 "0"
               ],
               "subInstructions": []

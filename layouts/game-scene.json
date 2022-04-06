@@ -64,44 +64,21 @@
           "name": "Wall_Mid"
         },
         {
-          "name": "Wall_Side_Mid_Left"
-        },
-        {
-          "name": "Wall_Side_Mid_Right"
-        },
-        {
-          "name": "Wall_Top_Mid"
-        },
-        {
           "name": "Wall_Side_Right"
         },
         {
           "name": "Wall_Side_Left"
-        }
-      ]
-    },
-    {
-      "name": "WallFull",
-      "objects": [
+        },
         {
           "name": "Wall_Left"
         },
         {
           "name": "Wall_Right"
-        },
-        {
-          "name": "Wall_Mid"
-        },
-        {
-          "name": "Wall_Side_Right"
-        },
-        {
-          "name": "Wall_Side_Left"
         }
       ]
     },
     {
-      "name": "WallLine",
+      "name": "WallLines",
       "objects": [
         {
           "name": "Wall_Side_Mid_Left"
@@ -856,7 +833,7 @@
       "behaviors": [],
       "animations": [
         {
-          "name": "",
+          "name": "Mid",
           "useMultipleDirections": false,
           "directions": [
             {
@@ -866,6 +843,93 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "Assets\\Tiles\\Wall\\wall_top_mid.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Left",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Tiles\\Wall\\wall_top_left.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Right",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Tiles\\Wall\\wall_top_right.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Full",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Tiles\\Wall\\wall_top_full.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -1639,6 +1703,17 @@
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "name": "Wall",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 9377776,
+      "ambientLightColorG": 6033120,
+      "ambientLightColorR": 9366192,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "Wall Lines",
       "visibility": true,
       "cameras": [],
       "effects": []

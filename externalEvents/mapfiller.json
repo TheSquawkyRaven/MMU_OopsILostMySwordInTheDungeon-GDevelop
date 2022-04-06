@@ -415,6 +415,102 @@
                 "value": "VarScene"
               },
               "parameters": [
+                "Map[Floors.Variable(x) - 1][Floors.Variable(y) - 1].type",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Map[Floors.Variable(x) + 1][Floors.Variable(y) - 1].type",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Wall_Full",
+                "Floors.X()",
+                "Floors.Y() - Variable(tileSize)",
+                "\"Wall\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Wall_Full",
+                "x",
+                "=",
+                "Wall_Full.X() / Variable(tileSize)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Wall_Full",
+                "y",
+                "=",
+                "Wall_Full.Y() / Variable(tileSize)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
                 "Map[Floors.Variable(x) - 1][Floors.Variable(y)].type",
                 "=",
                 "1"
@@ -947,91 +1043,13 @@
           "subInstructions": []
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "Wall_Mid",
-            "Floors.X()",
-            "Floors.Y() + Variable(tileSize)",
-            "\"Wall\""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "ModVarObjet"
-          },
-          "parameters": [
-            "Wall_Mid",
-            "x",
-            "=",
-            "Wall_Mid.X() / Variable(tileSize)"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "ModVarObjet"
-          },
-          "parameters": [
-            "Wall_Mid",
-            "y",
-            "=",
-            "Wall_Mid.Y() / Variable(tileSize)"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "ModVarScene"
-          },
-          "parameters": [
-            "Map[Floors.Variable(x)][Floors.Variable(y) + 1].type",
-            "=",
-            "2"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "ModVarScene"
-          },
-          "parameters": [
-            "Map[Floors.Variable(x)][Floors.Variable(y) + 1].wallType",
-            "=",
-            "2"
-          ],
-          "subInstructions": []
-        }
-      ],
+      "actions": [],
       "events": [
         {
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Map[Floors.Variable(x) - 1][Floors.Variable(y)].type",
-                "!=",
-                "1"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "conditions": [],
           "actions": [
             {
               "type": {
@@ -1040,8 +1058,8 @@
               },
               "parameters": [
                 "",
-                "Wall_Side_Left",
-                "Floors.X() - Variable(tileSize)",
+                "Wall_Mid",
+                "Floors.X()",
                 "Floors.Y() + Variable(tileSize)",
                 "\"Wall\""
               ],
@@ -1053,10 +1071,10 @@
                 "value": "ModVarObjet"
               },
               "parameters": [
-                "Wall_Side_Left",
+                "Wall_Mid",
                 "x",
                 "=",
-                "Wall_Side_Left.X() / Variable(tileSize)"
+                "Wall_Mid.X() / Variable(tileSize)"
               ],
               "subInstructions": []
             },
@@ -1066,10 +1084,10 @@
                 "value": "ModVarObjet"
               },
               "parameters": [
-                "Wall_Side_Left",
+                "Wall_Mid",
                 "y",
                 "=",
-                "Wall_Side_Left.Y() / Variable(tileSize)"
+                "Wall_Mid.Y() / Variable(tileSize)"
               ],
               "subInstructions": []
             },
@@ -1079,7 +1097,7 @@
                 "value": "ModVarScene"
               },
               "parameters": [
-                "Map[Floors.Variable(x) - 1][Floors.Variable(y) + 1].type",
+                "Map[Floors.Variable(x)][Floors.Variable(y) + 1].type",
                 "=",
                 "2"
               ],
@@ -1091,100 +1109,187 @@
                 "value": "ModVarScene"
               },
               "parameters": [
-                "Map[Floors.Variable(x) - 1][Floors.Variable(y) + 1].wallType",
-                "=",
-                "2"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Map[Floors.Variable(x) + 1][Floors.Variable(y)].type",
-                "!=",
-                "1"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Wall_Side_Right",
-                "Floors.X() + Variable(tileSize)",
-                "Floors.Y() + Variable(tileSize)",
-                "\"Wall\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "Wall_Side_Right",
-                "x",
-                "=",
-                "Wall_Side_Right.X() / Variable(tileSize)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "Wall_Side_Right",
-                "y",
-                "=",
-                "Wall_Side_Right.Y() / Variable(tileSize)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Map[Floors.Variable(x) + 1][Floors.Variable(y) + 1].type",
-                "=",
-                "2"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "Map[Floors.Variable(x) + 1][Floors.Variable(y) + 1].wallType",
+                "Map[Floors.Variable(x)][Floors.Variable(y) + 1].wallType",
                 "=",
                 "2"
               ],
               "subInstructions": []
             }
           ],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Map[Floors.Variable(x) - 1][Floors.Variable(y)].type",
+                    "!=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Wall_Side_Left",
+                    "Floors.X() - Variable(tileSize)",
+                    "Floors.Y() + Variable(tileSize)",
+                    "\"Wall\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Wall_Side_Left",
+                    "x",
+                    "=",
+                    "Wall_Side_Left.X() / Variable(tileSize)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Wall_Side_Left",
+                    "y",
+                    "=",
+                    "Wall_Side_Left.Y() / Variable(tileSize)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Map[Floors.Variable(x) - 1][Floors.Variable(y) + 1].type",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Map[Floors.Variable(x) - 1][Floors.Variable(y) + 1].wallType",
+                    "=",
+                    "5"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Map[Floors.Variable(x) + 1][Floors.Variable(y)].type",
+                    "!=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Wall_Side_Right",
+                    "Floors.X() + Variable(tileSize)",
+                    "Floors.Y() + Variable(tileSize)",
+                    "\"Wall\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Wall_Side_Right",
+                    "x",
+                    "=",
+                    "Wall_Side_Right.X() / Variable(tileSize)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Wall_Side_Right",
+                    "y",
+                    "=",
+                    "Wall_Side_Right.Y() / Variable(tileSize)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Map[Floors.Variable(x) + 1][Floors.Variable(y) + 1].type",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Map[Floors.Variable(x) + 1][Floors.Variable(y) + 1].wallType",
+                    "=",
+                    "6"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         }
       ]
     },
@@ -1320,6 +1425,68 @@
       "disabled": false,
       "folded": false,
       "type": "BuiltinCommonInstructions::ForEach",
+      "object": "Wall_Full",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Create"
+          },
+          "parameters": [
+            "",
+            "Wall_Top_Mid",
+            "Wall_Full.X()",
+            "Wall_Full.Y() - Variable(tileSize)",
+            "\"Wall Lines\""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "Map[Wall_Full.Variable(x)][Wall_Full.Variable(y) - 1].wallLine",
+            "=",
+            "1"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjet"
+          },
+          "parameters": [
+            "Wall_Top_Mid",
+            "x",
+            "=",
+            "Wall_Top_Mid.X() / Variable(tileSize)"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjet"
+          },
+          "parameters": [
+            "Wall_Top_Mid",
+            "y",
+            "=",
+            "Wall_Top_Mid.Y() / Variable(tileSize)"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::ForEach",
       "object": "Wall_Mid",
       "conditions": [],
       "actions": [
@@ -1385,14 +1552,35 @@
             {
               "type": {
                 "inverted": false,
-                "value": "VarScene"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "Map[Wall_Mid.Variable(x) + 1][Wall_Mid.Variable(y)].type",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Map[Wall_Mid.Variable(x) + 1][Wall_Mid.Variable(y)].type",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Map[Wall_Mid.Variable(x) + 1][Wall_Mid.Variable(y)].wallType",
+                    "=",
+                    "5"
+                  ],
+                  "subInstructions": []
+                }
+              ]
             }
           ],
           "actions": [
@@ -1430,18 +1618,6 @@
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Map[Wall_Mid.Variable(x) + 1][Wall_Mid.Variable(y) - 1].wallLine",
-                "!=",
-                "1"
-              ],
-              "subInstructions": []
-            },
             {
               "type": {
                 "inverted": false,
@@ -1493,14 +1669,35 @@
             {
               "type": {
                 "inverted": false,
-                "value": "VarScene"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "Map[Wall_Mid.Variable(x) - 1][Wall_Mid.Y() / Variable(tileSize)].type",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Map[Wall_Mid.Variable(x) - 1][Wall_Mid.Y() / Variable(tileSize)].type",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "Map[Wall_Mid.Variable(x) - 1][Wall_Mid.Variable(y)].wallType",
+                    "=",
+                    "6"
+                  ],
+                  "subInstructions": []
+                }
+              ]
             }
           ],
           "actions": [
@@ -1538,18 +1735,6 @@
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarScene"
-              },
-              "parameters": [
-                "Map[Wall_Mid.Variable(x) - 1][Wall_Mid.Variable(y) - 1].wallLine",
-                "!=",
-                "1"
-              ],
-              "subInstructions": []
-            },
             {
               "type": {
                 "inverted": false,
@@ -1597,6 +1782,26 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
@@ -1607,6 +1812,73 @@
                 "Map[Wall_Mid.Variable(x) + 1][Wall_Mid.Variable(y)].type",
                 "=",
                 "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Map[Wall_Mid.Variable(x) - 1][Wall_Mid.Variable(y)].type",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Map[Wall_Mid.Variable(x) + 1][Wall_Mid.Variable(y)].type",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                ""
               ],
               "subInstructions": []
             }
@@ -1637,6 +1909,17 @@
                 "1"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                "True"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -1655,6 +1938,17 @@
                 "Map[Wall_Mid.Variable(x) - 1][Wall_Mid.Variable(y)].type",
                 "=",
                 "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                ""
               ],
               "subInstructions": []
             }
@@ -1685,6 +1979,17 @@
                 "1"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                "True"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -1701,31 +2006,170 @@
         {
           "type": {
             "inverted": false,
-            "value": "Create"
+            "value": "SetSceneVariableAsBoolean"
           },
           "parameters": [
-            "",
-            "Wall_Corner_L",
-            "Wall_Left.X()",
-            "Wall_Left.Y() - Variable(tileSize)",
-            "\"Wall Lines\""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "ModVarScene"
-          },
-          "parameters": [
-            "Map[Wall_Left.Variable(x)][Wall_Left.Variable(y) - 1].wallLine",
-            "=",
-            "1"
+            "ifelse",
+            ""
           ],
           "subInstructions": []
         }
       ],
       "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Map[Wall_Left.Variable(x)][Wall_Left.Variable(y) - 1].type",
+                "!=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Wall_Corner_L",
+                "Wall_Left.X()",
+                "Wall_Left.Y() - Variable(tileSize)",
+                "\"Wall Lines\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Map[Wall_Left.Variable(x)][Wall_Left.Variable(y) - 1].wallLine",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Wall_Top_Mid",
+                "Wall_Left.X()",
+                "Wall_Left.Y() - Variable(tileSize)",
+                "\"Wall Lines\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Wall_Top_Mid",
+                "x",
+                "=",
+                "Wall_Left.X() / Variable(tileSize)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Wall_Top_Mid",
+                "y",
+                "=",
+                "Wall_Left.Y() / Variable(tileSize)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Map[Wall_Left.Variable(x)][Wall_Left.Variable(y) - 1].wallLine",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
         {
           "disabled": false,
           "folded": false,
@@ -1786,31 +2230,170 @@
         {
           "type": {
             "inverted": false,
-            "value": "Create"
+            "value": "SetSceneVariableAsBoolean"
           },
           "parameters": [
-            "",
-            "Wall_Corner_R",
-            "Wall_Right.X()",
-            "Wall_Right.Y() - Variable(tileSize)",
-            "\"Wall Lines\""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "ModVarScene"
-          },
-          "parameters": [
-            "Map[Wall_Right.Variable(x)][Wall_Right.Variable(y) - 1].wallLine",
-            "=",
-            "1"
+            "ifelse",
+            ""
           ],
           "subInstructions": []
         }
       ],
       "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "Map[Wall_Right.Variable(x)][Wall_Right.Variable(y) - 1].type",
+                "!=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Wall_Corner_R",
+                "Wall_Right.X()",
+                "Wall_Right.Y() - Variable(tileSize)",
+                "\"Wall Lines\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Map[Wall_Right.Variable(x)][Wall_Right.Variable(y) - 1].wallLine",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Wall_Top_Mid",
+                "Wall_Right.X()",
+                "Wall_Right.Y() - Variable(tileSize)",
+                "\"Wall Lines\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Wall_Top_Mid",
+                "x",
+                "=",
+                "Wall_Right.X() / Variable(tileSize)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Wall_Top_Mid",
+                "y",
+                "=",
+                "Wall_Right.Y() / Variable(tileSize)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Map[Wall_Right.Variable(x)][Wall_Right.Variable(y) - 1].wallLine",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
         {
           "disabled": false,
           "folded": false,

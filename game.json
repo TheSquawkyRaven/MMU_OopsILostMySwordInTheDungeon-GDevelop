@@ -323,15 +323,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Assets/Tiles/Wall/doors_frame_top.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Assets\\Tiles\\Wall\\doors_frame_top.png",
-        "smoothed": false,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "Assets/Tiles/Wall/wall_corner_top_left.png",
         "kind": "image",
         "metadata": "",
@@ -365,6 +356,49 @@
         "name": "Assets\\Characters\\Knight\\knight_f_idle_anim_f0.png",
         "smoothed": true,
         "userAdded": true
+      },
+        "file": "Assets/Markers/Tile_Highlight.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Tile_Highlight.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Tile_Highlight_Valid.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Tile_Highlight_Valid.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Tile_Highlight_Invalid.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Tile_Highlight_Invalid.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Player_Start.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Player_Start.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_full.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_full.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

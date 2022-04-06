@@ -66,8 +66,8 @@
             "",
             "Variable(MapStartX) + Variable(tileSize)",
             "Variable(MapStartY) + Variable(tileSize)",
-            "Variable(MapEndX) + Variable(tileSize)",
-            "Variable(MapEndY) + Variable(tileSize)",
+            "Variable(MapEndX)",
+            "Variable(MapEndY)",
             ""
           ],
           "subInstructions": []

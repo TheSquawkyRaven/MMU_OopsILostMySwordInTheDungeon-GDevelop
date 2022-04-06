@@ -464,6 +464,87 @@
         "name": "Assets\\Characters\\Knight\\knight_f_run_anim_f3.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Skeleton/skelet_idle_anim_f0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Skeleton\\skelet_idle_anim_f0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Skeleton/skelet_idle_anim_f1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Skeleton\\skelet_idle_anim_f1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Skeleton/skelet_idle_anim_f2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Skeleton\\skelet_idle_anim_f2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Skeleton/skelet_idle_anim_f3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Skeleton\\skelet_idle_anim_f3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Skeleton/skelet_run_anim_f0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Skeleton\\skelet_run_anim_f0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Skeleton/skelet_run_anim_f1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Skeleton\\skelet_run_anim_f1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Skeleton/skelet_run_anim_f2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Skeleton\\skelet_run_anim_f2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Skeleton/skelet_run_anim_f3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Skeleton\\skelet_run_anim_f3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Enemy_Spawn.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Enemy_Spawn.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -499,6 +580,14 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/markers"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/turn-based-tick"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/spawn-characters"
     }
   ],
   "eventsFunctionsExtensions": [

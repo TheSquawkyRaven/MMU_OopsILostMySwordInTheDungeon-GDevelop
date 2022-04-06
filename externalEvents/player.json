@@ -23,46 +23,6 @@
         {
           "type": {
             "inverted": false,
-            "value": "Create"
-          },
-          "parameters": [
-            "",
-            "Player",
-            "PlayerStart.X()",
-            "PlayerStart.Y()",
-            "PlayerStart.Layer()"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "ModVarObjet"
-          },
-          "parameters": [
-            "Player",
-            "Pos.x",
-            "=",
-            "Player.X() / Variable(tileSize)"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "ModVarObjet"
-          },
-          "parameters": [
-            "Player",
-            "Pos.y",
-            "=",
-            "Player.Y() / Variable(tileSize)"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
             "value": "SetSceneVariableAsBoolean"
           },
           "parameters": [
@@ -826,6 +786,15 @@
             {
               "disabled": false,
               "folded": false,
+              "type": "BuiltinCommonInstructions::Link",
+              "include": {
+                "includeConfig": 0
+              },
+              "target": "Turn Based Tick"
+            },
+            {
+              "disabled": false,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -924,6 +893,28 @@
           ]
         }
       ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cam::Follow"
+          },
+          "parameters": [
+            "",
+            "Player.X()",
+            "Player.Y()",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
     }
   ]
 }

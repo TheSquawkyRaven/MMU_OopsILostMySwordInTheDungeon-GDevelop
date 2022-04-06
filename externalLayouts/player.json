@@ -1,6 +1,6 @@
 {
   "associatedLayout": "Game Scene",
-  "name": "Level-1",
+  "name": "Player",
   "instances": [],
   "editionSettings": {
     "grid": true,
@@ -9,10 +9,10 @@
     "gridHeight": 16,
     "gridOffsetX": 0,
     "gridOffsetY": 0,
-    "gridColor": 10401023,
-    "gridAlpha": 0.8,
+    "gridColor": 4739159,
+    "gridAlpha": 1,
     "snap": true,
-    "zoomFactor": 0.7799999999999998,
+    "zoomFactor": 0.7199999999999998,
     "windowMask": false
   }
 }

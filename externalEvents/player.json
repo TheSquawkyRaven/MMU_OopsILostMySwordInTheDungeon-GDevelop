@@ -28,9 +28,9 @@
           "parameters": [
             "",
             "Player",
-            "208",
-            "128",
-            "\"Player\""
+            "PlayerStart.X()",
+            "PlayerStart.Y()",
+            "PlayerStart.Layer()"
           ],
           "subInstructions": []
         }

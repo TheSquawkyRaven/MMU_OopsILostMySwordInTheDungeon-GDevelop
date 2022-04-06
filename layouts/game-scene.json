@@ -21,7 +21,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.2999999999999995,
+    "zoomFactor": 0.45999999999999974,
     "windowMask": false
   },
   "objectsGroups": [
@@ -1619,6 +1619,46 @@
                   "centerPoint": {
                     "automatic": true,
                     "name": "centre",
+                    "x": -29,
+                    "y": -41.5
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Player",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Characters\\Knight\\knight_f_idle_anim_f0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
                     "x": 0,
                     "y": 0
                   },
@@ -1661,6 +1701,19 @@
             "0"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+          },
+          "parameters": [
+            "",
+            "\"Player\"",
+            "",
+            ""
+          ],
+          "subInstructions": []
         }
       ],
       "events": [
@@ -1672,6 +1725,15 @@
             "includeConfig": 0
           },
           "target": "MapFiller"
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Player"
         },
         {
           "disabled": false,
@@ -1692,6 +1754,17 @@
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "name": "Floor",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 100663296,
+      "ambientLightColorG": 6033120,
+      "ambientLightColorR": 9552632,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "Player",
       "visibility": true,
       "cameras": [],
       "effects": []

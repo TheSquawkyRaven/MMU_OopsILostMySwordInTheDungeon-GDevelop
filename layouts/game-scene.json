@@ -21,7 +21,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.45999999999999974,
+    "zoomFactor": 0.43999999999999967,
     "windowMask": false
   },
   "objectsGroups": [
@@ -1940,17 +1940,6 @@
       "effects": []
     },
     {
-      "ambientLightColorB": 100663296,
-      "ambientLightColorG": 6033120,
-      "ambientLightColorR": 9552632,
-      "followBaseLayerCamera": false,
-      "isLightingLayer": false,
-      "name": "Player",
-      "visibility": true,
-      "cameras": [],
-      "effects": []
-    },
-    {
       "ambientLightColorB": 7575768,
       "ambientLightColorG": 6033120,
       "ambientLightColorR": 7318808,
@@ -1968,6 +1957,17 @@
       "followBaseLayerCamera": false,
       "isLightingLayer": false,
       "name": "Wall Lines",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
+      "ambientLightColorB": 100663296,
+      "ambientLightColorG": 6033120,
+      "ambientLightColorR": 9552632,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "Characters",
       "visibility": true,
       "cameras": [],
       "effects": []

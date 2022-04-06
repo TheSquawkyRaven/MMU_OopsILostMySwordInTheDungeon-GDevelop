@@ -354,15 +354,16 @@
         "kind": "image",
         "metadata": "",
         "name": "Assets\\Characters\\Knight\\knight_f_idle_anim_f0.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
+        "alwaysLoaded": false,
         "file": "Assets/Markers/Tile_Highlight.png",
         "kind": "image",
         "metadata": "",
         "name": "Assets\\Markers\\Tile_Highlight.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": false
       },
       {
@@ -371,7 +372,7 @@
         "kind": "image",
         "metadata": "",
         "name": "Assets\\Markers\\Tile_Highlight_Valid.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": false
       },
       {
@@ -380,7 +381,7 @@
         "kind": "image",
         "metadata": "",
         "name": "Assets\\Markers\\Tile_Highlight_Invalid.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": false
       },
       {
@@ -389,7 +390,7 @@
         "kind": "image",
         "metadata": "",
         "name": "Assets\\Markers\\Player_Start.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": false
       },
       {

@@ -1,0 +1,29 @@
+{
+  "associatedLayout": "Game Scene",
+  "lastChangeTimeStamp": 0,
+  "name": "Markers",
+  "events": [
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "MarkersMakeInvisible",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Opacity"
+          },
+          "parameters": [
+            "MarkersMakeInvisible",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    }
+  ]
+}

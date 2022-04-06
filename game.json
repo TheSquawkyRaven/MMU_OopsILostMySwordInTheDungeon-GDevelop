@@ -401,6 +401,69 @@
         "name": "Assets\\Tiles\\Wall\\wall_full.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Knight/knight_f_idle_anim_f1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Knight\\knight_f_idle_anim_f1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Knight/knight_f_idle_anim_f2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Knight\\knight_f_idle_anim_f2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Knight/knight_f_idle_anim_f3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Knight\\knight_f_idle_anim_f3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Knight/knight_f_run_anim_f0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Knight\\knight_f_run_anim_f0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Knight/knight_f_run_anim_f1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Knight\\knight_f_run_anim_f1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Knight/knight_f_run_anim_f2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Knight\\knight_f_run_anim_f2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/Knight/knight_f_run_anim_f3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\Knight\\knight_f_run_anim_f3.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -432,6 +495,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/player"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/markers"
     }
   ],
   "eventsFunctionsExtensions": [
@@ -450,6 +517,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/eventsFunctionsExtensions/cam"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/eventsFunctionsExtensions/position"
     }
   ],
   "externalLayouts": [
@@ -464,10 +535,6 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalLayouts/level-0"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/player"
     }
   ],
   "externalSourceFiles": []

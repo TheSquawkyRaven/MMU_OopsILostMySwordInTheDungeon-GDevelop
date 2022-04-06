@@ -111,6 +111,14 @@
           "name": "Wall_Dot_L"
         }
       ]
+    },
+    {
+      "name": "MarkersMakeInvisible",
+      "objects": [
+        {
+          "name": "PlayerStart"
+        }
+      ]
     }
   ],
   "variables": [
@@ -351,6 +359,32 @@
       "name": "MapEndY",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "Movement",
+      "type": "structure",
+      "children": [
+        {
+          "name": "x",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "y",
+          "type": "number",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "DoMove",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "CanMove",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [],
@@ -1678,17 +1712,39 @@
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "Pos",
+          "type": "structure",
+          "children": [
+            {
+              "name": "x",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "animations": [
         {
-          "name": "",
+          "name": "Idle",
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
+              "looping": true,
+              "timeBetweenFrames": 0.15000000596046448,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
@@ -1697,7 +1753,138 @@
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
                     "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Characters\\Knight\\knight_f_idle_anim_f1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Characters\\Knight\\knight_f_idle_anim_f2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Characters\\Knight\\knight_f_idle_anim_f3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Run",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.10000000149011612,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Characters\\Knight\\knight_f_run_anim_f0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Characters\\Knight\\knight_f_run_anim_f1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Characters\\Knight\\knight_f_run_anim_f2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Characters\\Knight\\knight_f_run_anim_f3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 16
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -1882,19 +2069,6 @@
             "0"
           ],
           "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
-          },
-          "parameters": [
-            "",
-            "\"Player\"",
-            "",
-            ""
-          ],
-          "subInstructions": []
         }
       ],
       "events": [
@@ -1914,7 +2088,7 @@
           "include": {
             "includeConfig": 0
           },
-          "target": "Player"
+          "target": "Markers"
         },
         {
           "disabled": false,
@@ -1925,6 +2099,15 @@
           "events": []
         }
       ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Player"
     }
   ],
   "layers": [
@@ -2006,5 +2189,10 @@
       "effects": []
     }
   ],
-  "behaviorsSharedData": []
+  "behaviorsSharedData": [
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
+    }
+  ]
 }

@@ -411,6 +411,21 @@
       "name": "yDiff",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "droppings",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "xDroppings",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "yDroppings",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [],
@@ -1932,6 +1947,11 @@
               "value": 0
             }
           ]
+        },
+        {
+          "name": "Droppings",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -2160,6 +2180,21 @@
       ],
       "effects": [],
       "behaviors": [
+        {
+          "acceleration": 400,
+          "allowDiagonals": false,
+          "angleOffset": 0,
+          "angularMaxSpeed": 180,
+          "cellHeight": 16,
+          "cellWidth": 16,
+          "extraBorder": 0,
+          "gridOffsetX": 0,
+          "gridOffsetY": 0,
+          "maxSpeed": 200,
+          "name": "Pathfinding",
+          "rotateObject": false,
+          "type": "PathfindingBehavior::PathfindingBehavior"
+        },
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
@@ -2608,6 +2643,10 @@
     }
   ],
   "behaviorsSharedData": [
+    {
+      "name": "Pathfinding",
+      "type": "PathfindingBehavior::PathfindingBehavior"
+    },
     {
       "name": "Tween",
       "type": "Tween::TweenBehavior"

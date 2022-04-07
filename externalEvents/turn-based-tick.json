@@ -235,7 +235,7 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Position::Pathfind"
+                "value": "Position::FollowPlayerPathfind"
               },
               "parameters": [
                 "",
@@ -248,20 +248,7 @@
               "subInstructions": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "DebuggerTools::ConsoleLog"
-              },
-              "parameters": [
-                "VariableString(x) + \", \" + VariableString(y)",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
+          "actions": [],
           "events": [
             {
               "disabled": false,

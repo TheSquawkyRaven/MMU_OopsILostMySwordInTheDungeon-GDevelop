@@ -396,6 +396,21 @@
       "name": "CanMove",
       "type": "boolean",
       "value": false
+    },
+    {
+      "name": "distance",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "xDiff",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "yDiff",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [],
@@ -1763,51 +1778,7 @@
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [
-        {
-          "name": "Patrol",
-          "type": "structure",
-          "children": [
-            {
-              "name": "Origin",
-              "type": "structure",
-              "children": [
-                {
-                  "name": "x",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "name": "y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "name": "Path",
-              "type": "array",
-              "children": [
-                {
-                  "type": "structure",
-                  "children": [
-                    {
-                      "name": "x",
-                      "type": "number",
-                      "value": 0
-                    },
-                    {
-                      "name": "y",
-                      "type": "number",
-                      "value": 0
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
+      "variables": [],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -2177,61 +2148,23 @@
           "value": 0
         },
         {
-          "name": "Patrol",
-          "type": "structure",
-          "children": [
-            {
-              "name": "Origin",
-              "type": "structure",
-              "children": [
-                {
-                  "name": "x",
-                  "type": "number",
-                  "value": 0
-                },
-                {
-                  "name": "y",
-                  "type": "number",
-                  "value": 0
-                }
-              ]
-            },
-            {
-              "name": "Path",
-              "type": "array",
-              "children": [
-                {
-                  "type": "structure",
-                  "children": [
-                    {
-                      "name": "x",
-                      "type": "number",
-                      "value": 0
-                    },
-                    {
-                      "name": "y",
-                      "type": "number",
-                      "value": 0
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "i",
-              "type": "number",
-              "value": 0
-            }
-          ]
+          "name": "idleTime",
+          "type": "number",
+          "value": 0
         },
         {
-          "name": "DoPatrol",
-          "type": "boolean",
-          "value": false
+          "name": "DetectionRadius",
+          "type": "number",
+          "value": 2.5
         }
       ],
       "effects": [],
-      "behaviors": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
       "animations": [
         {
           "name": "Idle",
@@ -2451,6 +2384,51 @@
           ]
         }
       ]
+    },
+    {
+      "name": "DetectedMarker",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Markers\\Directions\\Detected.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -2467,6 +2445,14 @@
           "parameters": [
             ""
           ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
           "subInstructions": []
         }
       ],
@@ -2531,6 +2517,15 @@
         "includeConfig": 0
       },
       "target": "Player"
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Running Behaviours"
     }
   ],
   "layers": [

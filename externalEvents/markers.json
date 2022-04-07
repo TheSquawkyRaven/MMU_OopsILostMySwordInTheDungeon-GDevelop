@@ -6,24 +6,44 @@
     {
       "disabled": false,
       "folded": false,
-      "type": "BuiltinCommonInstructions::ForEach",
-      "object": "MarkersMakeInvisible",
-      "conditions": [],
-      "actions": [
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
         {
           "type": {
             "inverted": false,
-            "value": "Opacity"
+            "value": "DepartScene"
           },
           "parameters": [
-            "MarkersMakeInvisible",
-            "=",
-            "0"
+            ""
           ],
           "subInstructions": []
         }
       ],
-      "events": []
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "MarkersMakeInvisible",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Opacity"
+              },
+              "parameters": [
+                "MarkersMakeInvisible",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
     }
   ]
 }

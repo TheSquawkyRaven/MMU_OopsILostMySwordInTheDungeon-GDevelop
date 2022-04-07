@@ -563,6 +563,15 @@
         "name": "Assets\\Markers\\Directions\\Move_Direction_1.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Directions/Detected.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Directions\\Detected.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -606,6 +615,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/spawn-characters"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/running-behaviours"
     }
   ],
   "eventsFunctionsExtensions": [

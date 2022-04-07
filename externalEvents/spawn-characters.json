@@ -66,6 +66,18 @@
                 "Player.Y() / Variable(tileSize)"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "Map[Player.Variable(Pos.x)][Player.Variable(Pos.y)].c",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -127,79 +139,17 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarObjet"
+                    "value": "ModVarScene"
                   },
                   "parameters": [
-                    "Skeleton",
-                    "Patrol",
+                    "Map[Skeleton.Variable(Pos.x)][Skeleton.Variable(Pos.y)].c",
                     "=",
-                    "EnemySpawn.Variable(Patrol)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "Skeleton",
-                    "DoPatrol",
-                    "True"
+                    "1"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "EnemySpawn",
-                        "Patrol.Path[0].x",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "EnemySpawn",
-                        "Patrol.Path[0].y",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "Skeleton",
-                        "DoPatrol",
-                        "False"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
+              "events": []
             }
           ]
         }

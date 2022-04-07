@@ -15,6 +15,123 @@
         "textG": 0,
         "textR": 0
       },
+      "comment": "Test Detection",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::ForEach",
+      "object": "Enemies",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarObjet"
+          },
+          "parameters": [
+            "Enemies",
+            "State",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "distance",
+            "=",
+            "DistanceBetweenPositions(Enemies.Variable(Pos.x), Enemies.Variable(Pos.y), Player.Variable(Pos.x), Player.Variable(Pos.y))"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "distance",
+                "<=",
+                "Enemies.Variable(DetectionRadius)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "DetectedMarker",
+                "Enemies.X()",
+                "Enemies.Y()",
+                "\"\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectPositionYTween"
+              },
+              "parameters": [
+                "DetectedMarker",
+                "Tween",
+                "\"\"",
+                "DetectedMarker.Y() - 8",
+                "\"easeInOutQuad\"",
+                "1000",
+                "yes"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Enemies",
+                "State",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
       "comment": "Projectile Move TODO",
       "comment2": ""
     },
@@ -39,53 +156,6 @@
         "textR": 0
       },
       "comment": "Enemy Attack",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::ForEach",
-      "object": "Enemies",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "VarObjet"
-          },
-          "parameters": [
-            "Enemies",
-            "State",
-            "=",
-            "3"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [],
-      "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        }
-      ]
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Enemy Chase",
       "comment2": ""
     },
     {
@@ -132,7 +202,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Enemy Move",
+      "comment": "Enemy Chase",
       "comment2": ""
     },
     {
@@ -161,9 +231,115 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Position::Pathfind"
+              },
+              "parameters": [
+                "",
+                "Enemies.Variable(Pos.x)",
+                "Enemies.Variable(Pos.y)",
+                "Player.Variable(Pos.x)",
+                "Player.Variable(Pos.y)",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DebuggerTools::ConsoleLog"
+              },
+              "parameters": [
+                "VariableString(x) + \", \" + VariableString(y)",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Tween::AddObjectPositionTween"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "Tween",
+                    "\"Move\"",
+                    "Variable(x) * Variable(tileSize)",
+                    "Variable(y) * Variable(tileSize)",
+                    "\"linear\"",
+                    "250",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].c",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "Pos.x",
+                    "=",
+                    "Variable(x)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "Pos.y",
+                    "=",
+                    "Variable(y)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].c",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         }
       ]
     },
@@ -216,53 +392,30 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Move Towards",
+          "comment": "Idle, Look Around",
           "comment2": ""
         },
         {
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "conditions": [],
+          "actions": [
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectVariableAsBoolean"
+                "value": "ModVarObjet"
               },
               "parameters": [
                 "Enemies",
-                "DoPatrol",
-                "True"
+                "idleTime",
+                "-",
+                "1"
               ],
               "subInstructions": []
             }
           ],
-          "actions": [],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [],
-              "events": []
-            }
-          ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Continue Idle, Look Around",
-          "comment2": ""
+          "events": []
         },
         {
           "disabled": false,
@@ -272,12 +425,13 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectVariableAsBoolean"
+                "value": "VarObjet"
               },
               "parameters": [
                 "Enemies",
-                "DoPatrol",
-                "False"
+                "idleTime",
+                "<=",
+                "0"
               ],
               "subInstructions": []
             }
@@ -290,9 +444,20 @@
               },
               "parameters": [
                 "Enemies",
-                "Patrol.i",
-                "-",
-                "1"
+                "idleTime",
+                "=",
+                "RandomInRange(2, 4)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                "False"
               ],
               "subInstructions": []
             }
@@ -306,13 +471,21 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "VarObjet"
+                    "value": "FlippedX"
                   },
                   "parameters": [
-                    "Enemies",
-                    "Patrol.i",
-                    "<=",
-                    "0"
+                    "Enemies"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "ifelse",
+                    "False"
                   ],
                   "subInstructions": []
                 }
@@ -321,16 +494,56 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarObjet"
+                    "value": "SetSceneVariableAsBoolean"
                   },
                   "parameters": [
-                    "Enemies",
-                    "Patrol.i",
-                    "=",
-                    "RandomInRange(1, 5)"
+                    "ifelse",
+                    "True"
                   ],
                   "subInstructions": []
                 },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlipX"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "no"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "FlippedX"
+                  },
+                  "parameters": [
+                    "Enemies"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "ifelse",
+                    "False"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "inverted": false,
@@ -338,119 +551,23 @@
                   },
                   "parameters": [
                     "ifelse",
-                    ""
+                    "True"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "FlipX"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "yes"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "FlippedX"
-                      },
-                      "parameters": [
-                        "Enemies"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "ifelse",
-                        "False"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "ifelse",
-                        "True"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "FlipX"
-                      },
-                      "parameters": [
-                        "Enemies",
-                        "no"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "FlippedX"
-                      },
-                      "parameters": [
-                        "Enemies"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "ifelse",
-                        "False"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "ifelse",
-                        "True"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "FlipX"
-                      },
-                      "parameters": [
-                        "Enemies",
-                        "yes"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
+              "events": []
             }
           ]
         }

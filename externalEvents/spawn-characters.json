@@ -48,9 +48,9 @@
               },
               "parameters": [
                 "Player",
-                "Pos.y",
+                "Pos.x",
                 "=",
-                "Player.Y() / Variable(tileSize)"
+                "Player.X() / Variable(tileSize)"
               ],
               "subInstructions": []
             },
@@ -61,9 +61,9 @@
               },
               "parameters": [
                 "Player",
-                "Pos.x",
+                "Pos.y",
                 "=",
-                "Player.X() / Variable(tileSize)"
+                "Player.Y() / Variable(tileSize)"
               ],
               "subInstructions": []
             }
@@ -97,9 +97,109 @@
                     "\"Characters\""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Skeleton",
+                    "Pos.x",
+                    "=",
+                    "EnemySpawn.X() / Variable(tileSize)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Skeleton",
+                    "Pos.y",
+                    "=",
+                    "EnemySpawn.Y() / Variable(tileSize)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Skeleton",
+                    "Patrol",
+                    "=",
+                    "EnemySpawn.Variable(Patrol)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Skeleton",
+                    "DoPatrol",
+                    "True"
+                  ],
+                  "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "EnemySpawn",
+                        "Patrol.Path[0].x",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "EnemySpawn",
+                        "Patrol.Path[0].y",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "DoPatrol",
+                        "False"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ]
         }

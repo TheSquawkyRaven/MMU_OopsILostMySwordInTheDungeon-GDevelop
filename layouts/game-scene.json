@@ -124,8 +124,12 @@
       ]
     },
     {
-      "name": "TurnBasedTick",
-      "objects": []
+      "name": "Enemies",
+      "objects": [
+        {
+          "name": "Skeleton"
+        }
+      ]
     }
   ],
   "variables": [
@@ -1759,7 +1763,51 @@
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "Patrol",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Origin",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "x",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "y",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "name": "Path",
+              "type": "array",
+              "children": [
+                {
+                  "type": "structure",
+                  "children": [
+                    {
+                      "name": "x",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "y",
+                      "type": "number",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -2127,6 +2175,59 @@
           "name": "State",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "Patrol",
+          "type": "structure",
+          "children": [
+            {
+              "name": "Origin",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "x",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "y",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "name": "Path",
+              "type": "array",
+              "children": [
+                {
+                  "type": "structure",
+                  "children": [
+                    {
+                      "name": "x",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "y",
+                      "type": "number",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "i",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "DoPatrol",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -2279,6 +2380,63 @@
                     "name": "origine",
                     "x": 0,
                     "y": 4
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "MoveDirectionMarker",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.75,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Markers\\Directions\\Move_Direction_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 8
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Markers\\Directions\\Move_Direction_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 8
                   },
                   "centerPoint": {
                     "automatic": true,

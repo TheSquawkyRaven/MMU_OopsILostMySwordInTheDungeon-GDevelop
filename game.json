@@ -545,6 +545,24 @@
         "name": "Assets\\Markers\\Enemy_Spawn.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Directions/Move_Direction_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Directions\\Move_Direction_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Directions/Move_Direction_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Directions\\Move_Direction_1.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

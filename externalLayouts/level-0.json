@@ -1681,6 +1681,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "Traps",
+      "locked": false,
+      "name": "BearTrap",
+      "persistentUuid": "9dea064f-4f17-4490-8391-32ba1376d79e",
+      "width": 0,
+      "x": 400,
+      "y": 400,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -1693,7 +1709,7 @@
     "gridColor": 1447962,
     "gridAlpha": 1,
     "snap": true,
-    "zoomFactor": 1.6000000000000028,
+    "zoomFactor": 2.7400000000000038,
     "windowMask": false
   }
 }

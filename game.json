@@ -590,6 +590,132 @@
         "name": "Assets\\Tiles\\OccupiedTile.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Traps/BearTrap.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Traps\\BearTrap.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/hit_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\hit_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/hit_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\hit_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/hit_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\hit_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/hit_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\hit_3.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/move_hit_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\move_hit_0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/move_hit_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\move_hit_1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/move_hit_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\move_hit_2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/move_hit_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\move_hit_3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/move_hit_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\move_hit_4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Traps/BearTrap_Used.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Traps\\BearTrap_Used.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Directions/Attacking.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Directions\\Attacking.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Directions/Attack_Direction_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Directions\\Attack_Direction_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Directions/Attack_Direction_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Directions\\Attack_Direction_1.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -600,7 +726,7 @@
     {
       "name": "Debug",
       "type": "boolean",
-      "value": true
+      "value": false
     }
   ],
   "layouts": [

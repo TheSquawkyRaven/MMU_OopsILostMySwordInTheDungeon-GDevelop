@@ -1217,13 +1217,13 @@
       "objectGroups": []
     },
     {
-      "description": "",
-      "fullName": "Create Occupied Tile",
+      "description": "Note: Linked objects are not destroyed",
+      "fullName": "Delete A Character At Position. Cleans up variables and links",
       "functionType": "Action",
       "group": "",
-      "name": "CreateOccupiedTile",
+      "name": "DeleteCharacterAtPosition",
       "private": false,
-      "sentence": "Creates _PARAM3_ in x:_PARAM1_, y:_PARAM2_",
+      "sentence": "Deletes _PARAM1_ and cleans up",
       "events": [
         {
           "disabled": false,
@@ -1234,13 +1234,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "Create"
+                "value": "DebuggerTools::ConsoleLog"
               },
               "parameters": [
+                "ToString(Variable(Map[character.Variable(Pos.x)][character.Variable(Pos.y)].c))",
                 "",
-                "occupiedTile",
-                "GetArgumentAsNumber(\"x\") * Variable(tileSize)",
-                "GetArgumentAsNumber(\"y\") * Variable(tileSize)",
                 ""
               ],
               "subInstructions": []
@@ -1252,27 +1250,37 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "Debug",
-                "False"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "conditions": [],
           "actions": [
             {
               "type": {
                 "inverted": false,
-                "value": "Cache"
+                "value": "ModVarScene"
               },
               "parameters": [
-                "occupiedTile"
+                "Map[character.Variable(Pos.x)][character.Variable(Pos.y)].c",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Delete"
+              },
+              "parameters": [
+                "character",
+                ""
               ],
               "subInstructions": []
             }
@@ -1284,141 +1292,9 @@
         {
           "codeOnly": false,
           "defaultValue": "",
-          "description": "X",
+          "description": "Character",
           "longDescription": "",
-          "name": "x",
-          "optional": false,
-          "supplementaryInformation": "",
-          "type": "expression"
-        },
-        {
-          "codeOnly": false,
-          "defaultValue": "",
-          "description": "Y",
-          "longDescription": "",
-          "name": "y",
-          "optional": false,
-          "supplementaryInformation": "",
-          "type": "expression"
-        },
-        {
-          "codeOnly": false,
-          "defaultValue": "",
-          "description": "Creating Tile",
-          "longDescription": "",
-          "name": "occupiedTile",
-          "optional": false,
-          "supplementaryInformation": "Sprite",
-          "type": "objectList"
-        }
-      ],
-      "objectGroups": []
-    },
-    {
-      "description": "",
-      "fullName": "Remove Occupied Tile",
-      "functionType": "Action",
-      "group": "",
-      "name": "RemoveOccupiedTile",
-      "private": false,
-      "sentence": "Removes _PARAM3_ in x:_PARAM1_, y:_PARAM2_",
-      "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "PickNearest"
-              },
-              "parameters": [
-                "occupiedTile",
-                "GetArgumentAsNumber(\"x\") * Variable(tileSize)",
-                "GetArgumentAsNumber(\"y\") * Variable(tileSize)",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "occupiedTile",
-                    "=",
-                    "GetArgumentAsNumber(\"x\") * Variable(tileSize)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PosY"
-                  },
-                  "parameters": [
-                    "occupiedTile",
-                    "=",
-                    "GetArgumentAsNumber(\"y\") * Variable(tileSize)"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "occupiedTile",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ]
-        }
-      ],
-      "parameters": [
-        {
-          "codeOnly": false,
-          "defaultValue": "",
-          "description": "X",
-          "longDescription": "",
-          "name": "x",
-          "optional": false,
-          "supplementaryInformation": "",
-          "type": "expression"
-        },
-        {
-          "codeOnly": false,
-          "defaultValue": "",
-          "description": "Y",
-          "longDescription": "",
-          "name": "y",
-          "optional": false,
-          "supplementaryInformation": "",
-          "type": "expression"
-        },
-        {
-          "codeOnly": false,
-          "defaultValue": "",
-          "description": "Removing Tile",
-          "longDescription": "",
-          "name": "occupiedTile",
+          "name": "character",
           "optional": false,
           "supplementaryInformation": "Sprite",
           "type": "objectList"

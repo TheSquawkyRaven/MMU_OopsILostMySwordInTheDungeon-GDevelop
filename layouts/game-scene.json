@@ -130,6 +130,17 @@
           "name": "Skeleton"
         }
       ]
+    },
+    {
+      "name": "Characters",
+      "objects": [
+        {
+          "name": "Player"
+        },
+        {
+          "name": "Skeleton"
+        }
+      ]
     }
   ],
   "variables": [
@@ -426,6 +437,57 @@
       "name": "yDroppings",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "EnemySpawnControl",
+      "type": "array",
+      "children": [
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "x",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TurnTime",
+      "type": "number",
+      "value": 250
+    },
+    {
+      "name": "TurnGiver",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "TurnOrder",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "TurnExecuting",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "TurnTimeCount",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "TurnSystemWaiting",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [],
@@ -750,10 +812,10 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ],
       "animations": [
@@ -797,10 +859,10 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ],
       "animations": [
@@ -1211,10 +1273,10 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ],
       "animations": [
@@ -1258,10 +1320,10 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ],
       "animations": [
@@ -1305,10 +1367,10 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ],
       "animations": [
@@ -1352,10 +1414,10 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 2,
-          "impassable": true,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": true
         }
       ],
       "animations": [
@@ -1994,6 +2056,11 @@
           "name": "Droppings",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "Health",
+          "type": "number",
+          "value": 1
         }
       ],
       "effects": [],
@@ -2218,6 +2285,16 @@
           "name": "DetectionRadius",
           "type": "number",
           "value": 2.5
+        },
+        {
+          "name": "TurnOrder",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Health",
+          "type": "number",
+          "value": 1
         }
       ],
       "effects": [],
@@ -2428,7 +2505,7 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
+                    "x": 8,
                     "y": 8
                   },
                   "centerPoint": {
@@ -2445,7 +2522,7 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
+                    "x": 8,
                     "y": 8
                   },
                   "centerPoint": {
@@ -2554,6 +2631,8 @@
       "effects": [],
       "behaviors": [
         {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
           "acceleration": 400,
           "allowDiagonals": false,
           "angleOffset": 0,
@@ -2564,9 +2643,7 @@
           "gridOffsetX": 0,
           "gridOffsetY": 0,
           "maxSpeed": 10,
-          "name": "Pathfinding",
-          "rotateObject": false,
-          "type": "PathfindingBehavior::PathfindingBehavior"
+          "rotateObject": false
         }
       ],
       "animations": [
@@ -2610,10 +2687,10 @@
       "effects": [],
       "behaviors": [
         {
-          "cost": 2,
-          "impassable": false,
           "name": "PathfindingObstacle",
-          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior",
+          "cost": 2,
+          "impassable": false
         }
       ],
       "animations": [
@@ -2685,18 +2762,6 @@
             "\"Level-0\"",
             "0",
             "0"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "DebuggerTools::ConsoleLog"
-          },
-          "parameters": [
-            "\"Layout Created\"",
-            "",
-            ""
           ],
           "subInstructions": []
         }

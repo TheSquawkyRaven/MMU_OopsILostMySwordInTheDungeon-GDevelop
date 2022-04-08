@@ -440,7 +440,182 @@
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "MoveDirectionMarker",
+                        "Enemies",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "MoveDirectionMarker",
+                        "=",
+                        "AngleBetweenPositions(0, 0, Enemies.Variable(Movement.x), Enemies.Variable(Movement.y)) + 90"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Montre"
+                      },
+                      "parameters": [
+                        "MoveDirectionMarker",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "ifelse",
+                        "False"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "Enemies",
+                                "Movement.x",
+                                "<",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "Enemies",
+                                "Movement.y",
+                                "<",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "ifelse",
+                            "True"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "MoveDirectionMarker",
+                            "=",
+                            "Enemies.Variable(Pos.x) * Variable(tileSize) + (abs(Enemies.Variable(Movement.y)) * (Variable(tileSize) / 2))",
+                            "=",
+                            "Enemies.Variable(Pos.y) * Variable(tileSize) + (abs(Enemies.Variable(Movement.x)) * (Variable(tileSize) / 2))"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "ifelse",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "ifelse",
+                            "True"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "MettreXY"
+                          },
+                          "parameters": [
+                            "MoveDirectionMarker",
+                            "=",
+                            "Enemies.Variable(Pos.x) * Variable(tileSize) + Enemies.Variable(Movement.x) * Variable(tileSize) + (abs(Enemies.Variable(Movement.y)) * (Variable(tileSize) / 2))",
+                            "=",
+                            "Enemies.Variable(Pos.y) * Variable(tileSize) + Enemies.Variable(Movement.y) * Variable(tileSize) + (abs(Enemies.Variable(Movement.x)) * (Variable(tileSize) / 2))"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

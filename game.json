@@ -572,6 +572,24 @@
         "name": "Assets\\Markers\\Directions\\Detected.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Characters/ghost.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Characters\\ghost.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/OccupiedTile.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\OccupiedTile.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -580,9 +598,9 @@
   "objectsGroups": [],
   "variables": [
     {
-      "name": "Seed",
-      "type": "number",
-      "value": 0
+      "name": "Debug",
+      "type": "boolean",
+      "value": true
     }
   ],
   "layouts": [

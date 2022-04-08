@@ -1592,22 +1592,6 @@
       "height": 0,
       "layer": "",
       "locked": false,
-      "name": "EnemySpawn",
-      "persistentUuid": "b11aad65-988c-43b0-a825-e9f49a93e26b",
-      "width": 0,
-      "x": 320,
-      "y": 192,
-      "zOrder": 2,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
       "name": "MoveDirectionMarker",
       "persistentUuid": "023ee1d8-fc06-4cdf-9d12-7e37485cc7ef",
       "width": 0,
@@ -1665,6 +1649,38 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "EnemySpawn",
+      "persistentUuid": "5dc409c6-6151-4607-b063-d8ab16bcf986",
+      "width": 0,
+      "x": 320,
+      "y": 192,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "EnemySpawn",
+      "persistentUuid": "77bab96b-481b-459d-b8e4-2a1d826eaca7",
+      "width": 0,
+      "x": 544,
+      "y": 320,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -1677,7 +1693,7 @@
     "gridColor": 1447962,
     "gridAlpha": 1,
     "snap": true,
-    "zoomFactor": 2.080000000000003,
+    "zoomFactor": 2.100000000000003,
     "windowMask": false
   }
 }

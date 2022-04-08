@@ -17,6 +17,14 @@
             ""
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
         }
       ],
       "actions": [],
@@ -76,6 +84,41 @@
                 "Map[Player.Variable(Pos.x)][Player.Variable(Pos.y)].c",
                 "=",
                 "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Position::CreateOccupiedTile"
+              },
+              "parameters": [
+                "",
+                "Player.Variable(Pos.x)",
+                "Player.Variable(Pos.y)",
+                "OccupiedTile",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DebuggerTools::ConsoleLog"
+              },
+              "parameters": [
+                "\"There are \" + ToString(Count(EnemySpawn)) + \" Enemy Spawns\"",
+                "",
+                ""
               ],
               "subInstructions": []
             }
@@ -145,6 +188,32 @@
                     "Map[Skeleton.Variable(Pos.x)][Skeleton.Variable(Pos.y)].c",
                     "=",
                     "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Position::CreateOccupiedTile"
+                  },
+                  "parameters": [
+                    "",
+                    "Skeleton.Variable(Pos.x)",
+                    "Skeleton.Variable(Pos.y)",
+                    "OccupiedTile",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "\"Spawned One Skeleton\"",
+                    "",
+                    ""
                   ],
                   "subInstructions": []
                 }

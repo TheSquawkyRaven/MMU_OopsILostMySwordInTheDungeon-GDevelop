@@ -766,6 +766,20 @@
                 {
                   "type": {
                     "inverted": false,
+                    "value": "Position::RemoveOccupiedTile"
+                  },
+                  "parameters": [
+                    "",
+                    "Player.Variable(Pos.x)",
+                    "Player.Variable(Pos.y)",
+                    "OccupiedTile",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
                     "value": "ModVarObjet"
                   },
                   "parameters": [
@@ -798,6 +812,20 @@
                     "Map[Player.Variable(Pos.x)][Player.Variable(Pos.y)].c",
                     "=",
                     "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Position::CreateOccupiedTile"
+                  },
+                  "parameters": [
+                    "",
+                    "Player.Variable(Pos.x)",
+                    "Player.Variable(Pos.y)",
+                    "OccupiedTile",
+                    ""
                   ],
                   "subInstructions": []
                 },

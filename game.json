@@ -716,6 +716,42 @@
         "name": "Assets\\Markers\\Directions\\Attack_Direction_1.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_idle_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_idle_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_idle_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_idle_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_hover_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_hover_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_press_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_press_0.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -771,6 +807,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/player-trigger-tbs"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/buttons"
     }
   ],
   "eventsFunctionsExtensions": [

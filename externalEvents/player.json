@@ -802,8 +802,20 @@
                     "(Player.Variable(Pos.x) + Variable(Movement.x)) * Variable(tileSize)",
                     "(Player.Variable(Pos.y) + Variable(Movement.y)) * Variable(tileSize)",
                     "\"linear\"",
-                    "Variable(TurnTime)",
+                    "Variable(MoveTurnTime)",
                     ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "TurnTime",
+                    "=",
+                    "Variable(MoveTurnTime)"
                   ],
                   "subInstructions": []
                 },

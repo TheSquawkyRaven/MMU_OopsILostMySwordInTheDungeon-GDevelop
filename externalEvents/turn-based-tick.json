@@ -354,8 +354,20 @@
                         "(Enemies.Variable(Pos.x) + Enemies.Variable(Movement.x)) * Variable(tileSize)",
                         "(Enemies.Variable(Pos.y) + Enemies.Variable(Movement.y)) * Variable(tileSize)",
                         "\"linear\"",
-                        "Variable(TurnTime)",
+                        "Variable(MoveTurnTime)",
                         ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "TurnTime",
+                        "=",
+                        "Variable(MoveTurnTime)"
                       ],
                       "subInstructions": []
                     },
@@ -568,9 +580,56 @@
                     "1"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "TurnTime",
+                    "=",
+                    "Variable(MoveTurnTime)"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "HitMove",
+                        "Characters.X()",
+                        "Characters.Y()",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "HitMove",
+                        "=",
+                        "Variable(angle)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -592,41 +651,6 @@
                   ],
                   "actions": [],
                   "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "HitMove",
-                            "Characters.X()",
-                            "Characters.Y()",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SetAngle"
-                          },
-                          "parameters": [
-                            "HitMove",
-                            "=",
-                            "Variable(angle)"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
                     {
                       "disabled": false,
                       "folded": false,
@@ -755,27 +779,6 @@
               ]
             }
           ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "CollisionPoint"
-              },
-              "parameters": [
-                "Characters",
-                "Variable(x) * Variable(tileSize) + Variable(tileSize) / 2",
-                "Variable(y) * Variable(tileSize) + Variable(tileSize) / 2"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": []
         }
       ]
     },

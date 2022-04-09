@@ -69,6 +69,18 @@
             "0"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "TurnTime",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
         }
       ],
       "events": [

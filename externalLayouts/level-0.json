@@ -1645,7 +1645,7 @@
       "width": 0,
       "x": 320,
       "y": 192,
-      "zOrder": 4,
+      "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1661,7 +1661,7 @@
       "width": 0,
       "x": 304,
       "y": 208,
-      "zOrder": 5,
+      "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1677,7 +1677,7 @@
       "width": 0,
       "x": 544,
       "y": 320,
-      "zOrder": 5,
+      "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1693,7 +1693,23 @@
       "width": 0,
       "x": 400,
       "y": 400,
-      "zOrder": 6,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 102,
+      "layer": "HUD",
+      "locked": false,
+      "name": "Button",
+      "persistentUuid": "8409769e-2abb-4f5d-81b6-b77bef5a98ae",
+      "width": 150,
+      "x": 645,
+      "y": 739,
+      "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1709,7 +1725,7 @@
     "gridColor": 1447962,
     "gridAlpha": 1,
     "snap": true,
-    "zoomFactor": 2.7400000000000038,
+    "zoomFactor": 1.140000000000003,
     "windowMask": false
   }
 }

@@ -4197,6 +4197,17 @@
       "effects": []
     },
     {
+      "ambientLightColorB": 13,
+      "ambientLightColorG": 6034128,
+      "ambientLightColorR": 11674880,
+      "followBaseLayerCamera": false,
+      "isLightingLayer": false,
+      "name": "CamHUD",
+      "visibility": true,
+      "cameras": [],
+      "effects": []
+    },
+    {
       "ambientLightColorB": 7575768,
       "ambientLightColorG": 6033120,
       "ambientLightColorR": 7318808,

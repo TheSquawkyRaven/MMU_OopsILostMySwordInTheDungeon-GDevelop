@@ -21,7 +21,7 @@
     "gridColor": 10401023,
     "gridAlpha": 0.8,
     "snap": false,
-    "zoomFactor": 0.43999999999999967,
+    "zoomFactor": 0.47999999999999976,
     "windowMask": false
   },
   "objectsGroups": [
@@ -150,6 +150,9 @@
         },
         {
           "name": "HitMove"
+        },
+        {
+          "name": "MissAttack"
         }
       ]
     },
@@ -158,6 +161,15 @@
       "objects": [
         {
           "name": "Button"
+        },
+        {
+          "name": "SkipButton"
+        },
+        {
+          "name": "ScrollLeftButton"
+        },
+        {
+          "name": "ScrollRightButton"
         }
       ]
     }
@@ -542,6 +554,42 @@
       "name": "ButtonAnim",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "HasMoveAttacked",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "HasAttackedHit",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "HasAttackedMiss",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "ButtonsControl",
+      "type": "array",
+      "children": [
+        {
+          "type": "structure",
+          "children": [
+            {
+              "name": "x",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        }
+      ]
     }
   ],
   "instances": [],
@@ -2898,6 +2946,103 @@
       ]
     },
     {
+      "name": "MissAttack",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "timeToDelete",
+          "type": "number",
+          "value": 0.25
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.05000000074505806,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Markers\\Hit\\hit_miss_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Markers\\Hit\\hit_miss_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Markers\\Hit\\hit_miss_2.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Markers\\Hit\\hit_miss_3.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "HitAttack",
       "tags": "",
       "type": "Sprite",
@@ -3187,6 +3332,16 @@
           "name": "id",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "HeldDownByKey",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -3309,6 +3464,543 @@
           ]
         }
       ]
+    },
+    {
+      "name": "ScrollRightButton",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "id",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "HeldDownByKey",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Traps\\TrapsScroll_right_button_idle_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Idle2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Traps\\TrapsScroll_right_button_idle_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hover",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Traps\\TrapsScroll_right_button_hover_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Press",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Traps\\TrapsScroll_right_button_press_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ScrollLeftButton",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "id",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "HeldDownByKey",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Traps\\TrapsScroll_left_button_idle_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Idle2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Traps\\TrapsScroll_left_button_idle_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hover",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Traps\\TrapsScroll_left_button_hover_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Press",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Traps\\TrapsScroll_left_button_press_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SkipButton",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "id",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "HeldDownByKey",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Button\\button_skip_idle_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 25,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Idle2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Button\\button_skip_idle_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 25,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hover",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Button\\button_skip_hover_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 25,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Press",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Button\\button_skip_press_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 25,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TrapHUDBackground",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.75,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Traps\\TrapsBackground_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Traps\\TrapsBackground_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "HUDTraps",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Current",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Count",
+          "type": "number",
+          "value": 1
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Traps\\BearTrap.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 20
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -3415,6 +4107,15 @@
         "includeConfig": 0
       },
       "target": "Buttons"
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Traps"
     }
   ],
   "layers": [

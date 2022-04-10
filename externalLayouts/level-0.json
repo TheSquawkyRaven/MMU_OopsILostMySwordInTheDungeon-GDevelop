@@ -1704,12 +1704,94 @@
       "height": 102,
       "layer": "HUD",
       "locked": false,
-      "name": "Button",
-      "persistentUuid": "8409769e-2abb-4f5d-81b6-b77bef5a98ae",
+      "name": "SkipButton",
+      "persistentUuid": "d5ed4e42-ec96-4a10-adb1-df380c3fc00c",
       "width": 150,
-      "x": 645,
-      "y": 739,
+      "x": 757,
+      "y": 845,
       "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": "SkipTurn"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 96,
+      "layer": "HUD",
+      "locked": false,
+      "name": "TrapHUDBackground",
+      "persistentUuid": "396f967e-6250-4508-a0df-c1b0b0932ae7",
+      "width": 96,
+      "x": 1232,
+      "y": 798,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 102,
+      "layer": "HUD",
+      "locked": false,
+      "name": "ScrollLeftButton",
+      "persistentUuid": "a8c03e7c-79bb-43ff-aaec-0c64bff89ea0",
+      "width": 102,
+      "x": 1184,
+      "y": 845,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": "ScrollTrapsLeft"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 102,
+      "layer": "HUD",
+      "locked": false,
+      "name": "ScrollRightButton",
+      "persistentUuid": "ea435819-65d2-4413-a77f-22fa2a546e28",
+      "width": 102,
+      "x": 1376,
+      "y": 845,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": "ScrollTrapsRight"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 96,
+      "layer": "HUD",
+      "locked": false,
+      "name": "HUDTraps",
+      "persistentUuid": "24ca6691-4e3e-4706-a5b9-e37640802732",
+      "width": 96,
+      "x": 1280,
+      "y": 848,
+      "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1725,7 +1807,7 @@
     "gridColor": 1447962,
     "gridAlpha": 1,
     "snap": true,
-    "zoomFactor": 1.140000000000003,
+    "zoomFactor": 1.5400000000000038,
     "windowMask": false
   }
 }

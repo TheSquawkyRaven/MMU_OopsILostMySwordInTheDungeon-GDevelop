@@ -44,6 +44,18 @@
             "1"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "NbObjet"
+          },
+          "parameters": [
+            "Player",
+            ">",
+            "0"
+          ],
+          "subInstructions": []
         }
       ],
       "actions": [],

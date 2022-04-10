@@ -1101,27 +1101,6 @@
           "events": []
         },
         {
-          "disabled": true,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "DebuggerTools::ConsoleLog"
-              },
-              "parameters": [
-                "VariableString(Map[GetArgumentAsNumber(\"x\")][GetArgumentAsNumber(\"y\")].pd)",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
@@ -1225,27 +1204,6 @@
       "private": false,
       "sentence": "Deletes _PARAM1_ and cleans up",
       "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "DebuggerTools::ConsoleLog"
-              },
-              "parameters": [
-                "ToString(Variable(Map[character.Variable(Pos.x)][character.Variable(Pos.y)].c))",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
         {
           "disabled": false,
           "folded": false,

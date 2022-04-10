@@ -662,6 +662,18 @@
             "True"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "NbObjet"
+          },
+          "parameters": [
+            "Player",
+            ">",
+            "0"
+          ],
+          "subInstructions": []
         }
       ],
       "actions": [],
@@ -727,6 +739,18 @@
           "parameters": [
             "TurnSystemWaiting",
             "False"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "NbObjet"
+          },
+          "parameters": [
+            "Player",
+            ">",
+            "0"
           ],
           "subInstructions": []
         }
@@ -1119,6 +1143,161 @@
         "textG": 0,
         "textR": 0
       },
+      "comment": "Check Spacebar, Skip Turn",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "KeyPressed"
+          },
+          "parameters": [
+            "",
+            "Space"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "NbObjet"
+          },
+          "parameters": [
+            "Player",
+            ">",
+            "0"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "BuiltinCommonInstructions::Once"
+          },
+          "parameters": [],
+          "subInstructions": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "CanMove",
+                "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "DoMove",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "TurnSystemWaiting",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjetTxt"
+                  },
+                  "parameters": [
+                    "Buttons",
+                    "Identifier",
+                    "=",
+                    "\"SkipTurn\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeAnimation"
+                  },
+                  "parameters": [
+                    "Buttons",
+                    "=",
+                    "3"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Buttons",
+                    "HeldDownByKey",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Link",
+              "include": {
+                "includeConfig": 0
+              },
+              "target": "Player Trigger TBS"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
       "comment": "Cam Follow",
       "comment2": ""
     },
@@ -1135,6 +1314,18 @@
           "parameters": [
             "PlayerDead",
             "False"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "NbObjet"
+          },
+          "parameters": [
+            "Player",
+            ">",
+            "0"
           ],
           "subInstructions": []
         }
@@ -1155,6 +1346,124 @@
         }
       ],
       "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Space (Skip Turn) Released",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "KeyReleased"
+          },
+          "parameters": [
+            "",
+            "Space"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjetTxt"
+              },
+              "parameters": [
+                "Buttons",
+                "Identifier",
+                "=",
+                "\"SkipTurn\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Buttons",
+                "HeldDownByKey",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Buttons",
+                "HeldDownByKey",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Buttons",
+                "id",
+                "!=",
+                "Variable(ButtonID)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeAnimation"
+              },
+              "parameters": [
+                "Buttons",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
     }
   ]
 }

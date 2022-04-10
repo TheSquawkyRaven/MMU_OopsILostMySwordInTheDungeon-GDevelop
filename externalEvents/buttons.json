@@ -60,7 +60,19 @@
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Buttons",
           "conditions": [],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "ifelse",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": [
             {
               "disabled": false,
@@ -71,12 +83,32 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarObjet"
+                    "value": "ModVarScene"
                   },
                   "parameters": [
-                    "Buttons",
-                    "id",
+                    "j",
                     "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "infiniteLoopWarning": true,
+              "type": "BuiltinCommonInstructions::While",
+              "whileConditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "j",
+                    "<",
                     "Variable(i)"
                   ],
                   "subInstructions": []
@@ -84,17 +116,196 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarScene"
+                    "value": "SceneVariableAsBoolean"
                   },
                   "parameters": [
-                    "i",
-                    "+",
-                    "1"
+                    "ifelse",
+                    "False"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "ButtonsControl[Variable(j)].x",
+                        "=",
+                        "Buttons.X()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "ButtonsControl[Variable(j)].y",
+                        "=",
+                        "Buttons.Y()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "DebuggerTools::ConsoleLog"
+                      },
+                      "parameters": [
+                        "\"Duplicate Buttons Found! Skipping\"",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "ifelse",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Buttons",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "j",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "ifelse",
+                    "False"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "ButtonsControl[Variable(j)].x",
+                        "=",
+                        "Buttons.X()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "ButtonsControl[Variable(j)].y",
+                        "=",
+                        "Buttons.Y()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Buttons",
+                        "id",
+                        "=",
+                        "Variable(i)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "i",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ]
         }
@@ -206,7 +417,20 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "Buttons",
+                        "HeldDownByKey",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
                   "actions": [
                     {
                       "type": {
@@ -355,36 +579,22 @@
                     {
                       "disabled": false,
                       "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Valid Click",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
+                      "conditions": [
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarScene"
+                            "value": "ObjectVariableAsBoolean"
                           },
                           "parameters": [
-                            "ButtonID",
-                            "=",
-                            "-1"
+                            "Buttons",
+                            "HeldDownByKey",
+                            ""
                           ],
                           "subInstructions": []
-                        },
+                        }
+                      ],
+                      "actions": [
                         {
                           "type": {
                             "inverted": false,
@@ -398,19 +608,301 @@
                           "subInstructions": []
                         }
                       ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [],
-                      "events": []
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "Buttons",
+                                "id",
+                                "=",
+                                "Variable(ButtonID)"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Valid Click",
+                              "comment2": ""
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarObjetTxt"
+                                  },
+                                  "parameters": [
+                                    "Buttons",
+                                    "Identifier",
+                                    "=",
+                                    "\"ScrollTrapsLeft\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "HUDTraps",
+                                    "Current",
+                                    "-",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarObjetTxt"
+                                  },
+                                  "parameters": [
+                                    "Buttons",
+                                    "Identifier",
+                                    "=",
+                                    "\"ScrollTrapsRight\""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "HUDTraps",
+                                    "Current",
+                                    "+",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarObjet"
+                                  },
+                                  "parameters": [
+                                    "HUDTraps",
+                                    "Current",
+                                    ">=",
+                                    "HUDTraps.Variable(Count)"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "HUDTraps",
+                                    "Current",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarObjet"
+                                  },
+                                  "parameters": [
+                                    "HUDTraps",
+                                    "Current",
+                                    "<",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "HUDTraps",
+                                    "Current",
+                                    "=",
+                                    "HUDTraps.Variable(Count) - 1"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ChangeAnimation"
+                                  },
+                                  "parameters": [
+                                    "HUDTraps",
+                                    "=",
+                                    "HUDTraps.Variable(Current)"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarObjetTxt"
+                                  },
+                                  "parameters": [
+                                    "Buttons",
+                                    "Identifier",
+                                    "=",
+                                    "\"SkipTurn\""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "CanMove",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "DoMove",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TurnSystemWaiting",
+                                    "False"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [],
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Link",
+                                  "include": {
+                                    "includeConfig": 0
+                                  },
+                                  "target": "Player Trigger TBS"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
               ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "ButtonID",
+                    "=",
+                    "-1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ]
         }
@@ -463,6 +955,18 @@
                 "id",
                 "!=",
                 "Variable(ButtonID)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Buttons",
+                "HeldDownByKey",
+                ""
               ],
               "subInstructions": []
             }
@@ -519,6 +1023,31 @@
                 "Buttons",
                 ">",
                 "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Buttons",
+                "id",
+                "!=",
+                "Variable(ButtonID)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Buttons",
+                "HeldDownByKey",
+                ""
               ],
               "subInstructions": []
             }
@@ -723,6 +1252,18 @@
                 "id",
                 "!=",
                 "Variable(ButtonID)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Buttons",
+                "HeldDownByKey",
+                ""
               ],
               "subInstructions": []
             }

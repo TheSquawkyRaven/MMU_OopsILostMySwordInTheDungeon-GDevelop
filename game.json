@@ -14,7 +14,7 @@
     "pixelsRounding": false,
     "projectUuid": "392a4640-cffe-4935-afbb-81c1473f6de9",
     "scaleMode": "linear",
-    "sizeOnStartupMode": "adaptWidth",
+    "sizeOnStartupMode": "",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
     "name": "Roguelike",
@@ -752,6 +752,195 @@
         "name": "Assets\\HUD\\Button\\button_press_0.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/hit_miss_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\hit_miss_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/hit_miss_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\hit_miss_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/hit_miss_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\hit_miss_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Markers/Hit/hit_miss_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Markers\\Hit\\hit_miss_3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_skip_hover_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_skip_hover_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_skip_press_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_skip_press_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_skip_idle_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_skip_idle_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_skip_idle_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_skip_idle_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Traps/TrapsScroll_left_button_idle_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Traps\\TrapsScroll_left_button_idle_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Traps/TrapsScroll_left_button_idle_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Traps\\TrapsScroll_left_button_idle_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Traps/TrapsScroll_left_button_hover_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Traps\\TrapsScroll_left_button_hover_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Traps/TrapsScroll_left_button_press_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Traps\\TrapsScroll_left_button_press_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Traps/TrapsScroll_right_button_idle_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Traps\\TrapsScroll_right_button_idle_0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Traps/TrapsScroll_right_button_idle_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Traps\\TrapsScroll_right_button_idle_1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Traps/TrapsScroll_right_button_hover_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Traps\\TrapsScroll_right_button_hover_0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Traps/TrapsScroll_right_button_press_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Traps\\TrapsScroll_right_button_press_0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Traps/TrapsBackground_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Traps\\TrapsBackground_0.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Traps/TrapsBackground_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Traps\\TrapsBackground_1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Traps/BearTrap.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Traps\\BearTrap.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Heart/ui_heart_full.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Heart\\ui_heart_full.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Heart/ui_heart_half.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Heart\\ui_heart_half.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -811,6 +1000,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/buttons"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/traps"
     }
   ],
   "eventsFunctionsExtensions": [

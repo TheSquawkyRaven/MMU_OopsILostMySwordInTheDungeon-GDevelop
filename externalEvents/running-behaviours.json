@@ -705,7 +705,7 @@
       "events": []
     },
     {
-      "disabled": false,
+      "disabled": true,
       "folded": false,
       "type": "BuiltinCommonInstructions::ForEach",
       "object": "Enemies",

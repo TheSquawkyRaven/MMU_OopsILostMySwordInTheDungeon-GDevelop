@@ -585,7 +585,7 @@
                         "(Enemies.Variable(Pos.x) + Enemies.Variable(Movement.x)) * Variable(tileSize)",
                         "(Enemies.Variable(Pos.y) + Enemies.Variable(Movement.y)) * Variable(tileSize)",
                         "\"linear\"",
-                        "Variable(MoveTurnTime)",
+                        "Variable(MoveTurnTime) - 100",
                         ""
                       ],
                       "subInstructions": []

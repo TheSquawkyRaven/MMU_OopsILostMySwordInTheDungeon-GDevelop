@@ -929,7 +929,7 @@
                       },
                       "parameters": [
                         "Map[Variable(x)][Variable(y)].trap",
-                        "=",
+                        ">=",
                         "1"
                       ],
                       "subInstructions": []
@@ -1552,7 +1552,7 @@
               },
               "parameters": [
                 "Map[Variable(x)][Variable(y)].trap",
-                "=",
+                ">=",
                 "1"
               ],
               "subInstructions": []

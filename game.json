@@ -941,6 +941,13 @@
         "name": "Assets\\HUD\\Heart\\ui_heart_half.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "Assets/Font/LameFont.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Assets\\Font\\LameFont.ttf",
+        "userAdded": true
       }
     ],
     "resourceFolders": []

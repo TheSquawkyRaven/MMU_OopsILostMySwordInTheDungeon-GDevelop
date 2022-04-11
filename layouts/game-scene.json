@@ -172,6 +172,14 @@
           "name": "ScrollRightButton"
         }
       ]
+    },
+    {
+      "name": "Traps",
+      "objects": [
+        {
+          "name": "BearTrap"
+        }
+      ]
     }
   ],
   "variables": [
@@ -590,6 +598,11 @@
           ]
         }
       ]
+    },
+    {
+      "name": "TrapInteracted",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [],
@@ -2039,7 +2052,23 @@
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "Valid",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "CanLayTrap",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "CanPickupTrap",
+          "type": "boolean",
+          "value": false
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -3258,7 +3287,13 @@
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "Type",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "effects": [],
       "behaviors": [],
       "animations": [
@@ -3917,8 +3952,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 16,
+                    "y": 16
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -3934,8 +3969,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 16,
+                    "y": 16
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -3966,6 +4001,11 @@
           "name": "Count",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "BearTraps",
+          "type": "number",
+          "value": 5
         }
       ],
       "effects": [],
@@ -4001,6 +4041,86 @@
           ]
         }
       ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "TrapsCountHUD",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "5",
+      "font": "Assets\\Font\\LameFont.ttf",
+      "characterSize": 48,
+      "color": {
+        "b": 0,
+        "g": 209,
+        "r": 192
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "EHUD",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "(E)",
+      "font": "Assets\\Font\\LameFont.ttf",
+      "characterSize": 32,
+      "color": {
+        "b": 0,
+        "g": 209,
+        "r": 192
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "QHUD",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "(Q)",
+      "font": "Assets\\Font\\LameFont.ttf",
+      "characterSize": 32,
+      "color": {
+        "b": 0,
+        "g": 209,
+        "r": 192
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "SpacebarHUD",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "(Spacebar)",
+      "font": "Assets\\Font\\LameFont.ttf",
+      "characterSize": 32,
+      "color": {
+        "b": 0,
+        "g": 209,
+        "r": 192
+      }
     }
   ],
   "events": [

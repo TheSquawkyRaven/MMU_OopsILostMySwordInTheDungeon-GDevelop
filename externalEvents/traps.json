@@ -27,7 +27,20 @@
           "subInstructions": []
         }
       ],
-      "actions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "TrapIndex",
+            "=",
+            "1"
+          ],
+          "subInstructions": []
+        }
+      ],
       "events": [
         {
           "disabled": false,
@@ -686,6 +699,32 @@
                     "Player.Variable(Pos.y) - 1"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "TileHighlight",
+                    "PointDirection.x",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "TileHighlight",
+                    "PointDirection.y",
+                    "=",
+                    "-1"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -744,6 +783,44 @@
                     "Player.Variable(Pos.y)"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "TileHighlight",
+                    "Left",
+                    "False"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "TileHighlight",
+                    "PointDirection.x",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "TileHighlight",
+                    "PointDirection.y",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -800,6 +877,44 @@
                     "y",
                     "=",
                     "Player.Variable(Pos.y) + 1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "TileHighlight",
+                    "Up",
+                    "False"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "TileHighlight",
+                    "PointDirection.x",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "TileHighlight",
+                    "PointDirection.y",
+                    "=",
+                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -869,6 +984,44 @@
                     "Player.Variable(Pos.y)"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "TileHighlight",
+                    "Left",
+                    "True"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "TileHighlight",
+                    "PointDirection.x",
+                    "=",
+                    "-1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "TileHighlight",
+                    "PointDirection.y",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -903,6 +1056,18 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "angle",
+                    "=",
+                    "AngleBetweenPositions(0, 0, TileHighlight.Variable(PointDirection.x), TileHighlight.Variable(PointDirection.y)) - 90"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": [
@@ -925,35 +1090,14 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "BuiltinCommonInstructions::Or"
+                        "value": "VarScene"
                       },
-                      "parameters": [],
-                      "subInstructions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Map[Variable(x)][Variable(y)].trap",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarScene"
-                          },
-                          "parameters": [
-                            "Map[Variable(x)][Variable(y)].trap",
-                            "=",
-                            "2"
-                          ],
-                          "subInstructions": []
-                        }
-                      ]
+                      "parameters": [
+                        "Map[Variable(x)][Variable(y)].trap",
+                        ">",
+                        "0"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "actions": [
@@ -1022,7 +1166,43 @@
                       "disabled": false,
                       "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HUDTraps",
+                            "Current",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HUDTraps",
+                            "Current",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
                       "actions": [],
                       "events": []
                     }
@@ -1058,68 +1238,686 @@
                       "subInstructions": []
                     }
                   ],
-                  "actions": [
+                  "actions": [],
+                  "events": [
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "ChangeAnimation"
-                      },
-                      "parameters": [
-                        "TileHighlight",
-                        "=",
-                        "1"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HUDTraps",
+                            "Current",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangeAnimation"
+                          },
+                          "parameters": [
+                            "TileHighlight",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "TileHighlight",
+                            "CanPickupTrap",
+                            "False"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "TileHighlight",
+                            "CanLayTrap",
+                            "True"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "TileHighlight",
+                            "Valid",
+                            "True"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "ifelse",
+                            "True"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
                     },
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "TileHighlight",
-                        "CanPickupTrap",
-                        "False"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "HUDTraps",
+                            "Current",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "TileHighlight",
-                        "CanLayTrap",
-                        "True"
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "ifelse2",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "TileHighlight",
-                        "Valid",
-                        "True"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "ifelse",
-                        "True"
-                      ],
-                      "subInstructions": []
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "TileHighlight",
+                                "PointDirection.x",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "TileHighlight",
+                                "PointDirection.y",
+                                "=",
+                                "-1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "ifelse2",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SetSceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "ifelse2",
+                                "True"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "Map[Variable(x)][Variable(y) - 1].type",
+                                    "!=",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ChangeAnimation"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "=",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "CanPickupTrap",
+                                    "False"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "CanLayTrap",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "Valid",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "ifelse",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "TileHighlight",
+                                "PointDirection.x",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "TileHighlight",
+                                "PointDirection.y",
+                                "=",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "ifelse2",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SetSceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "ifelse2",
+                                "True"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "Map[Variable(x)][Variable(y) + 1].type",
+                                    "!=",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ChangeAnimation"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "=",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "CanPickupTrap",
+                                    "False"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "CanLayTrap",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "Valid",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "ifelse",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "TileHighlight",
+                                "PointDirection.x",
+                                "=",
+                                "-1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "TileHighlight",
+                                "PointDirection.y",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "ifelse2",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SetSceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "ifelse2",
+                                "True"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "Map[Variable(x) - 1][Variable(y)].type",
+                                    "!=",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ChangeAnimation"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "=",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "CanPickupTrap",
+                                    "False"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "CanLayTrap",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "Valid",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "ifelse",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "TileHighlight",
+                                "PointDirection.x",
+                                "=",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "TileHighlight",
+                                "PointDirection.y",
+                                "=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "ifelse2",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "SetSceneVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "ifelse2",
+                                "True"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "Map[Variable(x) + 1][Variable(y)].type",
+                                    "!=",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ChangeAnimation"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "=",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "CanPickupTrap",
+                                    "False"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "CanLayTrap",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetObjectVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "TileHighlight",
+                                    "Valid",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "SetSceneVariableAsBoolean"
+                                  },
+                                  "parameters": [
+                                    "ifelse",
+                                    "True"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            }
+                          ]
+                        }
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
                   "disabled": false,
@@ -1133,19 +1931,6 @@
                       },
                       "parameters": [
                         "ifelse",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "Position::TileCanMoveTo"
-                      },
-                      "parameters": [
-                        "",
-                        "Variable(x)",
-                        "Variable(y)",
                         ""
                       ],
                       "subInstructions": []
@@ -1232,7 +2017,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Left Click",
+      "comment": "Place Trap, F",
       "comment2": ""
     },
     {
@@ -1410,6 +2195,31 @@
                       "parameters": [
                         "Map[Variable(x)][Variable(y)].trap",
                         "=",
+                        "Variable(TrapIndex)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "BearTrap",
+                        "TrapIndex",
+                        "=",
+                        "Variable(TrapIndex)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "TrapIndex",
+                        "+",
                         "1"
                       ],
                       "subInstructions": []
@@ -1527,6 +2337,43 @@
                     {
                       "type": {
                         "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "Map[Variable(x)][Variable(y)].arrowTrapRef",
+                        "=",
+                        "Variable(TrapIndex)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "ArrowTrap",
+                        "TrapIndex",
+                        "=",
+                        "Variable(TrapIndex)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "TrapIndex",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
                         "value": "ModVarObjet"
                       },
                       "parameters": [
@@ -1547,9 +2394,184 @@
                         "True"
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "ArrowTrap",
+                        "=",
+                        "Variable(angle)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "ArrowTrap",
+                        "PointDirection.x",
+                        "=",
+                        "-TileHighlight.Variable(PointDirection.x)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "ArrowTrap",
+                        "PointDirection.y",
+                        "=",
+                        "-TileHighlight.Variable(PointDirection.y)"
+                      ],
+                      "subInstructions": []
                     }
                   ],
-                  "events": []
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "i",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 169,
+                        "g": 23,
+                        "r": 243,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "",
+                      "comment2": ""
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "infiniteLoopWarning": true,
+                      "type": "BuiltinCommonInstructions::While",
+                      "whileConditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "i",
+                            "<=",
+                            "ArrowTrap.Variable(DetectionRange)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "xi",
+                                "=",
+                                "ArrowTrap.Variable(PointDirection.x) * Variable(i)"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "yi",
+                                "=",
+                                "ArrowTrap.Variable(PointDirection.y) * Variable(i)"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "Map[Variable(x) + Variable(xi)][Variable(y) + Variable(yi)].arrowTrapRef",
+                                    "=",
+                                    "ArrowTrap.Variable(TrapIndex)"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            }
+                          ]
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "i",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -1599,7 +2621,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Right Click",
+      "comment": "Pickup Trap, F",
       "comment2": ""
     },
     {
@@ -1680,8 +2702,8 @@
               },
               "parameters": [
                 "Map[Variable(x)][Variable(y)].trap",
-                ">=",
-                "1"
+                ">",
+                "0"
               ],
               "subInstructions": []
             }
@@ -1907,6 +2929,18 @@
                       },
                       "parameters": [
                         "Map[Variable(x)][Variable(y)].trap",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "Map[Variable(x)][Variable(y)].trapRef",
                         "=",
                         "0"
                       ],

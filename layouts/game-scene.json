@@ -609,6 +609,11 @@
       "name": "TrapInteracted",
       "type": "boolean",
       "value": false
+    },
+    {
+      "name": "TrapIndex",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -2290,6 +2295,22 @@
           "name": "CanPickupTrap",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "PointDirection",
+          "type": "structure",
+          "children": [
+            {
+              "name": "x",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "value": 0
+            }
+          ]
         }
       ],
       "effects": [],
@@ -3520,6 +3541,32 @@
           "name": "Type",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "TrapIndex",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "PointDirection",
+          "type": "structure",
+          "children": [
+            {
+              "name": "x",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "DetectionRange",
+          "type": "number",
+          "value": 4
         }
       ],
       "effects": [],
@@ -3593,6 +3640,11 @@
       "variables": [
         {
           "name": "Type",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "TrapIndex",
           "type": "number",
           "value": 0
         }

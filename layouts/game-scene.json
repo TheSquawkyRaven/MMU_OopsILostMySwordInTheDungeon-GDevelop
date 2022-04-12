@@ -12,16 +12,16 @@
   "title": "",
   "v": 0,
   "uiSettings": {
-    "grid": false,
+    "grid": true,
     "gridType": "rectangular",
-    "gridWidth": 32,
-    "gridHeight": 32,
+    "gridWidth": 16,
+    "gridHeight": 16,
     "gridOffsetX": 0,
     "gridOffsetY": 0,
-    "gridColor": 10401023,
-    "gridAlpha": 0.8,
-    "snap": false,
-    "zoomFactor": 0.47999999999999976,
+    "gridColor": 1447962,
+    "gridAlpha": 1,
+    "snap": true,
+    "zoomFactor": 0.5200000000000002,
     "windowMask": false
   },
   "objectsGroups": [
@@ -170,6 +170,9 @@
         },
         {
           "name": "ScrollRightButton"
+        },
+        {
+          "name": "RestartButton"
         }
       ]
     },
@@ -178,6 +181,9 @@
       "objects": [
         {
           "name": "BearTrap"
+        },
+        {
+          "name": "ArrowTrap"
         }
       ]
     }
@@ -605,7 +611,224 @@
       "value": false
     }
   ],
-  "instances": [],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 102,
+      "layer": "HUD",
+      "locked": false,
+      "name": "SkipButton",
+      "persistentUuid": "c5e9c83b-b3ae-48b7-b913-7f6ccebb634c",
+      "width": 150,
+      "x": 757,
+      "y": 820,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": "SkipTurn"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 96,
+      "layer": "HUD",
+      "locked": false,
+      "name": "TrapHUDBackground",
+      "persistentUuid": "998943a4-464d-456c-ac2d-e2aea5202573",
+      "width": 96,
+      "x": 1280,
+      "y": 820,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 102,
+      "layer": "HUD",
+      "locked": false,
+      "name": "ScrollLeftButton",
+      "persistentUuid": "6513695a-74c3-442e-912d-1e42ca359156",
+      "width": 102,
+      "x": 1184,
+      "y": 820,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": "ScrollTrapsLeft"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 102,
+      "layer": "HUD",
+      "locked": false,
+      "name": "ScrollRightButton",
+      "persistentUuid": "573f58e2-dd1d-4d1b-a08b-0543055d91a1",
+      "width": 102,
+      "x": 1376,
+      "y": 820,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": "ScrollTrapsRight"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 96,
+      "layer": "HUD",
+      "locked": false,
+      "name": "HUDTraps",
+      "persistentUuid": "51dbebd8-2402-4faf-a7e2-91546ce53068",
+      "width": 96,
+      "x": 1280,
+      "y": 820,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "locked": false,
+      "name": "SpacebarHUD",
+      "persistentUuid": "9672f6c5-8881-4bdf-af20-8b0db29082ba",
+      "width": 0,
+      "x": 690,
+      "y": 867,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "locked": false,
+      "name": "QHUD",
+      "persistentUuid": "8ceb668d-44c3-4a4a-8c19-54c2bcf6cd79",
+      "width": 0,
+      "x": 1166,
+      "y": 867,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "locked": false,
+      "name": "EHUD",
+      "persistentUuid": "0141122b-f6c3-4605-bd45-d87e6ab0d666",
+      "width": 0,
+      "x": 1358,
+      "y": 867,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 32,
+      "layer": "HUD",
+      "locked": false,
+      "name": "TrapsCountHUD",
+      "persistentUuid": "2e9447b8-7df8-4113-90e7-2a4f26899e5e",
+      "width": 32,
+      "x": 1272,
+      "y": 732,
+      "zOrder": 2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "locked": false,
+      "name": "FHUD",
+      "persistentUuid": "6c048896-41f0-4a1f-b3c6-93011616943a",
+      "width": 0,
+      "x": 1262,
+      "y": 867,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 102,
+      "layer": "HUD",
+      "locked": false,
+      "name": "RestartButton",
+      "persistentUuid": "d1d1dcc4-b470-4d90-a559-842ce1935626",
+      "width": 102,
+      "x": 64,
+      "y": 820,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": "Restart"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "HUD",
+      "locked": false,
+      "name": "RHUD",
+      "persistentUuid": "1f874b4c-f9ac-4efa-835c-764e2622310a",
+      "width": 0,
+      "x": 46,
+      "y": 867,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
   "objects": [
     {
       "name": "HardWall",
@@ -2442,6 +2665,11 @@
               "value": 0
             }
           ]
+        },
+        {
+          "name": "CannotMove",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -3283,6 +3511,81 @@
       ]
     },
     {
+      "name": "ArrowTrap",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Type",
+          "type": "number",
+          "value": 1
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Active",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Traps\\ArrowTrap.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Used",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Traps\\ArrowTrap_Used.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "BearTrap",
       "tags": "",
       "type": "Sprite",
@@ -3484,6 +3787,149 @@
                   "originPoint": {
                     "name": "origine",
                     "x": 25,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RestartButton",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "id",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "HeldDownByKey",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Button\\button_restart_idle_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Idle2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Button\\button_restart_idle_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hover",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Button\\button_restart_hover_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Press",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Button\\button_restart_press_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
                     "y": 17
                   },
                   "centerPoint": {
@@ -4000,12 +4446,17 @@
         {
           "name": "Count",
           "type": "number",
-          "value": 1
+          "value": 2
         },
         {
           "name": "BearTraps",
           "type": "number",
-          "value": 5
+          "value": 2
+        },
+        {
+          "name": "ArrowTraps",
+          "type": "string",
+          "value": "4"
         }
       ],
       "effects": [],
@@ -4039,6 +4490,35 @@
               ]
             }
           ]
+        },
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Traps\\ArrowTrap.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -4056,6 +4536,46 @@
       "string": "5",
       "font": "Assets\\Font\\LameFont.ttf",
       "characterSize": 48,
+      "color": {
+        "b": 0,
+        "g": 209,
+        "r": 192
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "RHUD",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "(R)",
+      "font": "Assets\\Font\\LameFont.ttf",
+      "characterSize": 32,
+      "color": {
+        "b": 0,
+        "g": 209,
+        "r": 192
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "FHUD",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "(F)",
+      "font": "Assets\\Font\\LameFont.ttf",
+      "characterSize": 32,
       "color": {
         "b": 0,
         "g": 209,
@@ -4148,22 +4668,43 @@
           "subInstructions": []
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
-          },
-          "parameters": [
-            "",
-            "\"Level-0\"",
-            "0",
-            "0"
-          ],
-          "subInstructions": []
-        }
-      ],
+      "actions": [],
       "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "Level",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+              },
+              "parameters": [
+                "",
+                "\"Level-0\"",
+                "0",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
         {
           "disabled": false,
           "folded": false,
@@ -4181,14 +4722,6 @@
             "includeConfig": 0
           },
           "target": "Spawn Characters"
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
         }
       ]
     },
@@ -4236,6 +4769,15 @@
         "includeConfig": 0
       },
       "target": "Traps"
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Game Manager"
     }
   ],
   "layers": [

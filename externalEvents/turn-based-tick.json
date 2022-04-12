@@ -530,192 +530,192 @@
                       "comment2": ""
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "HasMoveAttacked",
-                    "False"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Moves based on defined movement",
-                  "comment2": ""
                 },
                 {
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
+                  "conditions": [
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Tween::AddObjectPositionTween"
+                        "value": "SceneVariableAsBoolean"
                       },
                       "parameters": [
-                        "Enemies",
-                        "Tween",
-                        "\"Move\"",
-                        "(Enemies.Variable(Pos.x) + Enemies.Variable(Movement.x)) * Variable(tileSize)",
-                        "(Enemies.Variable(Pos.y) + Enemies.Variable(Movement.y)) * Variable(tileSize)",
-                        "\"linear\"",
-                        "Variable(MoveTurnTime) - 100",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "TurnTime",
-                        "=",
-                        "Variable(MoveTurnTime)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].c",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Enemies",
-                        "Pos.x",
-                        "=",
-                        "Enemies.Variable(Pos.x) + Enemies.Variable(Movement.x)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Enemies",
-                        "Pos.y",
-                        "=",
-                        "Enemies.Variable(Pos.y) + Enemies.Variable(Movement.y)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].c",
-                        "=",
-                        "1"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Enemies",
-                        "Movement.x",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Enemies",
-                        "Movement.y",
-                        "=",
-                        "0"
+                        "HasMoveAttacked",
+                        "False"
                       ],
                       "subInstructions": []
                     }
                   ],
+                  "actions": [],
                   "events": [
                     {
                       "disabled": false,
                       "folded": false,
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 109,
+                        "g": 230,
+                        "r": 255,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Moves based on defined movement",
+                      "comment2": ""
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "LinkedObjects::PickObjectsLinkedTo"
-                          },
-                          "parameters": [
-                            "",
-                            "OccupiedTile",
-                            "Enemies",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
+                      "conditions": [],
                       "actions": [
                         {
                           "type": {
                             "inverted": false,
-                            "value": "MettreXY"
+                            "value": "Tween::AddObjectPositionTween"
                           },
                           "parameters": [
-                            "OccupiedTile",
-                            "=",
+                            "Enemies",
+                            "Tween",
+                            "\"Move\"",
                             "(Enemies.Variable(Pos.x) + Enemies.Variable(Movement.x)) * Variable(tileSize)",
+                            "(Enemies.Variable(Pos.y) + Enemies.Variable(Movement.y)) * Variable(tileSize)",
+                            "\"linear\"",
+                            "Variable(MoveTurnTime) - 100",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "TurnTime",
                             "=",
-                            "(Enemies.Variable(Pos.y) + Enemies.Variable(Movement.y)) * Variable(tileSize)"
+                            "Variable(MoveTurnTime)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].c",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Enemies",
+                            "Pos.x",
+                            "=",
+                            "Enemies.Variable(Pos.x) + Enemies.Variable(Movement.x)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Enemies",
+                            "Pos.y",
+                            "=",
+                            "Enemies.Variable(Pos.y) + Enemies.Variable(Movement.y)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].c",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Enemies",
+                            "Movement.x",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Enemies",
+                            "Movement.y",
+                            "=",
+                            "0"
                           ],
                           "subInstructions": []
                         }
                       ],
-                      "events": []
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "LinkedObjects::PickObjectsLinkedTo"
+                              },
+                              "parameters": [
+                                "",
+                                "OccupiedTile",
+                                "Enemies",
+                                ""
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "MettreXY"
+                              },
+                              "parameters": [
+                                "OccupiedTile",
+                                "=",
+                                "(Enemies.Variable(Pos.x) + Enemies.Variable(Movement.x)) * Variable(tileSize)",
+                                "=",
+                                "(Enemies.Variable(Pos.y) + Enemies.Variable(Movement.y)) * Variable(tileSize)"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1512,6 +1512,131 @@
             {
               "disabled": false,
               "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "Attack.x",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "Attack.y",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "Movement.x",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "Movement.y",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "MoveDirectionMarker"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "AttackDirectionMarker"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "LinkedObjects::PickObjectsLinkedTo"
+                      },
+                      "parameters": [
+                        "",
+                        "AttackingMarker",
+                        "Enemies",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "AttackingMarker",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -1647,41 +1772,6 @@
                 }
               ],
               "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Enemies",
-                        "Attack.x",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Enemies",
-                        "Attack.y",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -1894,7 +1984,7 @@
                   "events": []
                 },
                 {
-                  "disabled": false,
+                  "disabled": true,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -2143,6 +2233,18 @@
                     "Pathfinder",
                     "Enemies",
                     ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "Enemies",
+                    "CannotMove",
+                    "False"
                   ],
                   "subInstructions": []
                 }

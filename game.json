@@ -948,6 +948,69 @@
         "metadata": "",
         "name": "Assets\\Font\\LameFont.ttf",
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_restart_idle_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_restart_idle_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_restart_idle_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_restart_idle_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_restart_hover_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_restart_hover_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_restart_press_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_restart_press_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Traps/ArrowTrap.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Traps\\ArrowTrap.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Traps/ArrowTrap_Used.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Traps\\ArrowTrap_Used.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Traps/ArrowTrap.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Traps\\ArrowTrap.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -959,6 +1022,11 @@
       "name": "Debug",
       "type": "boolean",
       "value": false
+    },
+    {
+      "name": "Level",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -1015,6 +1083,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/post-turn-event"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/game-manager"
     }
   ],
   "eventsFunctionsExtensions": [

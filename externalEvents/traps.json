@@ -83,7 +83,7 @@
     },
     {
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [],
@@ -925,14 +925,35 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "VarScene"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "Map[Variable(x)][Variable(y)].trap",
-                        ">=",
-                        "1"
-                      ],
-                      "subInstructions": []
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "Map[Variable(x)][Variable(y)].trap",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "Map[Variable(x)][Variable(y)].trap",
+                            "=",
+                            "2"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
                     }
                   ],
                   "actions": [
@@ -996,7 +1017,16 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": []
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [],
+                      "events": []
+                    }
+                  ]
                 },
                 {
                   "disabled": false,
@@ -1213,11 +1243,11 @@
         {
           "type": {
             "inverted": false,
-            "value": "MouseButtonPressed"
+            "value": "KeyPressed"
           },
           "parameters": [
             "",
-            "Left"
+            "f"
           ],
           "subInstructions": []
         },
@@ -1400,12 +1430,110 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "TextObject::String"
+                        "value": "SetSceneVariableAsBoolean"
                       },
                       "parameters": [
-                        "TrapsCountHUD",
+                        "TrapInteracted",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Arrow Traps",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "HUDTraps",
+                    "Current",
+                    "=",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "HUDTraps",
+                    "ArrowTraps",
+                    ">",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "ArrowTrap",
+                        "TileHighlight.X()",
+                        "TileHighlight.Y()",
+                        "\"Traps\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "Map[Variable(x)][Variable(y)].trap",
                         "=",
-                        "HUDTraps.VariableString(BearTraps)"
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "HUDTraps",
+                        "ArrowTraps",
+                        "-",
+                        "1"
                       ],
                       "subInstructions": []
                     },
@@ -1482,11 +1610,11 @@
         {
           "type": {
             "inverted": false,
-            "value": "MouseButtonPressed"
+            "value": "KeyPressed"
           },
           "parameters": [
             "",
-            "Right"
+            "f"
           ],
           "subInstructions": []
         },
@@ -1664,43 +1792,69 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": [
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Arrow Traps",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarObjet"
-                          },
-                          "parameters": [
-                            "Traps",
-                            "Type",
-                            "=",
-                            "HUDTraps.Variable(Current)"
-                          ],
-                          "subInstructions": []
-                        }
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Traps",
+                        "Type",
+                        "=",
+                        "1"
                       ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "TextObject::String"
-                          },
-                          "parameters": [
-                            "TrapsCountHUD",
-                            "=",
-                            "HUDTraps.VariableString(BearTraps)"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
+                      "subInstructions": []
                     }
-                  ]
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "HUDTraps",
+                        "ArrowTraps",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "TrapInteracted",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 },
                 {
                   "disabled": false,
@@ -1776,6 +1930,84 @@
           ]
         }
       ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarObjet"
+          },
+          "parameters": [
+            "HUDTraps",
+            "Current",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "TrapsCountHUD",
+            "=",
+            "HUDTraps.VariableString(BearTraps)"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarObjet"
+          },
+          "parameters": [
+            "HUDTraps",
+            "Current",
+            "=",
+            "1"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "TextObject::String"
+          },
+          "parameters": [
+            "TrapsCountHUD",
+            "=",
+            "HUDTraps.VariableString(ArrowTraps)"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [],
+      "events": []
     }
   ]
 }

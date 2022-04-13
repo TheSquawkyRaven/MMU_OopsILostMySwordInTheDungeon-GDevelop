@@ -82,7 +82,20 @@
                       "subInstructions": []
                     }
                   ],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "DebuggerTools::ConsoleLog"
+                      },
+                      "parameters": [
+                        "\"Trap Found\"",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
                   "events": [
                     {
                       "disabled": false,
@@ -252,72 +265,183 @@
                         "value": "VarScene"
                       },
                       "parameters": [
-                        "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].arrowTrapRef",
+                        "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].arrowTraps",
                         "!=",
                         "0"
                       ],
                       "subInstructions": []
                     }
                   ],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "i",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
                   "events": [
                     {
                       "disabled": false,
                       "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 109,
-                        "g": 230,
-                        "r": 255,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "Arrow Trap",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                      "infiniteLoopWarning": true,
+                      "type": "BuiltinCommonInstructions::While",
+                      "whileConditions": [
                         {
                           "type": {
                             "inverted": false,
-                            "value": "VarObjet"
+                            "value": "VarScene"
                           },
                           "parameters": [
-                            "ArrowTrap",
-                            "TrapIndex",
-                            "=",
-                            "Variable(Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].arrowTrapRef)"
+                            "i",
+                            "<",
+                            "Variable(Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].arrowTraps)"
                           ],
                           "subInstructions": []
                         }
                       ],
+                      "conditions": [],
                       "actions": [],
                       "events": [
                         {
                           "disabled": false,
                           "folded": false,
-                          "type": "BuiltinCommonInstructions::Comment",
-                          "color": {
-                            "b": 169,
-                            "g": 23,
-                            "r": 243,
-                            "textB": 0,
-                            "textG": 0,
-                            "textR": 0
-                          },
-                          "comment": "",
-                          "comment2": ""
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarScene"
+                              },
+                              "parameters": [
+                                "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].arrowTrapRef[Variable(i)]",
+                                "!=",
+                                "0"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "actions": [],
+                          "events": [
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Comment",
+                              "color": {
+                                "b": 109,
+                                "g": 230,
+                                "r": 255,
+                                "textB": 0,
+                                "textG": 0,
+                                "textR": 0
+                              },
+                              "comment": "Arrow Trap",
+                              "comment2": ""
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarObjet"
+                                  },
+                                  "parameters": [
+                                    "ArrowTrap",
+                                    "TrapIndex",
+                                    "=",
+                                    "Variable(Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].arrowTrapRef[Variable(i)])"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "DebuggerTools::ConsoleLog"
+                                  },
+                                  "parameters": [
+                                    "\"Arrow Trap Trigger\"",
+                                    "",
+                                    ""
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": [
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "SetObjectVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "TrapDetectionLines",
+                                        "Lines[ArrowTrap.Variable(LineIndex)].Enable",
+                                        "False"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "SetAnimationName"
+                                      },
+                                      "parameters": [
+                                        "ArrowTrap",
+                                        "\"Used\""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                }
+                              ]
+                            }
+                          ]
                         },
                         {
                           "disabled": false,
                           "folded": false,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
-                          "actions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ModVarScene"
+                              },
+                              "parameters": [
+                                "i",
+                                "+",
+                                "1"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
                           "events": []
                         }
                       ]

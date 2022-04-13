@@ -2195,7 +2195,7 @@
                       "parameters": [
                         "Map[Variable(x)][Variable(y)].trap",
                         "=",
-                        "Variable(TrapIndex)"
+                        "1"
                       ],
                       "subInstructions": []
                     },
@@ -2306,6 +2306,40 @@
                   "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "Map[Variable(x)][Variable(y)].arrowTraps",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "Map[Variable(x)][Variable(y)].arrowTraps",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
                     {
@@ -2340,9 +2374,21 @@
                         "value": "ModVarScene"
                       },
                       "parameters": [
-                        "Map[Variable(x)][Variable(y)].arrowTrapRef",
+                        "Map[Variable(x)][Variable(y)].arrowTrapRef[Variable(Map[Variable(x)][Variable(y)].arrowTraps)]",
                         "=",
                         "Variable(TrapIndex)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "Map[Variable(x)][Variable(y)].arrowTraps",
+                        "+",
+                        "1"
                       ],
                       "subInstructions": []
                     },
@@ -2452,6 +2498,30 @@
                             "1"
                           ],
                           "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "xi",
+                            "=",
+                            "ArrowTrap.Variable(PointDirection.x) * Variable(i)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "yi",
+                            "=",
+                            "ArrowTrap.Variable(PointDirection.y) * Variable(i)"
+                          ],
+                          "subInstructions": []
                         }
                       ],
                       "events": []
@@ -2486,6 +2556,18 @@
                             "i",
                             "<=",
                             "ArrowTrap.Variable(DetectionRange)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "Map[Variable(x) + Variable(xi)][Variable(y) + Variable(yi)].type",
+                            "=",
+                            "1"
                           ],
                           "subInstructions": []
                         }
@@ -2529,6 +2611,73 @@
                               "disabled": false,
                               "folded": false,
                               "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "Map[Variable(x) + Variable(xi)][Variable(y) + Variable(yi)].arrowTraps",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "Map[Variable(x) + Variable(xi)][Variable(y) + Variable(yi)].arrowTraps",
+                                    "=",
+                                    "0"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "Map[Variable(x) + Variable(xi)][Variable(y) + Variable(yi)].arrowTrapRef[Variable(Map[Variable(x) + Variable(xi)][Variable(y) + Variable(yi)].arrowTraps)]",
+                                    "=",
+                                    "ArrowTrap.Variable(TrapIndex)"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "Map[Variable(x) + Variable(xi)][Variable(y) + Variable(yi)].arrowTraps",
+                                    "+",
+                                    "1"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
+                            },
+                            {
+                              "disabled": true,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [],
                               "actions": [
                                 {
@@ -2570,6 +2719,444 @@
                           "events": []
                         }
                       ]
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "Map[Variable(x) + Variable(xi)][Variable(y) + Variable(yi)].type",
+                            "!=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "i",
+                            "-",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "i",
+                            "-",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "xi",
+                            "=",
+                            "ArrowTrap.Variable(PointDirection.x) * Variable(i)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "yi",
+                            "=",
+                            "ArrowTrap.Variable(PointDirection.y) * Variable(i)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "LineIndex",
+                            "+",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "ArrowTrap",
+                            "LineIndex",
+                            "=",
+                            "Variable(LineIndex)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].Thickness",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].Enable",
+                            "True"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "ArrowTrap",
+                            "PointDirection.x",
+                            "<",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].x1",
+                            "=",
+                            "Variable(x) * Variable(tileSize)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].y1",
+                            "=",
+                            "Variable(y) * Variable(tileSize) + Variable(tileSize) / 2"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].x2",
+                            "=",
+                            "(Variable(x) + Variable(xi)) * Variable(tileSize)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].y2",
+                            "=",
+                            "(Variable(y) + Variable(yi)) * Variable(tileSize) + Variable(tileSize) / 2"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "ArrowTrap",
+                            "PointDirection.x",
+                            ">",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].x1",
+                            "=",
+                            "(Variable(x) + 1) * Variable(tileSize)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].y1",
+                            "=",
+                            "Variable(y) * Variable(tileSize) + Variable(tileSize) / 2"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].x2",
+                            "=",
+                            "(Variable(x) + 1 + Variable(xi)) * Variable(tileSize)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].y2",
+                            "=",
+                            "(Variable(y) + Variable(yi)) * Variable(tileSize) + Variable(tileSize) / 2"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "ArrowTrap",
+                            "PointDirection.y",
+                            ">",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].x1",
+                            "=",
+                            "Variable(x) * Variable(tileSize) + Variable(tileSize) / 2"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].y1",
+                            "=",
+                            "(Variable(y) + 1) * Variable(tileSize)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].x2",
+                            "=",
+                            "(Variable(x) + Variable(xi)) * Variable(tileSize) + Variable(tileSize) / 2"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].y2",
+                            "=",
+                            "(Variable(y) + 1 + Variable(yi)) * Variable(tileSize)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "ArrowTrap",
+                            "PointDirection.y",
+                            "<",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].x1",
+                            "=",
+                            "Variable(x) * Variable(tileSize) + Variable(tileSize) / 2"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].y1",
+                            "=",
+                            "Variable(y) * Variable(tileSize)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].x2",
+                            "=",
+                            "(Variable(x) + Variable(xi)) * Variable(tileSize) + Variable(tileSize) / 2"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "TrapDetectionLines",
+                            "Lines[Variable(LineIndex)].y2",
+                            "=",
+                            "(Variable(y) + Variable(yi)) * Variable(tileSize)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
                     }
                   ]
                 }
@@ -2872,6 +3459,18 @@
                       "parameters": [
                         "TrapInteracted",
                         "True"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "TrapDetectionLines",
+                        "Lines[ArrowTrap.Variable(LineIndex)].Enable",
+                        "False"
                       ],
                       "subInstructions": []
                     }

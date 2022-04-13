@@ -6,6 +6,15 @@
     {
       "disabled": false,
       "folded": false,
+      "type": "BuiltinCommonInstructions::Link",
+      "include": {
+        "includeConfig": 0
+      },
+      "target": "Post Turn Event"
+    },
+    {
+      "disabled": false,
+      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [],
@@ -684,31 +693,7 @@
     {
       "disabled": false,
       "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Enemy Finish Movement",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [],
-      "events": []
-    },
-    {
-      "disabled": true,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::ForEach",
-      "object": "Enemies",
       "conditions": [],
       "actions": [],
       "events": [
@@ -716,20 +701,43 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "conditions": [],
+          "actions": [
             {
               "type": {
                 "inverted": false,
-                "value": "Tween::Exists"
+                "value": "ModVarScene"
               },
               "parameters": [
-                "Enemies",
-                "Tween",
-                "\"Move\""
+                "i",
+                "=",
+                "1"
               ],
               "subInstructions": []
             }
           ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "infiniteLoopWarning": true,
+          "type": "BuiltinCommonInstructions::While",
+          "whileConditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "i",
+                "<=",
+                "Variable(LineIndex)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "conditions": [],
           "actions": [],
           "events": [
             {
@@ -740,12 +748,12 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Tween::HasFinished"
+                    "value": "ObjectVariableAsBoolean"
                   },
                   "parameters": [
-                    "Enemies",
-                    "Tween",
-                    "\"Move\""
+                    "TrapDetectionLines",
+                    "Lines[Variable(i)].Enable",
+                    "True"
                   ],
                   "subInstructions": []
                 }
@@ -754,290 +762,41 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Tween::RemoveTween"
+                    "value": "PrimitiveDrawing::LineV2"
                   },
                   "parameters": [
-                    "Enemies",
-                    "Tween",
-                    "\"Move\""
+                    "TrapDetectionLines",
+                    "TrapDetectionLines.Variable(Lines[Variable(i)].x1)",
+                    "TrapDetectionLines.Variable(Lines[Variable(i)].y1)",
+                    "TrapDetectionLines.Variable(Lines[Variable(i)].x2)",
+                    "TrapDetectionLines.Variable(Lines[Variable(i)].y2)",
+                    "TrapDetectionLines.Variable(Lines[Variable(i)].Thickness)"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": [
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
                 {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].trap",
-                        "=",
-                        "1"
-                      ],
-                      "subInstructions": []
-                    }
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "i",
+                    "+",
+                    "1"
                   ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarObjet"
-                          },
-                          "parameters": [
-                            "Enemies",
-                            "Health",
-                            "-",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "Create"
-                          },
-                          "parameters": [
-                            "",
-                            "HitAttack",
-                            "Enemies.X()",
-                            "Enemies.Y()",
-                            ""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarObjet"
-                          },
-                          "parameters": [
-                            "Enemies",
-                            "Health",
-                            "<=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [],
-                      "events": [
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "LinkedObjects::PickObjectsLinkedTo"
-                              },
-                              "parameters": [
-                                "",
-                                "Pathfinder",
-                                "Enemies",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Delete"
-                              },
-                              "parameters": [
-                                "Pathfinder",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "LinkedObjects::PickObjectsLinkedTo"
-                              },
-                              "parameters": [
-                                "",
-                                "MoveDirectionMarker",
-                                "Enemies",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Delete"
-                              },
-                              "parameters": [
-                                "MoveDirectionMarker",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "LinkedObjects::PickObjectsLinkedTo"
-                              },
-                              "parameters": [
-                                "",
-                                "AttackDirectionMarker",
-                                "Enemies",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Delete"
-                              },
-                              "parameters": [
-                                "AttackDirectionMarker",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "LinkedObjects::PickObjectsLinkedTo"
-                              },
-                              "parameters": [
-                                "",
-                                "AttackingMarker",
-                                "Enemies",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Delete"
-                              },
-                              "parameters": [
-                                "AttackingMarker",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "LinkedObjects::PickObjectsLinkedTo"
-                              },
-                              "parameters": [
-                                "",
-                                "OccupiedTile",
-                                "Enemies",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Delete"
-                              },
-                              "parameters": [
-                                "OccupiedTile",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Position::DeleteCharacterAtPosition"
-                              },
-                              "parameters": [
-                                "",
-                                "Enemies",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        }
-                      ]
-                    }
-                  ]
+                  "subInstructions": []
                 }
-              ]
+              ],
+              "events": []
             }
           ]
         }

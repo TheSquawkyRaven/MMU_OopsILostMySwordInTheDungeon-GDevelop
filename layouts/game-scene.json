@@ -614,6 +614,11 @@
       "name": "TrapIndex",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "LineIndex",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -828,6 +833,22 @@
       "width": 0,
       "x": 46,
       "y": 867,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "Traps",
+      "locked": false,
+      "name": "TrapDetectionLines",
+      "persistentUuid": "197e4b65-c209-45c2-8f06-c2afb232ee86",
+      "width": 0,
+      "x": 0,
+      "y": -32,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -3566,7 +3587,12 @@
         {
           "name": "DetectionRange",
           "type": "number",
-          "value": 4
+          "value": 3
+        },
+        {
+          "name": "LineIndex",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -4693,6 +4719,71 @@
         "g": 209,
         "r": 192
       }
+    },
+    {
+      "name": "TrapDetectionLines",
+      "tags": "",
+      "type": "PrimitiveDrawing::Drawer",
+      "variables": [
+        {
+          "name": "Lines",
+          "type": "array",
+          "children": [
+            {
+              "type": "structure",
+              "children": [
+                {
+                  "name": "Enable",
+                  "type": "boolean",
+                  "value": false
+                },
+                {
+                  "name": "Thickness",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "x1",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "x2",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "y1",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "y2",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "fillOpacity": 255,
+      "outlineSize": 1,
+      "outlineOpacity": 255,
+      "fillColor": {
+        "b": 0,
+        "g": 0,
+        "r": 255
+      },
+      "outlineColor": {
+        "b": 0,
+        "g": 0,
+        "r": 255
+      },
+      "absoluteCoordinates": true,
+      "clearBetweenFrames": true
     }
   ],
   "events": [

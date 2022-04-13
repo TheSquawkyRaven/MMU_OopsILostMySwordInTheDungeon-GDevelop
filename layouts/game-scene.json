@@ -3593,6 +3593,11 @@
           "name": "LineIndex",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "Fired",
+          "type": "boolean",
+          "value": false
         }
       ],
       "effects": [],
@@ -4784,6 +4789,99 @@
       },
       "absoluteCoordinates": true,
       "clearBetweenFrames": true
+    },
+    {
+      "name": "Projectile",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "Direction",
+          "type": "structure",
+          "children": [
+            {
+              "name": "x",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "TurnOrder",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Speed",
+          "type": "number",
+          "value": 2
+        },
+        {
+          "name": "Pos",
+          "type": "structure",
+          "children": [
+            {
+              "name": "x",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "Stopped",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\Traps\\Arrow.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [

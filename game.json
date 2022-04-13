@@ -1011,6 +1011,15 @@
         "name": "Assets\\HUD\\Traps\\ArrowTrap.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Traps/Arrow.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Traps\\Arrow.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1087,6 +1096,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalEvents/game-manager"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalEvents/tick-projectiles"
     }
   ],
   "eventsFunctionsExtensions": [

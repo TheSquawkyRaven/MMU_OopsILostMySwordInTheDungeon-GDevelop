@@ -82,20 +82,7 @@
                       "subInstructions": []
                     }
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "DebuggerTools::ConsoleLog"
-                      },
-                      "parameters": [
-                        "\"Trap Found\"",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
+                  "actions": [],
                   "events": [
                     {
                       "disabled": false,
@@ -361,22 +348,21 @@
                                     "Variable(Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].arrowTrapRef[Variable(i)])"
                                   ],
                                   "subInstructions": []
-                                }
-                              ],
-                              "actions": [
+                                },
                                 {
                                   "type": {
                                     "inverted": false,
-                                    "value": "DebuggerTools::ConsoleLog"
+                                    "value": "ObjectVariableAsBoolean"
                                   },
                                   "parameters": [
-                                    "\"Arrow Trap Trigger\"",
-                                    "",
-                                    ""
+                                    "ArrowTrap",
+                                    "Fired",
+                                    "False"
                                   ],
                                   "subInstructions": []
                                 }
                               ],
+                              "actions": [],
                               "events": [
                                 {
                                   "disabled": false,
@@ -413,6 +399,164 @@
                                       "parameters": [
                                         "ArrowTrap",
                                         "\"Used\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "SetObjectVariableAsBoolean"
+                                      },
+                                      "parameters": [
+                                        "ArrowTrap",
+                                        "Fired",
+                                        "True"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "Create"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Projectile",
+                                        "ArrowTrap.X()",
+                                        "ArrowTrap.Y()",
+                                        "\"Characters\""
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "SetAngle"
+                                      },
+                                      "parameters": [
+                                        "Projectile",
+                                        "=",
+                                        "ArrowTrap.Angle()"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ChangePlan"
+                                      },
+                                      "parameters": [
+                                        "Projectile",
+                                        "=",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarObjet"
+                                      },
+                                      "parameters": [
+                                        "Projectile",
+                                        "Direction.x",
+                                        "=",
+                                        "ArrowTrap.Variable(PointDirection.x)"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarObjet"
+                                      },
+                                      "parameters": [
+                                        "Projectile",
+                                        "Direction.y",
+                                        "=",
+                                        "ArrowTrap.Variable(PointDirection.y)"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarObjet"
+                                      },
+                                      "parameters": [
+                                        "Projectile",
+                                        "Pos.x",
+                                        "=",
+                                        "Projectile.X() / Variable(tileSize)"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarObjet"
+                                      },
+                                      "parameters": [
+                                        "Projectile",
+                                        "Pos.y",
+                                        "=",
+                                        "Projectile.Y() / Variable(tileSize)"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarObjet"
+                                      },
+                                      "parameters": [
+                                        "Projectile",
+                                        "TurnOrder",
+                                        "=",
+                                        "Variable(TurnGiver)"
+                                      ],
+                                      "subInstructions": []
+                                    },
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "ModVarScene"
+                                      },
+                                      "parameters": [
+                                        "TurnGiver",
+                                        "+",
+                                        "1"
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "Position::TickProjectile"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Projectile",
+                                        "Tween",
+                                        ""
                                       ],
                                       "subInstructions": []
                                     }

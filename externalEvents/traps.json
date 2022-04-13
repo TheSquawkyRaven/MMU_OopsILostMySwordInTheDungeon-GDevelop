@@ -2043,6 +2043,39 @@
           },
           "parameters": [],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "CanMove",
+            "True"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "DoMove",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "TurnSystemWaiting",
+            "False"
+          ],
+          "subInstructions": []
         }
       ],
       "actions": [],
@@ -2529,21 +2562,6 @@
                     {
                       "disabled": false,
                       "folded": false,
-                      "type": "BuiltinCommonInstructions::Comment",
-                      "color": {
-                        "b": 169,
-                        "g": 23,
-                        "r": 243,
-                        "textB": 0,
-                        "textG": 0,
-                        "textR": 0
-                      },
-                      "comment": "",
-                      "comment2": ""
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
                       "infiniteLoopWarning": true,
                       "type": "BuiltinCommonInstructions::While",
                       "whileConditions": [
@@ -2668,27 +2686,6 @@
                                     "Map[Variable(x) + Variable(xi)][Variable(y) + Variable(yi)].arrowTraps",
                                     "+",
                                     "1"
-                                  ],
-                                  "subInstructions": []
-                                }
-                              ],
-                              "events": []
-                            },
-                            {
-                              "disabled": true,
-                              "folded": false,
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "inverted": false,
-                                    "value": "ModVarScene"
-                                  },
-                                  "parameters": [
-                                    "Map[Variable(x) + Variable(xi)][Variable(y) + Variable(yi)].arrowTrapRef",
-                                    "=",
-                                    "ArrowTrap.Variable(TrapIndex)"
                                   ],
                                   "subInstructions": []
                                 }
@@ -3233,6 +3230,39 @@
             "value": "BuiltinCommonInstructions::Once"
           },
           "parameters": [],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "CanMove",
+            "True"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "DoMove",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "TurnSystemWaiting",
+            "False"
+          ],
           "subInstructions": []
         }
       ],

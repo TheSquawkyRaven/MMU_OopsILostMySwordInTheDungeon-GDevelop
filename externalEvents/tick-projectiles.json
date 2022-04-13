@@ -74,6 +74,7 @@
                 "",
                 "Projectile",
                 "Tween",
+                "Variable(TurnOrder)",
                 ""
               ],
               "subInstructions": []

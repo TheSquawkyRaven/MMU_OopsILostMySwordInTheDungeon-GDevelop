@@ -1267,13 +1267,27 @@
       "group": "",
       "name": "TickProjectile",
       "private": false,
-      "sentence": "Projectile: _PARAM1_ _PARAM2_",
+      "sentence": "Projectile: _PARAM1_ _PARAM2_, TurnOrder: _PARAM3_",
       "events": [
         {
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Projectile",
+                "TurnOrder",
+                "=",
+                "GetArgumentAsNumber(\"TurnOrder\")"
+              ],
+              "subInstructions": []
+            }
+          ],
           "actions": [],
           "events": [
             {
@@ -1730,6 +1744,16 @@
           "optional": false,
           "supplementaryInformation": "Tween::TweenBehavior",
           "type": "behavior"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "TurnOrder",
+          "longDescription": "",
+          "name": "TurnOrder",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
         }
       ],
       "objectGroups": []

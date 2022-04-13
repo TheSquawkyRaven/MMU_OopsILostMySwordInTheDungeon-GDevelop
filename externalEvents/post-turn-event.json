@@ -266,7 +266,7 @@
                         "value": "ModVarScene"
                       },
                       "parameters": [
-                        "i",
+                        "j",
                         "=",
                         "0"
                       ],
@@ -286,7 +286,7 @@
                             "value": "VarScene"
                           },
                           "parameters": [
-                            "i",
+                            "j",
                             "<",
                             "Variable(Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].arrowTraps)"
                           ],
@@ -307,7 +307,7 @@
                                 "value": "VarScene"
                               },
                               "parameters": [
-                                "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].arrowTrapRef[Variable(i)]",
+                                "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].arrowTrapRef[Variable(j)]",
                                 "!=",
                                 "0"
                               ],
@@ -345,7 +345,7 @@
                                     "ArrowTrap",
                                     "TrapIndex",
                                     "=",
-                                    "Variable(Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].arrowTrapRef[Variable(i)])"
+                                    "Variable(Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].arrowTrapRef[Variable(j)])"
                                   ],
                                   "subInstructions": []
                                 },
@@ -556,6 +556,7 @@
                                         "",
                                         "Projectile",
                                         "Tween",
+                                        "Variable(TurnGiver) - 1",
                                         ""
                                       ],
                                       "subInstructions": []
@@ -579,7 +580,7 @@
                                 "value": "ModVarScene"
                               },
                               "parameters": [
-                                "i",
+                                "j",
                                 "+",
                                 "1"
                               ],

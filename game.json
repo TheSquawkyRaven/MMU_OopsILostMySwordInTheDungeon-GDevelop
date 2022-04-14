@@ -1020,6 +1020,33 @@
         "name": "Assets\\Traps\\Arrow.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_hole_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_hole_1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Wall/wall_hole_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Wall\\wall_hole_2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tiles/Floor/floor_ladder.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tiles\\Floor\\floor_ladder.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

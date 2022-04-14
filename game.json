@@ -13,7 +13,7 @@
     "packageName": "com.example.gamename",
     "pixelsRounding": false,
     "projectUuid": "392a4640-cffe-4935-afbb-81c1473f6de9",
-    "scaleMode": "linear",
+    "scaleMode": "nearest",
     "sizeOnStartupMode": "",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
@@ -1047,6 +1047,15 @@
         "name": "Assets\\Tiles\\Floor\\floor_ladder.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tutorial/WASD.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tutorial\\WASD.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1191,6 +1200,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalLayouts/level-0"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/main-menu"
     }
   ],
   "externalSourceFiles": []

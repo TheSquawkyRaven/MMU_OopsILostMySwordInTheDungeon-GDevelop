@@ -21,7 +21,7 @@
     "gridColor": 1447962,
     "gridAlpha": 1,
     "snap": true,
-    "zoomFactor": 0.5200000000000002,
+    "zoomFactor": 0.42000000000000015,
     "windowMask": false
   },
   "objectsGroups": [
@@ -5074,7 +5074,7 @@
       "actions": [],
       "events": [
         {
-          "disabled": true,
+          "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -5284,7 +5284,7 @@
           "events": []
         },
         {
-          "disabled": false,
+          "disabled": true,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -5392,7 +5392,7 @@
       "target": "Markers"
     },
     {
-      "disabled": false,
+      "disabled": true,
       "folded": false,
       "type": "BuiltinCommonInstructions::Link",
       "include": {

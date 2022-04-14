@@ -1056,6 +1056,33 @@
         "name": "Assets\\Tutorial\\WASD.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tutorial/Exit.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tutorial\\Exit.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tutorial/Traps.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tutorial\\Traps.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tutorial/Skip.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tutorial\\Skip.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

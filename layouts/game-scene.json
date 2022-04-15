@@ -1,16 +1,16 @@
 {
-  "b": 0,
+  "b": 22,
   "disableInputWhenNotFocused": true,
   "mangledName": "Game_32Scene",
   "name": "Game Scene",
   "oglFOV": 90,
   "oglZFar": 500,
   "oglZNear": 1,
-  "r": 0,
+  "r": 27,
   "standardSortMethod": true,
   "stopSoundsOnStartup": true,
   "title": "",
-  "v": 0,
+  "v": 22,
   "uiSettings": {
     "grid": true,
     "gridType": "rectangular",
@@ -21,7 +21,7 @@
     "gridColor": 1447962,
     "gridAlpha": 1,
     "snap": true,
-    "zoomFactor": 0.47000000000000003,
+    "zoomFactor": 0.18999999999999995,
     "windowMask": false
   },
   "objectsGroups": [
@@ -603,6 +603,11 @@
       "name": "LevelLoaded",
       "type": "boolean",
       "value": false
+    },
+    {
+      "name": "PlayerDeadTimeCount",
+      "type": "number",
+      "value": 0
     }
   ],
   "instances": [
@@ -615,8 +620,8 @@
       "name": "SkipButton",
       "persistentUuid": "c5e9c83b-b3ae-48b7-b913-7f6ccebb634c",
       "width": 150,
-      "x": 757,
-      "y": 820,
+      "x": 720,
+      "y": 819,
       "zOrder": 0,
       "numberProperties": [],
       "stringProperties": [],
@@ -713,7 +718,7 @@
       "name": "SpacebarHUD",
       "persistentUuid": "9672f6c5-8881-4bdf-af20-8b0db29082ba",
       "width": 0,
-      "x": 690,
+      "x": 653,
       "y": 867,
       "zOrder": 0,
       "numberProperties": [],
@@ -834,6 +839,54 @@
       "x": 0,
       "y": -32,
       "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 240,
+      "layer": "HUD",
+      "locked": false,
+      "name": "DeathText",
+      "persistentUuid": "9e43bbda-2334-439f-9cd8-35c811b47df6",
+      "width": 788,
+      "x": 316,
+      "y": 320,
+      "zOrder": 10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 352,
+      "layer": "HUD",
+      "locked": false,
+      "name": "DeathBackground",
+      "persistentUuid": "8269952b-df15-47da-bea5-d2affbbc04cb",
+      "width": 1440,
+      "x": 0,
+      "y": 256,
+      "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 928,
+      "layer": "HUD",
+      "locked": false,
+      "name": "FadeBackground",
+      "persistentUuid": "481969f6-57dc-4320-8d0b-57d2a722dc82",
+      "width": 1472,
+      "x": 1456,
+      "y": -16,
+      "zOrder": 8,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -2441,6 +2494,11 @@
           "name": "Health",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "IsPlayer",
+          "type": "boolean",
+          "value": true
         }
       ],
       "effects": [],
@@ -4827,12 +4885,12 @@
         {
           "name": "BearTraps",
           "type": "number",
-          "value": 2
+          "value": 0
         },
         {
           "name": "ArrowTraps",
           "type": "string",
-          "value": "4"
+          "value": "0"
         }
       ],
       "effects": [],
@@ -5340,6 +5398,121 @@
           ]
         }
       ]
+    },
+    {
+      "bold": true,
+      "italic": false,
+      "name": "DeathText",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "string": "YOU DIED",
+      "font": "Assets\\Font\\LameFontSlim.ttf",
+      "characterSize": 264,
+      "color": {
+        "b": 17,
+        "g": 17,
+        "r": 158
+      }
+    },
+    {
+      "name": "DeathBackground",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Death\\DeathBackground.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "FadeBackground",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Death\\FadeBackground.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
@@ -5774,6 +5947,19 @@
                 "True"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "ArrowTraps",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -5831,6 +6017,19 @@
                 "True"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "ArrowTraps",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -5886,6 +6085,19 @@
               "parameters": [
                 "LevelLoaded",
                 "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "ArrowTraps",
+                "=",
+                "1"
               ],
               "subInstructions": []
             }

@@ -1338,8 +1338,8 @@
           },
           "parameters": [
             "",
-            "Player.X()",
-            "Player.Y()",
+            "Player.X() + 8",
+            "Player.Y() + 8",
             ""
           ],
           "subInstructions": []

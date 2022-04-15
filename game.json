@@ -1083,6 +1083,31 @@
         "name": "Assets\\Tutorial\\Skip.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Death/DeathBackground.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Death\\DeathBackground.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Font/LameFontSlim.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Assets\\Font\\LameFontSlim.ttf",
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Death/FadeBackground.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Death\\FadeBackground.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

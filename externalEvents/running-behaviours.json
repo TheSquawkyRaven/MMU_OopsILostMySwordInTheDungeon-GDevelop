@@ -717,20 +717,7 @@
           "folded": false,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Projectile",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "Projectile",
-                "Stopped",
-                "False"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "conditions": [],
           "actions": [],
           "events": [
             {

@@ -1224,19 +1224,11 @@
   "externalLayouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/level-2"
+      "referenceTo": "/externalLayouts/level-manyprojectiles"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalLayouts/level-fakeprojectiletrap"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/level-projectile3"
-    },
-    {
-      "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/level-projectile2"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
@@ -1260,11 +1252,11 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/level-1"
+      "referenceTo": "/externalLayouts/level-beararrow222"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/level-beararrow22"
+      "referenceTo": "/externalLayouts/level-2bear1arrow"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

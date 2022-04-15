@@ -3313,9 +3313,9 @@
       "effects": [],
       "behaviors": [
         {
-          "extraBorder": -1,
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior",
+          "extraBorder": -1,
           "acceleration": 400,
           "allowDiagonals": false,
           "angleOffset": 0,
@@ -5591,7 +5591,7 @@
       ],
       "events": [
         {
-          "disabled": true,
+          "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
@@ -5617,7 +5617,7 @@
               "parameters": [
                 "Level",
                 "=",
-                "0"
+                "7"
               ],
               "subInstructions": []
             }
@@ -6252,7 +6252,7 @@
               "parameters": [
                 "Level",
                 "=",
-                "3"
+                "6"
               ],
               "subInstructions": []
             },
@@ -6276,9 +6276,35 @@
               },
               "parameters": [
                 "",
-                "\"Level-FakeProjectileTrap\"",
+                "\"Level-2Bear1Arrow\"",
                 "0",
                 "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "BearTraps",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "ArrowTraps",
+                "=",
+                "1"
               ],
               "subInstructions": []
             },
@@ -6292,9 +6318,36 @@
                 "True"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "LevelName",
+                "=",
+                "\"I'll Put A Trap Here. Wait...\""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Arrows Everywhere",
+          "comment2": ""
         },
         {
           "disabled": false,
@@ -6309,7 +6362,7 @@
               "parameters": [
                 "Level",
                 "=",
-                "4"
+                "7"
               ],
               "subInstructions": []
             },
@@ -6333,7 +6386,7 @@
               },
               "parameters": [
                 "",
-                "\"Level-Projectile3\"",
+                "\"Level-ManyProjectiles\"",
                 "0",
                 "0"
               ],
@@ -6357,66 +6410,9 @@
               },
               "parameters": [
                 "HUDTraps",
-                "ArrowTraps",
+                "BearTraps",
                 "=",
-                "1"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarGlobal"
-              },
-              "parameters": [
-                "Level",
-                "=",
-                "5"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SceneVariableAsBoolean"
-              },
-              "parameters": [
-                "LevelLoaded",
-                "False"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
-              },
-              "parameters": [
-                "",
-                "\"Level-Projectile2\"",
-                "0",
                 "0"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SetSceneVariableAsBoolean"
-              },
-              "parameters": [
-                "LevelLoaded",
-                "True"
               ],
               "subInstructions": []
             },
@@ -6429,12 +6425,54 @@
                 "HUDTraps",
                 "ArrowTraps",
                 "=",
-                "1"
+                "6"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "LevelName",
+                "=",
+                "\"Too Many Arrows?\""
               ],
               "subInstructions": []
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Bears Everywhere",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "???",
+          "comment2": ""
         },
         {
           "disabled": false,
@@ -6487,6 +6525,32 @@
               "parameters": [
                 "LevelLoaded",
                 "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "BearTraps",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "ArrowTraps",
+                "=",
+                "1"
               ],
               "subInstructions": []
             }

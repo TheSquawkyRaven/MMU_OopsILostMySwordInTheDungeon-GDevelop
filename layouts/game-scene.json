@@ -4901,12 +4901,12 @@
         {
           "name": "BearTraps",
           "type": "number",
-          "value": 1
+          "value": 4
         },
         {
           "name": "ArrowTraps",
           "type": "string",
-          "value": "1"
+          "value": "4"
         }
       ],
       "effects": [],
@@ -5617,7 +5617,7 @@
               "parameters": [
                 "Level",
                 "=",
-                "7"
+                "0"
               ],
               "subInstructions": []
             }
@@ -5746,7 +5746,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Baby Stage",
+          "comment": "Baby Stages",
           "comment2": ""
         },
         {
@@ -6242,6 +6242,21 @@
         {
           "disabled": false,
           "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Bears Everywhere",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6253,6 +6268,116 @@
                 "Level",
                 "=",
                 "6"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "LevelLoaded",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+              },
+              "parameters": [
+                "",
+                "\"Level-BearTrap2\"",
+                "0",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "LevelLoaded",
+                "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "BearTraps",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "ArrowTraps",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "LevelName",
+                "=",
+                "\"1 Trap, 2 Monsters\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Stage 2",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "Level",
+                "=",
+                "7"
               ],
               "subInstructions": []
             },
@@ -6346,6 +6471,226 @@
             "textG": 0,
             "textR": 0
           },
+          "comment": "Run",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "Level",
+                "=",
+                "8"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "LevelLoaded",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+              },
+              "parameters": [
+                "",
+                "\"Level-Big\"",
+                "0",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "BearTraps",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "ArrowTraps",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "LevelLoaded",
+                "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "LevelName",
+                "=",
+                "\"Leg Day\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Double Bear Trap. No Trap Challenge",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "Level",
+                "=",
+                "9"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "LevelLoaded",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
+              },
+              "parameters": [
+                "",
+                "\"Level-BearTrap3\"",
+                "0",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "BearTraps",
+                "=",
+                "2"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "HUDTraps",
+                "ArrowTraps",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "LevelLoaded",
+                "True"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "LevelName",
+                "=",
+                "\"Finish This Without Using Any Trap If You Want A Challenge\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
           "comment": "Arrows Everywhere",
           "comment2": ""
         },
@@ -6362,7 +6707,7 @@
               "parameters": [
                 "Level",
                 "=",
-                "7"
+                "10"
               ],
               "subInstructions": []
             },
@@ -6437,7 +6782,7 @@
               "parameters": [
                 "LevelName",
                 "=",
-                "\"Too Many Arrows?\""
+                "\"6 Is Not My Lucky Number\""
               ],
               "subInstructions": []
             }
@@ -6456,22 +6801,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Bears Everywhere",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "???",
+          "comment": "90 no scope",
           "comment2": ""
         },
         {
@@ -6487,7 +6817,7 @@
               "parameters": [
                 "Level",
                 "=",
-                "8"
+                "11"
               ],
               "subInstructions": []
             },
@@ -6537,7 +6867,7 @@
                 "HUDTraps",
                 "BearTraps",
                 "=",
-                "1"
+                "0"
               ],
               "subInstructions": []
             },
@@ -6550,7 +6880,19 @@
                 "HUDTraps",
                 "ArrowTraps",
                 "=",
-                "1"
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "LevelName",
+                "=",
+                "\"Out 'n' Out\""
               ],
               "subInstructions": []
             }
@@ -6585,7 +6927,7 @@
               "parameters": [
                 "Level",
                 "=",
-                "9"
+                "12"
               ],
               "subInstructions": []
             },
@@ -6649,6 +6991,18 @@
                 "ArrowTraps",
                 "=",
                 "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "LevelName",
+                "=",
+                "\"In And Around The Face\""
               ],
               "subInstructions": []
             }

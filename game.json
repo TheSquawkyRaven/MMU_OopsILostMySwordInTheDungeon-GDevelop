@@ -1108,6 +1108,15 @@
         "name": "Assets\\HUD\\Death\\FadeBackground.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/Death Music.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\Death Music.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

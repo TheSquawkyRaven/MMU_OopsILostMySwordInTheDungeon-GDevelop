@@ -234,6 +234,55 @@
                                 }
                               ],
                               "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "MettreXY"
+                                  },
+                                  "parameters": [
+                                    "Enemies",
+                                    "=",
+                                    "Traps.X()",
+                                    "=",
+                                    "Traps.Y()"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Enemies",
+                                    "Pos.x",
+                                    "=",
+                                    "Enemies.X() / Variable(tileSize)"
+                                  ],
+                                  "subInstructions": []
+                                },
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "ModVarObjet"
+                                  },
+                                  "parameters": [
+                                    "Enemies",
+                                    "Pos.y",
+                                    "=",
+                                    "Enemies.Y() / Variable(tileSize)"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
                             }
                           ]
                         }

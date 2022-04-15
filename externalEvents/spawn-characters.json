@@ -301,18 +301,6 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "DebuggerTools::ConsoleLog"
-                      },
-                      "parameters": [
-                        "\"Duplicate Enemy Spawn Found! Skipping\"",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
                         "value": "SetSceneVariableAsBoolean"
                       },
                       "parameters": [
@@ -524,18 +512,6 @@
                         "",
                         "OccupiedTile",
                         "Skeleton"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "DebuggerTools::ConsoleLog"
-                      },
-                      "parameters": [
-                        "\"Spawned One Skeleton\"",
-                        "",
-                        ""
                       ],
                       "subInstructions": []
                     }

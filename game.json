@@ -1132,7 +1132,7 @@
     {
       "name": "Level",
       "type": "number",
-      "value": 0
+      "value": -1
     }
   ],
   "layouts": [
@@ -1240,11 +1240,15 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/level-projectile"
+      "referenceTo": "/externalLayouts/level-projectiletut"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/level-run"
+      "referenceTo": "/externalLayouts/level-runstraight"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/level-runloop"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
@@ -1252,7 +1256,7 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/level-beartrap"
+      "referenceTo": "/externalLayouts/level-beartraptut"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
@@ -1260,7 +1264,15 @@
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
-      "referenceTo": "/externalLayouts/level-0"
+      "referenceTo": "/externalLayouts/level-beararrow22"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/level-beararrow"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/level-templerun"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

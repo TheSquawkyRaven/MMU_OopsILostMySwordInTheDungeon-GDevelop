@@ -6370,7 +6370,7 @@
           "type": "Tween::TweenBehavior"
         }
       ],
-      "string": "Press Space To Return To Main Menu",
+      "string": "Press Space To Return Home",
       "font": "Assets\\Font\\LameFont.ttf",
       "characterSize": 24,
       "color": {
@@ -6446,7 +6446,7 @@
               "parameters": [
                 "Level",
                 "=",
-                "13"
+                "0"
               ],
               "subInstructions": []
             }

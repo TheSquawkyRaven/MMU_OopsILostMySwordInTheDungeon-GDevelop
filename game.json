@@ -1324,6 +1324,15 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/bgm.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\bgm.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

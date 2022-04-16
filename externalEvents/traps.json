@@ -4010,6 +4010,18 @@
         {
           "type": {
             "inverted": false,
+            "value": "VarGlobal"
+          },
+          "parameters": [
+            "Level",
+            "!=",
+            "13"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
           "parameters": [],
@@ -4342,6 +4354,18 @@
         {
           "type": {
             "inverted": false,
+            "value": "VarGlobal"
+          },
+          "parameters": [
+            "Level",
+            "!=",
+            "13"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
           "parameters": [],
@@ -4430,6 +4454,78 @@
           "events": []
         }
       ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarGlobal"
+          },
+          "parameters": [
+            "Level",
+            "=",
+            "13"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "TurnHUD"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "Buttons"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "TrapHUDBackground"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "HUDTraps"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "TrapTexts"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
     }
   ]
 }

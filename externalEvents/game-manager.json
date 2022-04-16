@@ -22,6 +22,18 @@
         {
           "type": {
             "inverted": false,
+            "value": "VarGlobal"
+          },
+          "parameters": [
+            "Level",
+            "!=",
+            "13"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
           "parameters": [],

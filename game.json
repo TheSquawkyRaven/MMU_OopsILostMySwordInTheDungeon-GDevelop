@@ -1252,6 +1252,60 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Items/Chest/chest_full_open_anim_f0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Items\\Chest\\chest_full_open_anim_f0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Items/Chest/chest_full_open_anim_f1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Items\\Chest\\chest_full_open_anim_f1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Items/Chest/chest_full_open_anim_f2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Items\\Chest\\chest_full_open_anim_f2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tutorial/Press F.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tutorial\\Press F.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tutorial/Press F_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tutorial\\Press F_2.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Items/Weapons/weapon_knight_sword.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Items\\Weapons\\weapon_knight_sword.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1392,6 +1446,10 @@
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,
       "referenceTo": "/externalLayouts/level-beartrap3"
+    },
+    {
+      "__REFERENCE_TO_SPLIT_OBJECT": true,
+      "referenceTo": "/externalLayouts/ending"
     },
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

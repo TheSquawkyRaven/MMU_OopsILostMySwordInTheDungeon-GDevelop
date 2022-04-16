@@ -760,7 +760,7 @@
                                 "",
                                 "Assets\\Audio\\enemyfootstep.mp3",
                                 "",
-                                "100",
+                                "75",
                                 "RandomFloatInRange(0.9, 1.1)"
                               ],
                               "subInstructions": []

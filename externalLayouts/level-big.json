@@ -27,8 +27,8 @@
       "name": "MarkerBottomRight",
       "persistentUuid": "0f321ebe-b88d-4dc5-bd9d-7c1717fbd3a1",
       "width": 0,
-      "x": 1008,
-      "y": 672,
+      "x": 1152,
+      "y": 816,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -1485,7 +1485,7 @@
     "gridColor": 1447962,
     "gridAlpha": 1,
     "snap": true,
-    "zoomFactor": 1.7600000000000042,
+    "zoomFactor": 0.6200000000000035,
     "windowMask": false
   }
 }

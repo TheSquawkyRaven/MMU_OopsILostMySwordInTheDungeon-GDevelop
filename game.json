@@ -1306,6 +1306,24 @@
         "name": "Assets\\Items\\Weapons\\weapon_knight_sword.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/ending.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\ending.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/Ding.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\Ding.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

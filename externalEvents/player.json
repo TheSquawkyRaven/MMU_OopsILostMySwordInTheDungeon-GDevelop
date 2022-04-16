@@ -1827,6 +1827,20 @@
             "no"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "PlaySound"
+          },
+          "parameters": [
+            "",
+            "Assets\\Audio\\Ding.mp3",
+            "",
+            "100",
+            "1"
+          ],
+          "subInstructions": []
         }
       ],
       "events": [
@@ -2462,6 +2476,21 @@
             "0.5"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "PlayMusicCanal"
+          },
+          "parameters": [
+            "",
+            "Assets\\Audio\\ending.mp3",
+            "99",
+            "",
+            "100",
+            "1"
+          ],
+          "subInstructions": []
         }
       ],
       "events": []
@@ -2648,7 +2677,7 @@
             "Tween",
             "\"End\"",
             "370",
-            "\"easeInOutCubic\"",
+            "\"easeOutCubic\"",
             "4000",
             ""
           ],
@@ -2702,7 +2731,7 @@
           "parameters": [
             "FinishTime",
             ">",
-            "118"
+            "119"
           ],
           "subInstructions": []
         },

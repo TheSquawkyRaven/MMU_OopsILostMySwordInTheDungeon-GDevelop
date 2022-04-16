@@ -1847,8 +1847,8 @@
               },
               "parameters": [
                 "Map[Wall_Mid.Variable(x) + 1][Wall_Mid.Variable(y) - 1].type",
-                "=",
-                "0"
+                "!=",
+                "1"
               ],
               "subInstructions": []
             }

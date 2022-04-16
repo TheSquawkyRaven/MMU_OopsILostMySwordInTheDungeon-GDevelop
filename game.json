@@ -1117,6 +1117,42 @@
         "preloadAsMusic": false,
         "preloadAsSound": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tutorial/Try.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tutorial\\Try.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/Tutorial/ArrowTraps.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\Tutorial\\ArrowTraps.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/TBS/PlayerTurn.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\TBS\\PlayerTurn.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/TBS/EnemyTurn.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\TBS\\EnemyTurn.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

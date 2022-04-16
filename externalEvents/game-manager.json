@@ -526,6 +526,27 @@
         }
       ],
       "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "TimeElapsed",
+            "+",
+            "TimeDelta()"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
     }
   ]
 }

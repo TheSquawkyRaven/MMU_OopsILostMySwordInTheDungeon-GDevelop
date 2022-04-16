@@ -385,6 +385,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "CamHUD",
+      "locked": false,
+      "name": "TutArrow",
+      "persistentUuid": "2edadef0-de82-42b3-bff0-a76004d9963f",
+      "width": 0,
+      "x": 368,
+      "y": 336,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {
@@ -397,7 +413,7 @@
     "gridColor": 1447962,
     "gridAlpha": 0.8,
     "snap": true,
-    "zoomFactor": 2.040000000000001,
+    "zoomFactor": 2.200000000000001,
     "windowMask": false
   }
 }

@@ -1812,7 +1812,7 @@
                 "",
                 "1",
                 "=",
-                "1 - Variable(TimeElapsed)"
+                "(2 - Variable(TimeElapsed)) * 25"
               ],
               "subInstructions": []
             }

@@ -100,26 +100,6 @@
             }
           ],
           "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "StopSoundCanal"
-              },
-              "parameters": [
-                "",
-                "99"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
         }
       ]
     },
@@ -1790,7 +1770,7 @@
           "parameters": [
             "TimeElapsed",
             "<",
-            "1"
+            "3"
           ],
           "subInstructions": []
         }
@@ -1812,69 +1792,18 @@
                 "",
                 "1",
                 "=",
-                "(2 - Variable(TimeElapsed)) * 25"
+                "(3 - Variable(TimeElapsed)) / 3 * 50"
               ],
               "subInstructions": []
-            }
-          ],
-          "events": []
-        }
-      ]
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "VarGlobal"
-          },
-          "parameters": [
-            "Level",
-            "=",
-            "13"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "VarScene"
-          },
-          "parameters": [
-            "TimeElapsed",
-            ">",
-            "1"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "BuiltinCommonInstructions::Once"
-          },
-          "parameters": [],
-          "subInstructions": []
-        }
-      ],
-      "actions": [],
-      "events": [
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
+            },
             {
               "type": {
                 "inverted": false,
-                "value": "StopMusicCanal"
+                "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
-                "",
-                "1"
+                "Silenced",
+                "True"
               ],
               "subInstructions": []
             }

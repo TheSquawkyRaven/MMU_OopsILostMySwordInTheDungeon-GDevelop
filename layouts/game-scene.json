@@ -641,6 +641,11 @@
       "name": "FinishTime",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "Silenced",
+      "type": "boolean",
+      "value": false
     }
   ],
   "instances": [

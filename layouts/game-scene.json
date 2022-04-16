@@ -8,7 +8,7 @@
   "oglZNear": 1,
   "r": 27,
   "standardSortMethod": true,
-  "stopSoundsOnStartup": true,
+  "stopSoundsOnStartup": false,
   "title": "",
   "v": 22,
   "uiSettings": {
@@ -21,7 +21,7 @@
     "gridColor": 1447962,
     "gridAlpha": 1,
     "snap": true,
-    "zoomFactor": 0.7300000000000002,
+    "zoomFactor": 0.4900000000000002,
     "windowMask": false
   },
   "objectsGroups": [

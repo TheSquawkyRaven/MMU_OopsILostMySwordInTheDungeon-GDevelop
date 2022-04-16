@@ -283,6 +283,29 @@
                                 }
                               ],
                               "events": []
+                            },
+                            {
+                              "disabled": false,
+                              "folded": false,
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "inverted": false,
+                                    "value": "PlaySound"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Assets\\Audio\\beartrapactivating.mp3",
+                                    "",
+                                    "100",
+                                    "RandomFloatInRange(0.8, 1.1)"
+                                  ],
+                                  "subInstructions": []
+                                }
+                              ],
+                              "events": []
                             }
                           ]
                         }
@@ -607,6 +630,29 @@
                                         "Tween",
                                         "Variable(TurnGiver) - 1",
                                         ""
+                                      ],
+                                      "subInstructions": []
+                                    }
+                                  ],
+                                  "events": []
+                                },
+                                {
+                                  "disabled": false,
+                                  "folded": false,
+                                  "type": "BuiltinCommonInstructions::Standard",
+                                  "conditions": [],
+                                  "actions": [
+                                    {
+                                      "type": {
+                                        "inverted": false,
+                                        "value": "PlaySound"
+                                      },
+                                      "parameters": [
+                                        "",
+                                        "Assets\\Audio\\arrowtrapfiring.mp3",
+                                        "",
+                                        "100",
+                                        "RandomFloatInRange(0.8, 1.1)"
                                       ],
                                       "subInstructions": []
                                     }

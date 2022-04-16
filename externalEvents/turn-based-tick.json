@@ -744,6 +744,29 @@
                             }
                           ],
                           "events": []
+                        },
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "PlaySound"
+                              },
+                              "parameters": [
+                                "",
+                                "Assets\\Audio\\enemyfootstep.mp3",
+                                "",
+                                "100",
+                                "RandomFloatInRange(0.9, 1.1)"
+                              ],
+                              "subInstructions": []
+                            }
+                          ],
+                          "events": []
                         }
                       ]
                     }
@@ -897,6 +920,29 @@
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\Audio\\enemymovementattack.mp3",
+                    "",
+                    "100",
+                    "RandomFloatInRange(0.8, 1.1)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ]
         }
@@ -977,6 +1023,29 @@
                 "MissAttack",
                 "=",
                 "Variable(angle)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Assets\\Audio\\enemyhitmiss.mp3",
+                "",
+                "100",
+                "RandomFloatInRange(0.8, 1.1)"
               ],
               "subInstructions": []
             }
@@ -1092,6 +1161,29 @@
                     "HitAttack",
                     "=",
                     "Variable(angle)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Assets\\Audio\\enemyhit.mp3",
+                    "",
+                    "100",
+                    "RandomFloatInRange(0.8, 1.1)"
                   ],
                   "subInstructions": []
                 }
@@ -1341,6 +1433,42 @@
               "parameters": [
                 "PlayerDead",
                 "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "Characters",
+                "IsPlayer",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Assets\\Audio\\skeletondeath.mp3",
+                "",
+                "100",
+                "RandomFloatInRange(0.9, 1.1)"
               ],
               "subInstructions": []
             }

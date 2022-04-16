@@ -1153,6 +1153,105 @@
         "name": "Assets\\HUD\\TBS\\EnemyTurn.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/playerfootstep.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\playerfootstep.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/layingbear.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\layingbear.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": false
+      },
+      {
+        "file": "Assets/Audio/deployingarrow.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\deployingarrow.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/beartrapactivating.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\beartrapactivating.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/arrowtrapfiring.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\arrowtrapfiring.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/enemyhit.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\enemyhit.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/enemyhitmiss.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\enemyhitmiss.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/enemymovementattack.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\enemymovementattack.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/skeletondeath.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\skeletondeath.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/enemyfootstep.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\enemyfootstep.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "Assets/Audio/laddersounds.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Assets\\Audio\\laddersounds.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

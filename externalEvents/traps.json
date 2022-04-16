@@ -2132,7 +2132,7 @@
     },
     {
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -2392,7 +2392,31 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": []
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "Assets\\Audio\\layingbear.mp3",
+                            "",
+                            "100",
+                            "RandomFloatInRange(0.9, 1.1)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 }
               ]
             },
@@ -3259,6 +3283,29 @@
                             "Lines[Variable(LineIndex)].y2",
                             "=",
                             "(Variable(y) + Variable(yi)) * Variable(tileSize)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "Assets\\Audio\\deployingarrow.mp3",
+                            "",
+                            "100",
+                            "RandomFloatInRange(0.9, 1.1)"
                           ],
                           "subInstructions": []
                         }

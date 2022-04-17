@@ -636,7 +636,7 @@
     },
     {
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [],
@@ -655,7 +655,7 @@
               "parameters": [
                 "angle",
                 "=",
-                "AngleBetweenPositions(ScreenWidth() / 2, ScreenHeight() / 2, MouseX(\"HUD\"), MouseY(\"HUD\")) + 180"
+                "AngleBetweenPositions(Player.X() + 8, Player.Y() + 8, MouseX(\"Characters\"), MouseY(\"Characters\")) + 180"
               ],
               "subInstructions": []
             }
@@ -3973,8 +3973,31 @@
       "disabled": false,
       "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [],
-      "actions": [],
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SceneVariableAsBoolean"
+          },
+          "parameters": [
+            "PlayerDead",
+            "True"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Cache"
+          },
+          "parameters": [
+            "TileHighlight"
+          ],
+          "subInstructions": []
+        }
+      ],
       "events": []
     },
     {

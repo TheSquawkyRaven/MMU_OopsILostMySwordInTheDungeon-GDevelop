@@ -1923,6 +1923,17 @@
             "1"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "StopMusicCanal"
+          },
+          "parameters": [
+            "",
+            "1"
+          ],
+          "subInstructions": []
         }
       ],
       "events": [
@@ -2077,6 +2088,17 @@
             "FinishTime",
             "+",
             "TimeDelta()"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "StopMusicCanal"
+          },
+          "parameters": [
+            "",
+            "1"
           ],
           "subInstructions": []
         }

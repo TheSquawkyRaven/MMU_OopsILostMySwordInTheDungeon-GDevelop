@@ -278,7 +278,7 @@
                 "Assets\\Audio\\bgm.mp3",
                 "1",
                 "yes",
-                "50",
+                "30",
                 "1"
               ],
               "subInstructions": []
@@ -301,7 +301,7 @@
                 "",
                 "1",
                 "=",
-                "50"
+                "30"
               ],
               "subInstructions": []
             }
@@ -404,7 +404,7 @@
                 "",
                 "1",
                 "=",
-                "(1 - Variable(PlayerDeadTimeCount)) * 50"
+                "(1 - Variable(PlayerDeadTimeCount)) * 30"
               ],
               "subInstructions": []
             }
@@ -587,7 +587,7 @@
                 "",
                 "Assets\\Audio\\Death Music.mp3",
                 "",
-                "50",
+                "30",
                 "1"
               ],
               "subInstructions": []

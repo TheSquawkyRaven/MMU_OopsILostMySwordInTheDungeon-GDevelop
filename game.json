@@ -1160,7 +1160,7 @@
         "metadata": "",
         "name": "Assets\\Audio\\playerfootstep.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "userAdded": true
       },
       {
@@ -1169,7 +1169,7 @@
         "metadata": "",
         "name": "Assets\\Audio\\layingbear.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "userAdded": false
       },
       {
@@ -1178,7 +1178,7 @@
         "metadata": "",
         "name": "Assets\\Audio\\deployingarrow.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "userAdded": true
       },
       {
@@ -1187,7 +1187,7 @@
         "metadata": "",
         "name": "Assets\\Audio\\beartrapactivating.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "userAdded": true
       },
       {
@@ -1196,7 +1196,7 @@
         "metadata": "",
         "name": "Assets\\Audio\\arrowtrapfiring.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "userAdded": true
       },
       {
@@ -1205,7 +1205,7 @@
         "metadata": "",
         "name": "Assets\\Audio\\enemyhit.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "userAdded": true
       },
       {
@@ -1214,7 +1214,7 @@
         "metadata": "",
         "name": "Assets\\Audio\\enemyhitmiss.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "userAdded": true
       },
       {
@@ -1223,7 +1223,7 @@
         "metadata": "",
         "name": "Assets\\Audio\\enemymovementattack.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "userAdded": true
       },
       {
@@ -1232,7 +1232,7 @@
         "metadata": "",
         "name": "Assets\\Audio\\skeletondeath.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "userAdded": true
       },
       {
@@ -1241,7 +1241,7 @@
         "metadata": "",
         "name": "Assets\\Audio\\enemyfootstep.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "userAdded": true
       },
       {
@@ -1250,7 +1250,7 @@
         "metadata": "",
         "name": "Assets\\Audio\\laddersounds.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "userAdded": true
       },
       {
@@ -1312,7 +1312,7 @@
         "kind": "audio",
         "metadata": "",
         "name": "Assets\\Audio\\ending.mp3",
-        "preloadAsMusic": false,
+        "preloadAsMusic": true,
         "preloadAsSound": false,
         "userAdded": true
       },
@@ -1322,7 +1322,7 @@
         "metadata": "",
         "name": "Assets\\Audio\\Ding.mp3",
         "preloadAsMusic": false,
-        "preloadAsSound": false,
+        "preloadAsSound": true,
         "userAdded": true
       },
       {
@@ -1330,7 +1330,7 @@
         "kind": "audio",
         "metadata": "",
         "name": "Assets\\Audio\\bgm.mp3",
-        "preloadAsMusic": false,
+        "preloadAsMusic": true,
         "preloadAsSound": false,
         "userAdded": true
       }

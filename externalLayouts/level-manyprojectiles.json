@@ -1553,6 +1553,22 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "Floor",
+      "locked": false,
+      "name": "Floor1",
+      "persistentUuid": "8034da76-b3f0-41ac-b225-36532727f10f",
+      "width": 0,
+      "x": 448,
+      "y": 336,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "editionSettings": {

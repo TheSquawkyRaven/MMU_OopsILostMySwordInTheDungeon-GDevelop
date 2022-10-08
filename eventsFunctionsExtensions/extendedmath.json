@@ -39,8 +39,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "function fibonacci(n) {\n    let initial = 0;\n    let final = 1;\n    let sum = 0;\n\n    let i = 0;\n    for(i = 2; i <= n; i++) {\n        sum = initial + final;\n\n        initial = final;\n        final = sum;\n    }\n    return n ? final : initial;\n}\n\nconst n = eventsFunctionContext.getArgument(\"n\");\n\neventsFunctionContext.returnValue = fibonacci(n);",
           "parameterObjects": "",
@@ -72,8 +70,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "const x1 = eventsFunctionContext.getArgument(\"x1\");\r\nconst y1 = eventsFunctionContext.getArgument(\"y1\");\r\nconst x2 = eventsFunctionContext.getArgument(\"x2\");\r\nconst y2 = eventsFunctionContext.getArgument(\"y2\");\r\n\r\neventsFunctionContext.returnValue = (y2 - y1) / (x2 - x1);",
           "parameterObjects": "",
@@ -135,8 +131,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "const n = eventsFunctionContext.getArgument(\"n\");\nconst min1 = eventsFunctionContext.getArgument(\"min1\");\nconst max1 = eventsFunctionContext.getArgument(\"max1\");\nconst min2 = eventsFunctionContext.getArgument(\"min2\");\nconst max2 = eventsFunctionContext.getArgument(\"max2\");\n\neventsFunctionContext.returnValue = (n - min1) * (max2 - min2) / (max1 - min1) + min2;",
           "parameterObjects": "",
@@ -208,8 +202,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "const a = eventsFunctionContext.getArgument(\"a\");\r\nconst b = eventsFunctionContext.getArgument(\"b\");\r\n\r\neventsFunctionContext.returnValue = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));",
           "parameterObjects": "",
@@ -251,8 +243,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "//uses Euclid's algorithm\nfunction gcf(a, b) {\n    while (a != b) {\n        if (a > b) {\n            a = a - b;\n        } else {\n            b = b - a;\n        }\n    }\n    return a;\n}\n\nconst a = eventsFunctionContext.getArgument(\"a\");\nconst b = eventsFunctionContext.getArgument(\"b\");\n\nif (Number.isInteger(a) === false || Number.isInteger(b) === false) {\n    eventsFunctionContext.returnValue = 0;\n} \nelse if (a === 0) {\n    eventsFunctionContext.returnValue = b;\n} \nelse if (b === 0) {\n    eventsFunctionContext.returnValue = a;\n} else {\n    eventsFunctionContext.returnValue = gcf(a, b);\n}",
           "parameterObjects": "",
@@ -294,8 +284,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "function gcf(a, b) {\r\n    while (a != b) {\r\n        if (a > b) {\r\n            a = a - b;\r\n        } else {\r\n            b = b - a;\r\n        }\r\n    }\r\n    return a;\r\n}\r\n\r\nfunction lcm(a, b) {\r\n    return Math.abs(a * b) / gcf(a, b);\r\n}\r\n\r\nconst a = eventsFunctionContext.getArgument(\"a\");\r\nconst b = eventsFunctionContext.getArgument(\"b\");\r\n\r\nif (Number.isInteger(a) === false || Number.isInteger(b) === false) {\r\n    eventsFunctionContext.returnValue = 0;\r\n} \r\nelse if (a === 0) {\r\n    eventsFunctionContext.returnValue = b;\r\n} \r\nelse if (b === 0) {\r\n    eventsFunctionContext.returnValue = a;\r\n} else {\r\n    eventsFunctionContext.returnValue = lcm(a, b);\r\n}",
           "parameterObjects": "",
@@ -337,8 +325,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "function factorial(n) {\r\n    let result = 1;\r\n\r\n    let i = 1;\r\n    for (i = 1; i <= n; i++) {\r\n        result *= i;\r\n    }\r\n\r\n    return result;\r\n}\r\n\r\nconst n = eventsFunctionContext.getArgument(\"n\");\r\n\r\neventsFunctionContext.returnValue = factorial(n);",
           "parameterObjects": "",
@@ -370,8 +356,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "const r = eventsFunctionContext.getArgument(\"r\");\nconst theta = eventsFunctionContext.getArgument(\"theta\");\n\neventsFunctionContext.returnValue = r * Math.cos(theta);",
           "parameterObjects": "",
@@ -413,8 +397,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "const r = eventsFunctionContext.getArgument(\"r\");\nconst theta = eventsFunctionContext.getArgument(\"theta\");\n\neventsFunctionContext.returnValue = r * Math.sin(theta);",
           "parameterObjects": "",
@@ -456,8 +438,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "const x = eventsFunctionContext.getArgument(\"x\");\nconst y = eventsFunctionContext.getArgument(\"y\");\n\neventsFunctionContext.returnValue = (2 * y + x) * 0.5;",
           "parameterObjects": "",
@@ -499,8 +479,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "const x = eventsFunctionContext.getArgument(\"x\");\nconst y = eventsFunctionContext.getArgument(\"y\");\n\neventsFunctionContext.returnValue = (2 * y - x) * 0.5;",
           "parameterObjects": "",
@@ -542,23 +520,18 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetReturnNumber"
               },
               "parameters": [
                 "1.618033988749894"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ],
       "parameters": [],
@@ -574,8 +547,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "eventsFunctionContext.returnValue = Math.PI;",
           "parameterObjects": "",
@@ -583,12 +554,9 @@
           "eventsSheetExpanded": false
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [],
-          "events": []
+          "actions": []
         }
       ],
       "parameters": [],
@@ -604,8 +572,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "eventsFunctionContext.returnValue = Math.PI / 2;",
           "parameterObjects": "",
@@ -626,8 +592,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "eventsFunctionContext.returnValue = Math.E;",
           "parameterObjects": "",
@@ -648,8 +612,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "eventsFunctionContext.returnValue = Math.LN2;",
           "parameterObjects": "",
@@ -670,8 +632,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "eventsFunctionContext.returnValue = Math.LN10;",
           "parameterObjects": "",
@@ -692,8 +652,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "eventsFunctionContext.returnValue = Math.LOG10E;",
           "parameterObjects": "",
@@ -714,8 +672,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "eventsFunctionContext.returnValue = Math.LOG10E;",
           "parameterObjects": "",
@@ -736,8 +692,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "eventsFunctionContext.returnValue = Math.SQRT2;",
           "parameterObjects": "",
@@ -758,8 +712,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "eventsFunctionContext.returnValue = Math.SQRT1_2;",
           "parameterObjects": "",
@@ -780,8 +732,6 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "eventsFunctionContext.returnValue = Math.PI / 4;",
           "parameterObjects": "",
@@ -802,16 +752,11 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [],
-          "events": []
+          "actions": []
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "const valueToBeRounded = eventsFunctionContext.getArgument(\"ValueToBeRounded\");\nconst numberOfDecimalPlaces = eventsFunctionContext.getArgument(\"NumberOfDecimalPlaces\");\neventsFunctionContext.returnValue = Number(valueToBeRounded.toFixed(numberOfDecimalPlaces));",
           "parameterObjects": "",
@@ -853,16 +798,11 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [],
-          "events": []
+          "actions": []
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
           "inlineCode": "const valueToBeRounded = eventsFunctionContext.getArgument(\"ValueToBeRounded\");\nconst numberOfDecimalPlaces = eventsFunctionContext.getArgument(\"NumberOfDecimalPlaces\");\neventsFunctionContext.returnValue = valueToBeRounded.toFixed(numberOfDecimalPlaces);",
           "parameterObjects": "",
@@ -904,36 +844,29 @@
       "sentence": "_PARAM1_ is even",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "Egal"
               },
               "parameters": [
                 "mod(GetArgumentAsNumber(\"Value\"),2)",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetReturnBoolean"
               },
               "parameters": [
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ],
       "parameters": [
@@ -951,5 +884,6 @@
       "objectGroups": []
     }
   ],
-  "eventsBasedBehaviors": []
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
 }

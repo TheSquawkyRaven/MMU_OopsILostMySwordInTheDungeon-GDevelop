@@ -4,52 +4,41 @@
   "name": "Game Manager",
   "events": [
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "KeyPressed"
           },
           "parameters": [
             "",
             "r"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "VarGlobal"
           },
           "parameters": [
             "Level",
             "!=",
             "13"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarObjetTxt"
               },
               "parameters": [
@@ -57,130 +46,104 @@
                 "Identifier",
                 "=",
                 "\"Restart\""
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ChangeAnimation"
               },
               "parameters": [
                 "Buttons",
                 "=",
                 "3"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetObjectVariableAsBoolean"
               },
               "parameters": [
                 "Buttons",
                 "HeldDownByKey",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "Scene"
                   },
                   "parameters": [
                     "",
                     "\"Game Scene\"",
                     "yes"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
-              ],
-              "events": []
+              ]
             }
           ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "DepartScene"
           },
           "parameters": [
             ""
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::Opacity"
               },
               "parameters": [
                 "DeathText",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "Opacity"
               },
               "parameters": [
                 "DeathBackground",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "MettreXY"
               },
               "parameters": [
@@ -189,24 +152,20 @@
                 "-16",
                 "=",
                 "-16"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "Opacity"
               },
               "parameters": [
                 "FadeBackground",
                 "=",
                 "255"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "Tween::AddObjectOpacityTween"
               },
               "parameters": [
@@ -217,15 +176,11 @@
                 "\"easeInQuad\"",
                 "750",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -239,8 +194,6 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -250,69 +203,100 @@
               },
               "parameters": [
                 "",
-                "1"
-              ],
-              "subInstructions": []
+                "7546"
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "!=",
                 "13"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "PlayMusicCanal"
               },
               "parameters": [
                 "",
                 "Assets\\Audio\\bgm.mp3",
-                "1",
+                "7546",
                 "yes",
-                "30",
+                "20",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "inverted": false,
-                "value": "ModVolumeMusicCanal"
-              },
-              "parameters": [
-                "",
-                "1",
-                "=",
-                "30"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "IsMuted",
+                    ""
+                  ]
+                }
               ],
-              "subInstructions": []
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "7546",
+                    "=",
+                    "20"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "IsMuted",
+                    "True"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVolumeMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "7546",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -326,202 +310,170 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "SceneVariableAsBoolean"
           },
           "parameters": [
             "PlayerDead",
             "True"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "ModVarScene"
           },
           "parameters": [
             "PlayerDeadTimeCount",
             "+",
             "TimeDelta()"
-          ],
-          "subInstructions": []
+          ]
         }
-      ],
-      "events": []
+      ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "SceneVariableAsBoolean"
           },
           "parameters": [
             "PlayerDead",
             "True"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "PlayerDeadTimeCount",
             "<",
             "1"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "value": "GlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "IsMuted",
+                ""
+              ]
+            }
+          ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVolumeMusicCanal"
               },
               "parameters": [
                 "",
-                "1",
+                "7546",
                 "=",
-                "(1 - Variable(PlayerDeadTimeCount)) * 30"
-              ],
-              "subInstructions": []
+                "(1 - Variable(PlayerDeadTimeCount)) * 20"
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "SceneVariableAsBoolean"
           },
           "parameters": [
             "PlayerDead",
             "True"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "PlayerDeadTimeCount",
             ">",
             "1"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "StopMusicCanal"
               },
               "parameters": [
                 "",
-                "1"
-              ],
-              "subInstructions": []
+                "7546"
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "SceneVariableAsBoolean"
           },
           "parameters": [
             "PlayerDead",
             "True"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "PlayerDeadTimeCount",
             ">",
             "0.75"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "Tween::AddObjectOpacityTween"
               },
               "parameters": [
@@ -532,12 +484,10 @@
                 "\"linear\"",
                 "3000",
                 ""
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "Tween::AddObjectOpacityTween"
               },
               "parameters": [
@@ -548,12 +498,10 @@
                 "\"linear\"",
                 "3000",
                 ""
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "Tween::AddObjectScaleTween"
               },
               "parameters": [
@@ -566,21 +514,17 @@
                 "6000",
                 "",
                 "yes"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "PlaySound"
               },
               "parameters": [
@@ -589,51 +533,40 @@
                 "",
                 "30",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "PlayerDeadTimeCount",
             ">",
             "2"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "Tween::AddObjectOpacityTween"
               },
               "parameters": [
@@ -644,44 +577,35 @@
                 "\"linear\"",
                 "2500",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "PlayerDeadTimeCount",
             ">",
             "3.75"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "Tween::AddObjectOpacityTween"
           },
           "parameters": [
@@ -692,74 +616,58 @@
             "\"linear\"",
             "3000",
             ""
-          ],
-          "subInstructions": []
+          ]
         }
-      ],
-      "events": []
+      ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "PlayerDeadTimeCount",
             ">",
             "6"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "Scene"
           },
           "parameters": [
             "",
             "\"Game Scene\"",
             "yes"
-          ],
-          "subInstructions": []
+          ]
         }
-      ],
-      "events": []
+      ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "ModVarScene"
           },
           "parameters": [
             "TimeElapsed",
             "+",
             "TimeDelta()"
-          ],
-          "subInstructions": []
+          ]
         }
-      ],
-      "events": []
+      ]
     }
   ]
 }

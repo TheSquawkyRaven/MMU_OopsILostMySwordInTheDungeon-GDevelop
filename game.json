@@ -15,6 +15,7 @@
     "projectUuid": "392a4640-cffe-4935-afbb-81c1473f6de9",
     "scaleMode": "nearest",
     "sizeOnStartupMode": "",
+    "templateSlug": "",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
     "name": "A Knight's Weapon",
@@ -22,7 +23,7 @@
     "author": "",
     "windowWidth": 1440,
     "windowHeight": 900,
-    "latestCompilationDirectory": "",
+    "latestCompilationDirectory": "D:\\MMU\\Game Design Fund\\Build",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -1116,6 +1117,7 @@
         "name": "Assets\\Audio\\Death Music.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1161,6 +1163,7 @@
         "name": "Assets\\Audio\\playerfootstep.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1170,6 +1173,7 @@
         "name": "Assets\\Audio\\layingbear.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": false
       },
       {
@@ -1179,6 +1183,7 @@
         "name": "Assets\\Audio\\deployingarrow.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1188,6 +1193,7 @@
         "name": "Assets\\Audio\\beartrapactivating.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1197,6 +1203,7 @@
         "name": "Assets\\Audio\\arrowtrapfiring.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1206,6 +1213,7 @@
         "name": "Assets\\Audio\\enemyhit.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1215,6 +1223,7 @@
         "name": "Assets\\Audio\\enemyhitmiss.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1224,6 +1233,7 @@
         "name": "Assets\\Audio\\enemymovementattack.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1233,6 +1243,7 @@
         "name": "Assets\\Audio\\skeletondeath.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1242,6 +1253,7 @@
         "name": "Assets\\Audio\\enemyfootstep.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1251,6 +1263,7 @@
         "name": "Assets\\Audio\\laddersounds.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1314,6 +1327,7 @@
         "name": "Assets\\Audio\\ending.mp3",
         "preloadAsMusic": true,
         "preloadAsSound": false,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1323,6 +1337,7 @@
         "name": "Assets\\Audio\\Ding.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
+        "preloadInCache": false,
         "userAdded": true
       },
       {
@@ -1332,6 +1347,43 @@
         "name": "Assets\\Audio\\bgm.mp3",
         "preloadAsMusic": true,
         "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_music_idle_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_music_idle_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_music_idle_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_music_idle_1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_music_hover_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_music_hover_0.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Assets/HUD/Button/button_music_press_0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Assets\\HUD\\Button\\button_music_press_0.png",
+        "smoothed": false,
         "userAdded": true
       }
     ],
@@ -1349,6 +1401,12 @@
       "name": "Level",
       "type": "number",
       "value": -1
+    },
+    {
+      "folded": true,
+      "name": "IsMuted",
+      "type": "boolean",
+      "value": false
     }
   ],
   "layouts": [

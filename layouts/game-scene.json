@@ -3,9 +3,6 @@
   "disableInputWhenNotFocused": true,
   "mangledName": "Game_32Scene",
   "name": "Game Scene",
-  "oglFOV": 90,
-  "oglZFar": 500,
-  "oglZNear": 1,
   "r": 27,
   "standardSortMethod": true,
   "stopSoundsOnStartup": false,
@@ -21,7 +18,7 @@
     "gridColor": 1447962,
     "gridAlpha": 1,
     "snap": true,
-    "zoomFactor": 0.4900000000000002,
+    "zoomFactor": 0.8149999999999982,
     "windowMask": false
   },
   "objectsGroups": [
@@ -152,6 +149,9 @@
         },
         {
           "name": "RestartButton"
+        },
+        {
+          "name": "MusicButton"
         }
       ]
     },
@@ -654,7 +654,6 @@
       "customSize": true,
       "height": 102,
       "layer": "HUD",
-      "locked": false,
       "name": "SkipButton",
       "persistentUuid": "c5e9c83b-b3ae-48b7-b913-7f6ccebb634c",
       "width": 150,
@@ -676,7 +675,6 @@
       "customSize": true,
       "height": 96,
       "layer": "HUD",
-      "locked": false,
       "name": "TrapHUDBackground",
       "persistentUuid": "998943a4-464d-456c-ac2d-e2aea5202573",
       "width": 96,
@@ -692,7 +690,6 @@
       "customSize": true,
       "height": 102,
       "layer": "HUD",
-      "locked": false,
       "name": "ScrollLeftButton",
       "persistentUuid": "6513695a-74c3-442e-912d-1e42ca359156",
       "width": 102,
@@ -714,7 +711,6 @@
       "customSize": true,
       "height": 102,
       "layer": "HUD",
-      "locked": false,
       "name": "ScrollRightButton",
       "persistentUuid": "573f58e2-dd1d-4d1b-a08b-0543055d91a1",
       "width": 102,
@@ -736,7 +732,6 @@
       "customSize": true,
       "height": 96,
       "layer": "HUD",
-      "locked": false,
       "name": "HUDTraps",
       "persistentUuid": "51dbebd8-2402-4faf-a7e2-91546ce53068",
       "width": 96,
@@ -752,7 +747,6 @@
       "customSize": false,
       "height": 0,
       "layer": "HUD",
-      "locked": false,
       "name": "SpacebarHUD",
       "persistentUuid": "9672f6c5-8881-4bdf-af20-8b0db29082ba",
       "width": 0,
@@ -768,7 +762,6 @@
       "customSize": false,
       "height": 0,
       "layer": "HUD",
-      "locked": false,
       "name": "QHUD",
       "persistentUuid": "8ceb668d-44c3-4a4a-8c19-54c2bcf6cd79",
       "width": 0,
@@ -784,7 +777,6 @@
       "customSize": false,
       "height": 0,
       "layer": "HUD",
-      "locked": false,
       "name": "EHUD",
       "persistentUuid": "0141122b-f6c3-4605-bd45-d87e6ab0d666",
       "width": 0,
@@ -800,7 +792,6 @@
       "customSize": true,
       "height": 32,
       "layer": "HUD",
-      "locked": false,
       "name": "TrapsCountHUD",
       "persistentUuid": "2e9447b8-7df8-4113-90e7-2a4f26899e5e",
       "width": 32,
@@ -816,7 +807,6 @@
       "customSize": false,
       "height": 0,
       "layer": "HUD",
-      "locked": false,
       "name": "FHUD",
       "persistentUuid": "6c048896-41f0-4a1f-b3c6-93011616943a",
       "width": 0,
@@ -832,7 +822,6 @@
       "customSize": true,
       "height": 102,
       "layer": "HUD",
-      "locked": false,
       "name": "RestartButton",
       "persistentUuid": "d1d1dcc4-b470-4d90-a559-842ce1935626",
       "width": 102,
@@ -854,7 +843,6 @@
       "customSize": false,
       "height": 0,
       "layer": "HUD",
-      "locked": false,
       "name": "RHUD",
       "persistentUuid": "1f874b4c-f9ac-4efa-835c-764e2622310a",
       "width": 0,
@@ -870,7 +858,6 @@
       "customSize": false,
       "height": 0,
       "layer": "Traps",
-      "locked": false,
       "name": "TrapDetectionLines",
       "persistentUuid": "197e4b65-c209-45c2-8f06-c2afb232ee86",
       "width": 0,
@@ -886,7 +873,6 @@
       "customSize": true,
       "height": 240,
       "layer": "HUD",
-      "locked": false,
       "name": "DeathText",
       "persistentUuid": "9e43bbda-2334-439f-9cd8-35c811b47df6",
       "width": 788,
@@ -902,7 +888,6 @@
       "customSize": true,
       "height": 352,
       "layer": "HUD",
-      "locked": false,
       "name": "DeathBackground",
       "persistentUuid": "8269952b-df15-47da-bea5-d2affbbc04cb",
       "width": 1440,
@@ -918,7 +903,6 @@
       "customSize": true,
       "height": 928,
       "layer": "HUD",
-      "locked": false,
       "name": "FadeBackground",
       "persistentUuid": "481969f6-57dc-4320-8d0b-57d2a722dc82",
       "width": 1472,
@@ -934,7 +918,6 @@
       "customSize": false,
       "height": 0,
       "layer": "HUD",
-      "locked": false,
       "name": "LevelName",
       "persistentUuid": "e9277eb0-41c7-4d00-8e16-0732b720a1a2",
       "width": 0,
@@ -950,7 +933,6 @@
       "customSize": true,
       "height": 128,
       "layer": "HUD",
-      "locked": false,
       "name": "TrapUIIndicator",
       "persistentUuid": "0036f5c3-9a39-4163-8c2d-8b5a9978f4f6",
       "width": 128,
@@ -972,7 +954,6 @@
       "customSize": true,
       "height": 128,
       "layer": "HUD",
-      "locked": false,
       "name": "TrapUIIndicator",
       "persistentUuid": "1d72f356-b624-4755-8dfb-02d5253e8b64",
       "width": 128,
@@ -993,7 +974,6 @@
       "customSize": false,
       "height": 0,
       "layer": "HUD",
-      "locked": false,
       "name": "TrapAmountUIIndicator",
       "persistentUuid": "10892ef4-304e-4bb0-b293-ea1a0c3b3916",
       "width": 0,
@@ -1015,7 +995,6 @@
       "customSize": false,
       "height": 0,
       "layer": "HUD",
-      "locked": false,
       "name": "TrapAmountUIIndicator",
       "persistentUuid": "06d38d8a-c84e-42eb-99bd-1368d1b4e2c6",
       "width": 0,
@@ -1031,7 +1010,6 @@
       "customSize": true,
       "height": 66,
       "layer": "HUD",
-      "locked": false,
       "name": "TurnHUD",
       "persistentUuid": "cda0325e-1be6-4922-ba3e-6bb881f4af02",
       "width": 324,
@@ -1046,10 +1024,32 @@
       ],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 102,
+      "layer": "HUD",
+      "name": "MusicButton",
+      "persistentUuid": "b65f45be-4b31-4472-9ad1-8687b31f4577",
+      "width": 102,
+      "x": 175,
+      "y": 820,
+      "zOrder": 0,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": "Music"
+        }
+      ]
     }
   ],
   "objects": [
     {
+      "assetStoreId": "",
       "name": "HardWall",
       "tags": "",
       "type": "Sprite",
@@ -1090,6 +1090,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "FloorExit",
       "tags": "",
       "type": "Sprite",
@@ -1160,6 +1161,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "bold": false,
       "italic": false,
       "name": "SeedText",
@@ -1180,6 +1182,7 @@
       }
     },
     {
+      "assetStoreId": "",
       "name": "FloorMarkRed",
       "tags": "",
       "type": "Sprite",
@@ -1220,6 +1223,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "FloorMarkGreen",
       "tags": "",
       "type": "Sprite",
@@ -1260,6 +1264,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "FloorMarkBlue",
       "tags": "",
       "type": "Sprite",
@@ -1300,6 +1305,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "MarkerTopLeft",
       "tags": "",
       "type": "Sprite",
@@ -1340,6 +1346,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "MarkerBottomRight",
       "tags": "",
       "type": "Sprite",
@@ -1380,6 +1387,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Side_Mid_Left",
       "tags": "",
       "type": "Sprite",
@@ -1427,6 +1435,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Side_Mid_Right",
       "tags": "",
       "type": "Sprite",
@@ -1474,6 +1483,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Top_Right",
       "tags": "",
       "type": "Sprite",
@@ -1514,6 +1524,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Top_Left",
       "tags": "",
       "type": "Sprite",
@@ -1554,6 +1565,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Top_Mid",
       "tags": "",
       "type": "Sprite",
@@ -1681,6 +1693,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Corner_R",
       "tags": "",
       "type": "Sprite",
@@ -1721,6 +1734,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Corner_L",
       "tags": "",
       "type": "Sprite",
@@ -1761,6 +1775,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Dot_R",
       "tags": "",
       "type": "Sprite",
@@ -1801,6 +1816,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Dot_L",
       "tags": "",
       "type": "Sprite",
@@ -1841,6 +1857,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Left",
       "tags": "",
       "type": "Sprite",
@@ -1888,6 +1905,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Right",
       "tags": "",
       "type": "Sprite",
@@ -1935,6 +1953,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Full",
       "tags": "",
       "type": "Sprite",
@@ -1982,6 +2001,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Mid",
       "tags": "",
       "type": "Sprite",
@@ -2087,6 +2107,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Side_Right",
       "tags": "",
       "type": "Sprite",
@@ -2127,6 +2148,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Wall_Side_Left",
       "tags": "",
       "type": "Sprite",
@@ -2167,6 +2189,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Floor1",
       "tags": "",
       "type": "Sprite",
@@ -2410,6 +2433,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "PlayerStart",
       "tags": "",
       "type": "Sprite",
@@ -2450,6 +2474,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "EnemySpawn",
       "tags": "",
       "type": "Sprite",
@@ -2490,6 +2515,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "TileHighlight",
       "tags": "",
       "type": "Sprite",
@@ -2620,6 +2646,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Player",
       "tags": "",
       "type": "Sprite",
@@ -3009,6 +3036,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Skeleton",
       "tags": "",
       "type": "Sprite",
@@ -3436,6 +3464,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Pathfinder",
       "tags": "",
       "type": "Sprite",
@@ -3530,6 +3559,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "DetectedMarker",
       "tags": "",
       "type": "Sprite",
@@ -3575,6 +3605,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "AttackingMarker",
       "tags": "",
       "type": "Sprite",
@@ -3620,6 +3651,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "OccupiedTile",
       "tags": "",
       "type": "Sprite",
@@ -3667,6 +3699,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "MoveDirectionMarker",
       "tags": "",
       "type": "Sprite",
@@ -3724,6 +3757,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "AttackDirectionMarker",
       "tags": "",
       "type": "Sprite",
@@ -3781,6 +3815,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "MissAttack",
       "tags": "",
       "type": "Sprite",
@@ -3878,6 +3913,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "HitAttack",
       "tags": "",
       "type": "Sprite",
@@ -3975,6 +4011,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "HitMove",
       "tags": "",
       "type": "Sprite",
@@ -4089,6 +4126,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "ArrowTrap",
       "tags": "",
       "type": "Sprite",
@@ -4200,6 +4238,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "BearTrap",
       "tags": "",
       "type": "Sprite",
@@ -4280,6 +4319,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Button",
       "tags": "",
       "type": "Sprite",
@@ -4423,6 +4463,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "RestartButton",
       "tags": "",
       "type": "Sprite",
@@ -4566,6 +4607,151 @@
       ]
     },
     {
+      "assetStoreId": "",
+      "name": "MusicButton",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "id",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "Identifier",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "HeldDownByKey",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Button\\button_music_idle_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Idle2",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Button\\button_music_idle_1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hover",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.07999999821186066,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Button\\button_music_hover_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Press",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Assets\\HUD\\Button\\button_music_press_0.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 17,
+                    "y": 17
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "assetStoreId": "",
       "name": "ScrollRightButton",
       "tags": "",
       "type": "Sprite",
@@ -4709,6 +4895,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "ScrollLeftButton",
       "tags": "",
       "type": "Sprite",
@@ -4852,6 +5039,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "SkipButton",
       "tags": "",
       "type": "Sprite",
@@ -4995,6 +5183,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "TrapHUDBackground",
       "tags": "",
       "type": "Sprite",
@@ -5052,6 +5241,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "HUDTraps",
       "tags": "",
       "type": "Sprite",
@@ -5142,6 +5332,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "bold": false,
       "italic": false,
       "name": "TrapsCountHUD",
@@ -5162,6 +5353,7 @@
       }
     },
     {
+      "assetStoreId": "",
       "bold": false,
       "italic": false,
       "name": "RHUD",
@@ -5182,6 +5374,7 @@
       }
     },
     {
+      "assetStoreId": "",
       "bold": false,
       "italic": false,
       "name": "FHUD",
@@ -5202,6 +5395,7 @@
       }
     },
     {
+      "assetStoreId": "",
       "bold": false,
       "italic": false,
       "name": "EHUD",
@@ -5222,6 +5416,7 @@
       }
     },
     {
+      "assetStoreId": "",
       "bold": false,
       "italic": false,
       "name": "QHUD",
@@ -5242,6 +5437,7 @@
       }
     },
     {
+      "assetStoreId": "",
       "bold": false,
       "italic": false,
       "name": "SpacebarHUD",
@@ -5262,6 +5458,7 @@
       }
     },
     {
+      "assetStoreId": "",
       "name": "TrapDetectionLines",
       "tags": "",
       "type": "PrimitiveDrawing::Drawer",
@@ -5327,6 +5524,7 @@
       "clearBetweenFrames": true
     },
     {
+      "assetStoreId": "",
       "name": "Projectile",
       "tags": "",
       "type": "Sprite",
@@ -5425,6 +5623,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Tut_WASD",
       "tags": "",
       "type": "Sprite",
@@ -5465,6 +5664,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Tut_Objective",
       "tags": "",
       "type": "Sprite",
@@ -5505,6 +5705,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Tut_Traps",
       "tags": "",
       "type": "Sprite",
@@ -5545,6 +5746,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Tut_Skip",
       "tags": "",
       "type": "Sprite",
@@ -5585,6 +5787,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "bold": true,
       "italic": false,
       "name": "DeathText",
@@ -5610,6 +5813,7 @@
       }
     },
     {
+      "assetStoreId": "",
       "name": "DeathBackground",
       "tags": "",
       "type": "Sprite",
@@ -5655,6 +5859,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "FadeBackground",
       "tags": "",
       "type": "Sprite",
@@ -5700,6 +5905,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "bold": false,
       "italic": false,
       "name": "LevelName",
@@ -5725,6 +5931,7 @@
       }
     },
     {
+      "assetStoreId": "",
       "name": "TrapUIIndicator",
       "tags": "",
       "type": "Sprite",
@@ -5835,6 +6042,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "bold": true,
       "italic": false,
       "name": "TrapAmountUIIndicator",
@@ -5896,6 +6104,7 @@
       }
     },
     {
+      "assetStoreId": "",
       "name": "TutTry",
       "tags": "",
       "type": "Sprite",
@@ -5936,6 +6145,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "TutArrow",
       "tags": "",
       "type": "Sprite",
@@ -5976,6 +6186,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "TurnHUD",
       "tags": "",
       "type": "Sprite",
@@ -6045,6 +6256,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Chest",
       "tags": "",
       "type": "Sprite",
@@ -6227,6 +6439,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "F",
       "tags": "",
       "type": "Sprite",
@@ -6290,6 +6503,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "name": "Sword",
       "tags": "",
       "type": "Sprite",
@@ -6335,6 +6549,7 @@
       ]
     },
     {
+      "assetStoreId": "",
       "bold": false,
       "italic": false,
       "name": "Credits",
@@ -6360,6 +6575,7 @@
       }
     },
     {
+      "assetStoreId": "",
       "bold": false,
       "italic": false,
       "name": "Return",
@@ -6387,80 +6603,63 @@
   ],
   "events": [
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "DepartScene"
           },
           "parameters": [
             ""
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "SetSceneVariableAsBoolean"
           },
           "parameters": [
             "LevelLoaded",
             ""
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "<",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -6474,38 +6673,31 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -6513,12 +6705,10 @@
                 "\"Main Menu\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -6526,12 +6716,10 @@
                 "BearTraps",
                 "=",
                 "8"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -6539,38 +6727,30 @@
                 "ArrowTraps",
                 "=",
                 "8"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"Main Menu\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -6584,38 +6764,31 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -6623,23 +6796,19 @@
                 "\"Level-RunStraight\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -6647,12 +6816,10 @@
                 "BearTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -6660,57 +6827,46 @@
                 "ArrowTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"Straight Up & Into The Dungeon\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "2"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -6718,23 +6874,19 @@
                 "\"Level-RunOrTrap\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -6742,12 +6894,10 @@
                 "BearTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -6755,57 +6905,46 @@
                 "ArrowTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"Out 'n' Out\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "3"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -6813,12 +6952,10 @@
                 "\"Level-BearTrapTut\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -6826,12 +6963,10 @@
                 "BearTraps",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -6839,68 +6974,55 @@
                 "ArrowTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"You Shall Not Pass!\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "4"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -6908,23 +7030,19 @@
                 "\"Level-RunLoop\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -6932,12 +7050,10 @@
                 "BearTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -6945,57 +7061,46 @@
                 "ArrowTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"The Squarest Roundabout\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "5"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -7003,23 +7108,19 @@
                 "\"Level-ProjectileTut\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7027,12 +7128,10 @@
                 "BearTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7040,27 +7139,21 @@
                 "ArrowTraps",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"Hey Monster! Bye Monster!\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7074,38 +7167,31 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "6"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -7113,12 +7199,10 @@
                 "\"Level-BearArrow\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7126,12 +7210,10 @@
                 "BearTraps",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7139,38 +7221,30 @@
                 "ArrowTraps",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"Lock n Loaded\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7184,38 +7258,31 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "7"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -7223,23 +7290,19 @@
                 "\"Level-BearTrap2\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7247,12 +7310,10 @@
                 "BearTraps",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7260,27 +7321,21 @@
                 "ArrowTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"1 Trap, 2 Monsters\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7294,38 +7349,31 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "8"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -7333,12 +7381,10 @@
                 "\"Level-Big\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7346,12 +7392,10 @@
                 "BearTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7359,38 +7403,30 @@
                 "ArrowTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"Leg Day\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7404,38 +7440,31 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "9"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -7443,12 +7472,10 @@
                 "\"Level-2Bear1Arrow\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7456,12 +7483,10 @@
                 "BearTraps",
                 "=",
                 "2"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7469,38 +7494,30 @@
                 "ArrowTraps",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"I'll Put A Trap Here. Wait...\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7514,38 +7531,31 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "10"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -7553,12 +7563,10 @@
                 "\"Level-BearTrap3\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7566,12 +7574,10 @@
                 "BearTraps",
                 "=",
                 "2"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7579,38 +7585,30 @@
                 "ArrowTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"Finish This Without Using Any Trap If You Want A Challenge\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7624,38 +7622,31 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "11"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -7663,23 +7654,19 @@
                 "\"Level-ManyProjectiles\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7687,12 +7674,10 @@
                 "BearTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7700,27 +7685,21 @@
                 "ArrowTraps",
                 "=",
                 "6"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"6 Is Not My Lucky Number\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7734,38 +7713,31 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "12"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -7773,23 +7745,19 @@
                 "\"Level-TempleRun\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7797,12 +7765,10 @@
                 "BearTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7810,27 +7776,21 @@
                 "ArrowTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"In And Around The Face\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7844,38 +7804,31 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "13"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinExternalLayouts::CreateObjectsFromExternalLayout"
               },
               "parameters": [
@@ -7883,23 +7836,19 @@
                 "\"Ending\"",
                 "0",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7907,12 +7856,10 @@
                 "BearTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -7920,46 +7867,36 @@
                 "ArrowTraps",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::String"
               },
               "parameters": [
                 "LevelName",
                 "=",
                 "\"A Knight's Weapon\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "LevelLoaded",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -7975,29 +7912,22 @@
           ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "MettreX"
               },
               "parameters": [
                 "LevelName",
                 "-",
                 "LevelName.Width() / 2"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
@@ -8005,8 +7935,6 @@
           "target": "MapFiller"
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
@@ -8016,8 +7944,6 @@
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Link",
       "include": {
         "includeConfig": 0
@@ -8025,8 +7951,6 @@
       "target": "Player"
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Link",
       "include": {
         "includeConfig": 0
@@ -8034,8 +7958,6 @@
       "target": "Running Behaviours"
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Link",
       "include": {
         "includeConfig": 0
@@ -8043,8 +7965,6 @@
       "target": "Markers"
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Link",
       "include": {
         "includeConfig": 0
@@ -8052,8 +7972,6 @@
       "target": "Buttons"
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Link",
       "include": {
         "includeConfig": 0
@@ -8061,8 +7979,6 @@
       "target": "Traps"
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Link",
       "include": {
         "includeConfig": 0

@@ -24,35 +24,28 @@
       "sentence": "",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarGlobal"
               },
               "parameters": [
                 "Seed",
                 "=",
                 "mod(GlobalVariable(Seed) * 9301 + 49297, 233280)"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetReturnNumber"
               },
               "parameters": [
                 "GetArgumentAsNumber(\"min\") + GlobalVariable(Seed) / 233280 * (GetArgumentAsNumber(\"max\") - GetArgumentAsNumber(\"min\"))"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ],
       "parameters": [
@@ -80,5 +73,6 @@
       "objectGroups": []
     }
   ],
-  "eventsBasedBehaviors": []
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
 }

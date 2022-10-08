@@ -24,14 +24,11 @@
       "sentence": "Zoom the camera by x_PARAM1_",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ZoomCamera"
               },
               "parameters": [
@@ -39,12 +36,10 @@
                 "GetArgumentAsNumber(\"zoom\")",
                 "\"\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ZoomCamera"
               },
               "parameters": [
@@ -52,12 +47,10 @@
                 "GetArgumentAsNumber(\"zoom\")",
                 "\"Floor\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ZoomCamera"
               },
               "parameters": [
@@ -65,12 +58,10 @@
                 "GetArgumentAsNumber(\"zoom\")",
                 "\"Wall\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ZoomCamera"
               },
               "parameters": [
@@ -78,12 +69,10 @@
                 "GetArgumentAsNumber(\"zoom\")",
                 "\"Wall Lines\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ZoomCamera"
               },
               "parameters": [
@@ -91,12 +80,10 @@
                 "GetArgumentAsNumber(\"zoom\")",
                 "\"Characters\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ZoomCamera"
               },
               "parameters": [
@@ -104,12 +91,10 @@
                 "GetArgumentAsNumber(\"zoom\")",
                 "\"Traps\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ZoomCamera"
               },
               "parameters": [
@@ -117,31 +102,24 @@
                 "GetArgumentAsNumber(\"zoom\")",
                 "\"CamHUD\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "Cam::EnforceBoundary"
               },
               "parameters": [
                 "",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ],
       "parameters": [
@@ -168,14 +146,11 @@
       "sentence": "Follow x:_PARAM1_, y:_PARAM2_",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraX"
               },
               "parameters": [
@@ -184,12 +159,10 @@
                 "GetArgumentAsNumber(\"x\")",
                 "\"\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraY"
               },
               "parameters": [
@@ -198,21 +171,16 @@
                 "GetArgumentAsNumber(\"y\")",
                 "\"\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraX"
               },
               "parameters": [
@@ -221,12 +189,10 @@
                 "GetArgumentAsNumber(\"x\")",
                 "\"Floor\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraY"
               },
               "parameters": [
@@ -235,21 +201,16 @@
                 "GetArgumentAsNumber(\"y\")",
                 "\"Floor\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraX"
               },
               "parameters": [
@@ -258,12 +219,10 @@
                 "GetArgumentAsNumber(\"x\")",
                 "\"Wall\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraY"
               },
               "parameters": [
@@ -272,21 +231,16 @@
                 "GetArgumentAsNumber(\"y\")",
                 "\"Wall\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraX"
               },
               "parameters": [
@@ -295,12 +249,10 @@
                 "GetArgumentAsNumber(\"x\")",
                 "\"Wall Lines\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraY"
               },
               "parameters": [
@@ -309,21 +261,16 @@
                 "GetArgumentAsNumber(\"y\")",
                 "\"Wall Lines\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraX"
               },
               "parameters": [
@@ -332,12 +279,10 @@
                 "GetArgumentAsNumber(\"x\")",
                 "\"Characters\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraY"
               },
               "parameters": [
@@ -346,21 +291,16 @@
                 "GetArgumentAsNumber(\"y\")",
                 "\"Characters\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraX"
               },
               "parameters": [
@@ -369,12 +309,10 @@
                 "GetArgumentAsNumber(\"x\")",
                 "\"Traps\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraY"
               },
               "parameters": [
@@ -383,21 +321,16 @@
                 "GetArgumentAsNumber(\"y\")",
                 "\"Traps\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraX"
               },
               "parameters": [
@@ -406,12 +339,10 @@
                 "GetArgumentAsNumber(\"x\")",
                 "\"CamHUD\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetCameraY"
               },
               "parameters": [
@@ -420,31 +351,24 @@
                 "GetArgumentAsNumber(\"y\")",
                 "\"CamHUD\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "Cam::EnforceBoundary"
               },
               "parameters": [
                 "",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ],
       "parameters": [
@@ -481,81 +405,65 @@
       "sentence": "Sets The Camera Boundary, left:_PARAM1_, top:_PARAM2_, right:_PARAM3_, bottom:_PARAM4_",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarGlobal"
               },
               "parameters": [
                 "Boundary.left",
                 "=",
                 "GetArgumentAsNumber(\"left\")"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarGlobal"
               },
               "parameters": [
                 "Boundary.right",
                 "=",
                 "GetArgumentAsNumber(\"right\")"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarGlobal"
               },
               "parameters": [
                 "Boundary.top",
                 "=",
                 "GetArgumentAsNumber(\"top\")"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarGlobal"
               },
               "parameters": [
                 "Boundary.bottom",
                 "=",
                 "GetArgumentAsNumber(\"bottom\")"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "Cam::EnforceBoundary"
               },
               "parameters": [
                 "",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ],
       "parameters": [
@@ -612,14 +520,11 @@
       "sentence": "Enforces Boundary of Camera",
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ClampCamera"
               },
               "parameters": [
@@ -630,12 +535,10 @@
                 "GlobalVariable(Boundary.bottom)",
                 "\"\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ClampCamera"
               },
               "parameters": [
@@ -646,12 +549,10 @@
                 "GlobalVariable(Boundary.bottom)",
                 "\"Floor\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ClampCamera"
               },
               "parameters": [
@@ -662,12 +563,10 @@
                 "GlobalVariable(Boundary.bottom)",
                 "\"Wall\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ClampCamera"
               },
               "parameters": [
@@ -678,12 +577,10 @@
                 "GlobalVariable(Boundary.bottom)",
                 "\"Wall Lines\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ClampCamera"
               },
               "parameters": [
@@ -694,12 +591,10 @@
                 "GlobalVariable(Boundary.bottom)",
                 "\"Characters\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ClampCamera"
               },
               "parameters": [
@@ -710,12 +605,10 @@
                 "GlobalVariable(Boundary.bottom)",
                 "\"Traps\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ClampCamera"
               },
               "parameters": [
@@ -726,16 +619,15 @@
                 "GlobalVariable(Boundary.bottom)",
                 "\"CamHUD\"",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ],
       "parameters": [],
       "objectGroups": []
     }
   ],
-  "eventsBasedBehaviors": []
+  "eventsBasedBehaviors": [],
+  "eventsBasedObjects": []
 }

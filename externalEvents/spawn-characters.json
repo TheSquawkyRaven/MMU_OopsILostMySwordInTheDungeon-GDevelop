@@ -4,40 +4,31 @@
   "name": "Spawn Characters",
   "events": [
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "DepartScene"
           },
           "parameters": [
             ""
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "Create"
               },
               "parameters": [
@@ -46,12 +37,10 @@
                 "PlayerStart.X()",
                 "PlayerStart.Y()",
                 "PlayerStart.Layer()"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -59,12 +48,10 @@
                 "Pos.x",
                 "=",
                 "Player.X() / Variable(tileSize)"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -72,24 +59,20 @@
                 "Pos.y",
                 "=",
                 "Player.Y() / Variable(tileSize)"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarScene"
               },
               "parameters": [
                 "Map[Player.Variable(Pos.x)][Player.Variable(Pos.y)].c",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "Create"
               },
               "parameters": [
@@ -98,336 +81,267 @@
                 "Player.X()",
                 "Player.Y()",
                 "\"Floor\""
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ChangePlan"
               },
               "parameters": [
                 "OccupiedTile",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "LinkedObjects::LinkObjects"
               },
               "parameters": [
                 "",
                 "OccupiedTile",
                 "Player"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "GlobalVariableAsBoolean"
                   },
                   "parameters": [
                     "Debug",
                     ""
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "Cache"
                   },
                   "parameters": [
                     "OccupiedTile"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
-              ],
-              "events": []
+              ]
             }
           ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "DebuggerTools::ConsoleLog"
               },
               "parameters": [
                 "\"There are \" + ToString(Count(EnemySpawn)) + \" Enemy Spawns\"",
                 "",
                 ""
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarScene"
               },
               "parameters": [
                 "i",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "EnemySpawn",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "ifelse",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarScene"
                   },
                   "parameters": [
                     "j",
                     "=",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
-              "disabled": false,
-              "folded": false,
               "infiniteLoopWarning": true,
               "type": "BuiltinCommonInstructions::While",
               "whileConditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "VarScene"
                   },
                   "parameters": [
                     "j",
                     "<",
                     "Variable(i)"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "SceneVariableAsBoolean"
                   },
                   "parameters": [
                     "ifelse",
                     "False"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "conditions": [],
               "actions": [],
               "events": [
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "VarScene"
                       },
                       "parameters": [
                         "EnemySpawnControl[Variable(j)].x",
                         "=",
                         "EnemySpawn.X()"
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "VarScene"
                       },
                       "parameters": [
                         "EnemySpawnControl[Variable(j)].y",
                         "=",
                         "EnemySpawn.Y()"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "SetSceneVariableAsBoolean"
                       },
                       "parameters": [
                         "ifelse",
                         "True"
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Delete"
                       },
                       "parameters": [
                         "EnemySpawn",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "ModVarScene"
                       },
                       "parameters": [
                         "j",
                         "+",
                         "1"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             },
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "SceneVariableAsBoolean"
                   },
                   "parameters": [
                     "ifelse",
                     "False"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [],
               "events": [
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "ModVarScene"
                       },
                       "parameters": [
                         "EnemySpawnControl[Variable(i)].x",
                         "=",
                         "EnemySpawn.X()"
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "ModVarScene"
                       },
                       "parameters": [
                         "EnemySpawnControl[Variable(i)].y",
                         "=",
                         "EnemySpawn.Y()"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "ModVarScene"
                       },
                       "parameters": [
                         "i",
                         "+",
                         "1"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Create"
                       },
                       "parameters": [
@@ -436,12 +350,10 @@
                         "EnemySpawn.X()",
                         "EnemySpawn.Y()",
                         "\"Characters\""
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "ModVarObjet"
                       },
                       "parameters": [
@@ -449,12 +361,10 @@
                         "Pos.x",
                         "=",
                         "EnemySpawn.X() / Variable(tileSize)"
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "ModVarObjet"
                       },
                       "parameters": [
@@ -462,24 +372,20 @@
                         "Pos.y",
                         "=",
                         "EnemySpawn.Y() / Variable(tileSize)"
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "ModVarScene"
                       },
                       "parameters": [
                         "Map[Skeleton.Variable(Pos.x)][Skeleton.Variable(Pos.y)].c",
                         "=",
                         "1"
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Create"
                       },
                       "parameters": [
@@ -488,44 +394,36 @@
                         "Skeleton.X()",
                         "Skeleton.Y()",
                         "\"Floor\""
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "ChangePlan"
                       },
                       "parameters": [
                         "OccupiedTile",
                         "=",
                         "1"
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "LinkedObjects::LinkObjects"
                       },
                       "parameters": [
                         "",
                         "OccupiedTile",
                         "Skeleton"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "events": [
                     {
-                      "disabled": false,
-                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "Create"
                           },
                           "parameters": [
@@ -534,55 +432,44 @@
                             "Skeleton.X()",
                             "Skeleton.Y()",
                             "\"Characters\""
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "ChangePlan"
                           },
                           "parameters": [
                             "MoveDirectionMarker",
                             "=",
                             "-1"
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "LinkedObjects::LinkObjects"
                           },
                           "parameters": [
                             "",
                             "MoveDirectionMarker",
                             "Skeleton"
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "Cache"
                           },
                           "parameters": [
                             "MoveDirectionMarker"
-                          ],
-                          "subInstructions": []
+                          ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
-                      "disabled": false,
-                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "Create"
                           },
                           "parameters": [
@@ -591,76 +478,61 @@
                             "Skeleton.X()",
                             "Skeleton.Y()",
                             "\"Characters\""
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "ChangePlan"
                           },
                           "parameters": [
                             "AttackDirectionMarker",
                             "=",
                             "1"
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "LinkedObjects::LinkObjects"
                           },
                           "parameters": [
                             "",
                             "AttackDirectionMarker",
                             "Skeleton"
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "Cache"
                           },
                           "parameters": [
                             "AttackDirectionMarker"
-                          ],
-                          "subInstructions": []
+                          ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
-                      "disabled": false,
-                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "GlobalVariableAsBoolean"
                           },
                           "parameters": [
                             "Debug",
                             ""
-                          ],
-                          "subInstructions": []
+                          ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "Cache"
                           },
                           "parameters": [
                             "OccupiedTile"
-                          ],
-                          "subInstructions": []
+                          ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 }
@@ -669,74 +541,58 @@
           ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarScene"
               },
               "parameters": [
                 "i",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Player",
           "conditions": [],
           "actions": [],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "VarScene"
                   },
                   "parameters": [
                     "i",
                     ">",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "Delete"
                   },
                   "parameters": [
                     "Player",
                     ""
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "events": [
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "LinkedObjects::PickObjectsLinkedTo"
                       },
                       "parameters": [
@@ -744,59 +600,48 @@
                         "OccupiedTile",
                         "Player",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Delete"
                       },
                       "parameters": [
                         "OccupiedTile",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "DebuggerTools::ConsoleLog"
                       },
                       "parameters": [
                         "\"Deleted Player Duplicate!!!\"",
                         "",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             },
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarScene"
                   },
                   "parameters": [
                     "i",
                     "+",
                     "1"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
-              ],
-              "events": []
+              ]
             }
           ]
         }

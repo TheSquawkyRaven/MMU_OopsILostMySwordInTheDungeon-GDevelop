@@ -4,73 +4,56 @@
   "name": "Markers",
   "events": [
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "DepartScene"
           },
           "parameters": [
             ""
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "MarkersMakeInvisible",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "Opacity"
               },
               "parameters": [
                 "MarkersMakeInvisible",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
-      "actions": [],
-      "events": []
+      "actions": []
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::ForEach",
       "object": "AnimationFinishDelete",
       "conditions": [],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "ModVarObjet"
           },
           "parameters": [
@@ -78,19 +61,15 @@
             "timeToDelete",
             "-",
             "TimeDelta()"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarObjet"
               },
               "parameters": [
@@ -98,24 +77,20 @@
                 "timeToDelete",
                 "<=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "Delete"
               },
               "parameters": [
                 "AnimationFinishDelete",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     }

@@ -4,108 +4,87 @@
   "name": "Player",
   "events": [
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "DepartScene"
           },
           "parameters": [
             ""
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "SetSceneVariableAsBoolean"
           },
           "parameters": [
             "CanMove",
             "True"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "13"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "Cache"
               },
               "parameters": [
                 "Sword"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ChangeScale"
               },
               "parameters": [
                 "Sword",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::Opacity"
               },
               "parameters": [
                 "Credits",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "TextObject::Opacity"
               },
               "parameters": [
                 "Return",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -119,467 +98,380 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "FinishTime",
             "=",
             "0"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "ModVarScene"
           },
           "parameters": [
             "Movement.x",
             "=",
             "0"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "ModVarScene"
           },
           "parameters": [
             "Movement.y",
             "=",
             "0"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "SetSceneVariableAsBoolean"
           },
           "parameters": [
             "DoMove",
             ""
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinCommonInstructions::Or"
               },
               "parameters": [],
               "subInstructions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "KeyPressed"
                   },
                   "parameters": [
                     "",
                     "w"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "KeyPressed"
                   },
                   "parameters": [
                     "",
                     "Up"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "DoMove",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarScene"
               },
               "parameters": [
                 "Movement.x",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarScene"
               },
               "parameters": [
                 "Movement.y",
                 "=",
                 "-1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "DoMove",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinCommonInstructions::Or"
               },
               "parameters": [],
               "subInstructions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "KeyPressed"
                   },
                   "parameters": [
                     "",
                     "s"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "KeyPressed"
                   },
                   "parameters": [
                     "",
                     "Down"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "DoMove",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarScene"
               },
               "parameters": [
                 "Movement.x",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarScene"
               },
               "parameters": [
                 "Movement.y",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "DoMove",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinCommonInstructions::Or"
               },
               "parameters": [],
               "subInstructions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "KeyPressed"
                   },
                   "parameters": [
                     "",
                     "a"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "KeyPressed"
                   },
                   "parameters": [
                     "",
                     "Left"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "DoMove",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarScene"
               },
               "parameters": [
                 "Movement.x",
                 "=",
                 "-1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarScene"
               },
               "parameters": [
                 "Movement.y",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "DoMove",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinCommonInstructions::Or"
               },
               "parameters": [],
               "subInstructions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "KeyPressed"
                   },
                   "parameters": [
                     "",
                     "d"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "KeyPressed"
                   },
                   "parameters": [
                     "",
                     "Right"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "DoMove",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarScene"
               },
               "parameters": [
                 "Movement.x",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarScene"
               },
               "parameters": [
                 "Movement.y",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "DoMove",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "DoMove",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "HoldMove",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "DoMove",
                 ""
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "CanMove",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
@@ -589,30 +481,24 @@
               "parameters": [
                 "Player",
                 "\"Idle\""
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetAnimationName"
               },
               "parameters": [
                 "Player",
                 "\"Idle\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -626,97 +512,78 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "SceneVariableAsBoolean"
           },
           "parameters": [
             "CanMove",
             "False"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "Tween::HasFinished"
           },
           "parameters": [
             "Player",
             "Tween",
             "\"Move\""
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "SetSceneVariableAsBoolean"
           },
           "parameters": [
             "CanMove",
             "True"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "Tween::RemoveTween"
           },
           "parameters": [
             "Player",
             "Tween",
             "\"Move\""
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "DoMove",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetAnimationName"
               },
               "parameters": [
                 "Player",
                 "\"Idle\""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -730,39 +597,31 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "SceneVariableAsBoolean"
           },
           "parameters": [
             "TurnSystemWaiting",
             "True"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "NbObjet"
           },
           "parameters": [
             "Player",
             ">",
             "0"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
@@ -772,8 +631,6 @@
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -787,61 +644,49 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "SceneVariableAsBoolean"
           },
           "parameters": [
             "CanMove",
             "True"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "SceneVariableAsBoolean"
           },
           "parameters": [
             "DoMove",
             "True"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "SceneVariableAsBoolean"
           },
           "parameters": [
             "TurnSystemWaiting",
             "False"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "NbObjet"
           },
           "parameters": [
             "Player",
             ">",
             "0"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -855,13 +700,10 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "Position::TileCanMoveTo"
               },
               "parameters": [
@@ -869,15 +711,12 @@
                 "Player.Variable(Pos.x) + Variable(Movement.x)",
                 "Player.Variable(Pos.y) + Variable(Movement.y)",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -891,14 +730,11 @@
               "comment2": ""
             },
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "Tween::AddObjectPositionTween"
                   },
                   "parameters": [
@@ -910,36 +746,30 @@
                     "\"linear\"",
                     "Variable(MoveTurnTime)",
                     ""
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarScene"
                   },
                   "parameters": [
                     "TurnTime",
                     "=",
                     "Variable(MoveTurnTime)"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarScene"
                   },
                   "parameters": [
                     "Map[Player.Variable(Pos.x)][Player.Variable(Pos.y)].c",
                     "=",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarObjet"
                   },
                   "parameters": [
@@ -947,12 +777,10 @@
                     "Pos.x",
                     "+",
                     "Variable(Movement.x)"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarObjet"
                   },
                   "parameters": [
@@ -960,36 +788,30 @@
                     "Pos.y",
                     "+",
                     "Variable(Movement.y)"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarScene"
                   },
                   "parameters": [
                     "Map[Player.Variable(Pos.x)][Player.Variable(Pos.y)].c",
                     "=",
                     "1"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarScene"
                   },
                   "parameters": [
                     "Map[Player.Variable(Pos.x)][Player.Variable(Pos.y)].pd",
                     "=",
                     "Player.Variable(Droppings)"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarObjet"
                   },
                   "parameters": [
@@ -997,30 +819,24 @@
                     "Droppings",
                     "+",
                     "1"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "SetSceneVariableAsBoolean"
                   },
                   "parameters": [
                     "CanMove",
                     "False"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "events": [
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "LinkedObjects::PickObjectsLinkedTo"
                       },
                       "parameters": [
@@ -1028,14 +844,12 @@
                         "OccupiedTile",
                         "Player",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "MettreXY"
                       },
                       "parameters": [
@@ -1044,21 +858,16 @@
                         "(Player.Variable(Pos.x) + Player.Variable(Movement.x)) * Variable(tileSize)",
                         "=",
                         "(Player.Variable(Pos.y) + Player.Variable(Movement.y)) * Variable(tileSize)"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "PlaySound"
                       },
                       "parameters": [
@@ -1067,52 +876,41 @@
                         "",
                         "30",
                         "RandomFloatInRange(0.7, 1.0)"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "VarGlobal"
                       },
                       "parameters": [
                         "Level",
                         "=",
                         "13"
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "ObjectVariableAsBoolean"
                       },
                       "parameters": [
                         "Chest",
                         "Opened",
                         "False"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [],
                   "events": [
                     {
-                      "disabled": false,
-                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "VarObjet"
                           },
                           "parameters": [
@@ -1120,12 +918,10 @@
                             "Pos.x",
                             "=",
                             "Chest.Variable(x)"
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "VarObjet"
                           },
                           "parameters": [
@@ -1133,52 +929,42 @@
                             "Pos.y",
                             "=",
                             "Chest.Variable(y)"
-                          ],
-                          "subInstructions": []
+                          ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "Montre"
                           },
                           "parameters": [
                             "F",
                             ""
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
                             "F",
                             "CanPress",
                             "True"
-                          ],
-                          "subInstructions": []
+                          ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
-                      "disabled": false,
-                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "BuiltinCommonInstructions::Or"
                           },
                           "parameters": [],
                           "subInstructions": [
                             {
                               "type": {
-                                "inverted": false,
                                 "value": "VarObjet"
                               },
                               "parameters": [
@@ -1186,12 +972,10 @@
                                 "Pos.x",
                                 "!=",
                                 "Chest.Variable(x)"
-                              ],
-                              "subInstructions": []
+                              ]
                             },
                             {
                               "type": {
-                                "inverted": false,
                                 "value": "VarObjet"
                               },
                               "parameters": [
@@ -1199,8 +983,7 @@
                                 "Pos.y",
                                 "!=",
                                 "Chest.Variable(y)"
-                              ],
-                              "subInstructions": []
+                              ]
                             }
                           ]
                         }
@@ -1208,36 +991,29 @@
                       "actions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "Cache"
                           },
                           "parameters": [
                             "F"
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "SetObjectVariableAsBoolean"
                           },
                           "parameters": [
                             "F",
                             "CanPress",
                             "False"
-                          ],
-                          "subInstructions": []
+                          ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 }
               ]
             },
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Link",
               "include": {
                 "includeConfig": 0
@@ -1245,8 +1021,6 @@
               "target": "Player Trigger TBS"
             },
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -1257,30 +1031,24 @@
                   "parameters": [
                     "Player",
                     "\"Run\""
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "SetAnimationName"
                   },
                   "parameters": [
                     "Player",
                     "\"Run\""
-                  ],
-                  "subInstructions": []
+                  ]
                 }
-              ],
-              "events": []
+              ]
             }
           ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -1294,28 +1062,21 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "CanMove",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
-          "actions": [],
-          "events": []
+          "actions": []
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -1329,76 +1090,60 @@
           "comment2": ""
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarScene"
               },
               "parameters": [
                 "Movement.x",
                 "=",
                 "-1"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "FlipX"
               },
               "parameters": [
                 "Player",
                 "yes"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarScene"
               },
               "parameters": [
                 "Movement.x",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "FlipX"
               },
               "parameters": [
                 "Player",
                 "no"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -1412,93 +1157,74 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "KeyPressed"
           },
           "parameters": [
             "",
             "Space"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "NbObjet"
           },
           "parameters": [
             "Player",
             ">",
             "0"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "CanMove",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "DoMove",
                 ""
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SceneVariableAsBoolean"
               },
               "parameters": [
                 "TurnSystemWaiting",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "VarObjetTxt"
                   },
                   "parameters": [
@@ -1506,41 +1232,33 @@
                     "Identifier",
                     "=",
                     "\"SkipTurn\""
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ChangeAnimation"
                   },
                   "parameters": [
                     "Buttons",
                     "=",
                     "3"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "SetObjectVariableAsBoolean"
                   },
                   "parameters": [
                     "Buttons",
                     "HeldDownByKey",
                     "True"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Link",
               "include": {
                 "includeConfig": 0
@@ -1552,8 +1270,6 @@
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -1567,38 +1283,31 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "SceneVariableAsBoolean"
           },
           "parameters": [
             "PlayerDead",
             "False"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "NbObjet"
           },
           "parameters": [
             "Player",
             ">",
             "0"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "Cam::Follow"
           },
           "parameters": [
@@ -1606,15 +1315,11 @@
             "Player.X() + 8",
             "Player.Y() + 8",
             ""
-          ],
-          "subInstructions": []
+          ]
         }
-      ],
-      "events": []
+      ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -1628,32 +1333,25 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "KeyReleased"
           },
           "parameters": [
             "",
             "Space"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarObjetTxt"
               },
               "parameters": [
@@ -1661,46 +1359,37 @@
                 "Identifier",
                 "=",
                 "\"SkipTurn\""
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
                 "Buttons",
                 "HeldDownByKey",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetObjectVariableAsBoolean"
               },
               "parameters": [
                 "Buttons",
                 "HeldDownByKey",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarObjet"
               },
               "parameters": [
@@ -1708,31 +1397,25 @@
                 "id",
                 "!=",
                 "Variable(ButtonID)"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ChangeAnimation"
               },
               "parameters": [
                 "Buttons",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -1746,75 +1429,70 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarGlobal"
           },
           "parameters": [
             "Level",
             "=",
             "13"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "TimeElapsed",
             "<",
             "3"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "value": "GlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "IsMuted",
+                ""
+              ]
+            }
+          ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVolumeMusicCanal"
               },
               "parameters": [
                 "",
-                "1",
+                "7546",
                 "=",
-                "(3 - Variable(TimeElapsed)) / 3 * 30"
-              ],
-              "subInstructions": []
+                "(3 - Variable(TimeElapsed)) / 3 * 20"
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
                 "Silenced",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -1828,91 +1506,74 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "KeyReleased"
           },
           "parameters": [
             "",
             "f"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "ObjectVariableAsBoolean"
           },
           "parameters": [
             "F",
             "CanPress",
             "True"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "ObjectVariableAsBoolean"
           },
           "parameters": [
             "Chest",
             "Opened",
             "False"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "SetObjectVariableAsBoolean"
           },
           "parameters": [
             "Chest",
             "Opened",
             "True"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "Cache"
           },
           "parameters": [
             "F"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "FlipX"
           },
           "parameters": [
             "Player",
             "no"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "PlaySound"
           },
           "parameters": [
@@ -1921,52 +1582,41 @@
             "",
             "100",
             "1"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "StopMusicCanal"
           },
           "parameters": [
             "",
-            "1"
-          ],
-          "subInstructions": []
+            "7546"
+          ]
         }
       ],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ChangeAnimation"
               },
               "parameters": [
                 "Chest",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "Tween::AddObjectScaleTween"
               },
               "parameters": [
@@ -1979,12 +1629,10 @@
                 "1000",
                 "",
                 ""
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "Tween::AddObjectPositionYTween"
               },
               "parameters": [
@@ -1995,55 +1643,44 @@
                 "\"linear\"",
                 "1000",
                 "300"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "Montre"
               },
               "parameters": [
                 "Sword",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "Tween::HasFinished"
           },
           "parameters": [
             "Sword",
             "Tween",
             "\"PosY\""
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "Tween::AddObjectPositionYTween"
           },
           "parameters": [
@@ -2054,536 +1691,428 @@
             "\"linear\"",
             "1000",
             "300"
-          ],
-          "subInstructions": []
+          ]
         }
-      ],
-      "events": []
+      ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "ObjectVariableAsBoolean"
           },
           "parameters": [
             "Chest",
             "Opened",
             "True"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "ModVarScene"
           },
           "parameters": [
             "FinishTime",
             "+",
             "TimeDelta()"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "StopMusicCanal"
           },
           "parameters": [
             "",
-            "1"
-          ],
-          "subInstructions": []
+            "7546"
+          ]
         }
       ],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarScene"
               },
               "parameters": [
                 "FinishTime",
                 ">",
                 "2"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "VarScene"
               },
               "parameters": [
                 "FinishTime",
                 "<",
                 "100"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "NbObjet"
                   },
                   "parameters": [
                     "WallLines",
                     ">",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [],
               "events": [
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "AjoutHasard"
                       },
                       "parameters": [
                         "",
                         "WallLines"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Delete"
                       },
                       "parameters": [
                         "WallLines",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "AjoutHasard"
                       },
                       "parameters": [
                         "",
                         "WallLines"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Delete"
                       },
                       "parameters": [
                         "WallLines",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "AjoutHasard"
                       },
                       "parameters": [
                         "",
                         "WallLines"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Delete"
                       },
                       "parameters": [
                         "WallLines",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             },
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "NbObjet"
                   },
                   "parameters": [
                     "WallLines",
                     "=",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "NbObjet"
                   },
                   "parameters": [
                     "Walls",
                     ">",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [],
               "events": [
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "AjoutHasard"
                       },
                       "parameters": [
                         "",
                         "Walls"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Delete"
                       },
                       "parameters": [
                         "Walls",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             },
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "NbObjet"
                   },
                   "parameters": [
                     "Walls",
                     "=",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "NbObjet"
                   },
                   "parameters": [
                     "Floors",
                     ">",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [],
               "events": [
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "AjoutHasard"
                       },
                       "parameters": [
                         "",
                         "Floors"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Delete"
                       },
                       "parameters": [
                         "Floors",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "AjoutHasard"
                       },
                       "parameters": [
                         "",
                         "Floors"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Delete"
                       },
                       "parameters": [
                         "Floors",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "AjoutHasard"
                       },
                       "parameters": [
                         "",
                         "Floors"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Delete"
                       },
                       "parameters": [
                         "Floors",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 },
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "AjoutHasard"
                       },
                       "parameters": [
                         "",
                         "Floors"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Delete"
                       },
                       "parameters": [
                         "Floors",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             },
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "NbObjet"
                   },
                   "parameters": [
                     "Floors",
                     "=",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarScene"
                   },
                   "parameters": [
                     "FinishTime",
                     "=",
                     "100"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ChangeAnimationSpeedScale"
                   },
                   "parameters": [
                     "Player",
                     "=",
                     "0.7"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
-              ],
-              "events": []
+              ]
             }
           ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "FinishTime",
             ">",
             "102"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "Cache"
           },
           "parameters": [
             "Chest"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "ChangeAnimationSpeedScale"
           },
           "parameters": [
             "Player",
             "=",
             "0.5"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "PlayMusicCanal"
           },
           "parameters": [
@@ -2593,42 +2122,33 @@
             "",
             "100",
             "1"
-          ],
-          "subInstructions": []
+          ]
         }
-      ],
-      "events": []
+      ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "FinishTime",
             ">",
             "104"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "Tween::AddObjectPositionTween"
           },
           "parameters": [
@@ -2640,140 +2160,112 @@
             "\"easeOutQuad\"",
             "4500",
             ""
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "ChangeAnimationSpeedScale"
           },
           "parameters": [
             "Player",
             "=",
             "0.3"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "ChangeLayer"
           },
           "parameters": [
             "Sword",
             "\"Characters\""
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "ChangePlan"
           },
           "parameters": [
             "Sword",
             "=",
             "-1"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "TextObject::ChangeColor"
           },
           "parameters": [
             "LevelName",
             "\"158;201;211\""
-          ],
-          "subInstructions": []
+          ]
         }
-      ],
-      "events": []
+      ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "FinishTime",
             ">",
             "108"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "SetAnimationName"
           },
           "parameters": [
             "Player",
             "\"End\""
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "TextObject::ChangeColor"
           },
           "parameters": [
             "LevelName",
             "\"200;225;231\""
-          ],
-          "subInstructions": []
+          ]
         }
-      ],
-      "events": []
+      ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "FinishTime",
             ">",
             "111"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "Tween::AddObjectPositionYTween"
           },
           "parameters": [
@@ -2784,12 +2276,10 @@
             "\"easeOutCubic\"",
             "4000",
             ""
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "Tween::AddObjectOpacityTween"
           },
           "parameters": [
@@ -2800,12 +2290,10 @@
             "\"linear\"",
             "6000",
             ""
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "Tween::AddObjectOpacityTween"
           },
           "parameters": [
@@ -2816,42 +2304,33 @@
             "\"linear\"",
             "6000",
             ""
-          ],
-          "subInstructions": []
+          ]
         }
-      ],
-      "events": []
+      ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "FinishTime",
             ">",
             "119"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "Tween::AddObjectOpacityTween"
           },
           "parameters": [
@@ -2862,42 +2341,33 @@
             "\"easeInOutQuad\"",
             "2000",
             ""
-          ],
-          "subInstructions": []
+          ]
         }
-      ],
-      "events": []
+      ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "FinishTime",
             ">",
             "130"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Once"
           },
-          "parameters": [],
-          "subInstructions": []
+          "parameters": []
         }
       ],
       "actions": [
         {
           "type": {
-            "inverted": false,
             "value": "Tween::AddObjectOpacityTween"
           },
           "parameters": [
@@ -2908,86 +2378,68 @@
             "\"easeInOutQuad\"",
             "2000",
             ""
-          ],
-          "subInstructions": []
+          ]
         }
-      ],
-      "events": []
+      ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarScene"
           },
           "parameters": [
             "FinishTime",
             ">",
             "130"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "KeyPressed"
               },
               "parameters": [
                 "",
                 "Space"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarGlobal"
               },
               "parameters": [
                 "Level",
                 "=",
                 "0"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "Scene"
               },
               "parameters": [
                 "",
                 "\"Game Scene\"",
                 ""
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
-      "actions": [],
-      "events": []
+      "actions": []
     }
   ]
 }

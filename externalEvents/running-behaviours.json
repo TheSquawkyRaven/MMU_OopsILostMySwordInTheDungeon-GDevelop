@@ -4,8 +4,6 @@
   "name": "Running Behaviours",
   "events": [
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Link",
       "include": {
         "includeConfig": 0
@@ -13,16 +11,11 @@
       "target": "Post Turn Event"
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
-      "actions": [],
-      "events": []
+      "actions": []
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -36,14 +29,11 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::ForEach",
       "object": "Enemies",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "VarObjet"
           },
           "parameters": [
@@ -51,95 +41,76 @@
             "State",
             ">=",
             "1"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "NbObjet"
           },
           "parameters": [
             "Player",
             ">",
             "0"
-          ],
-          "subInstructions": []
+          ]
         }
       ],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "PosX"
               },
               "parameters": [
                 "Enemies",
                 "<",
                 "Player.X()"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "FlipX"
               },
               "parameters": [
                 "Enemies",
                 "no"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "PosX"
               },
               "parameters": [
                 "Enemies",
                 ">",
                 "Player.X()"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "FlipX"
               },
               "parameters": [
                 "Enemies",
                 "yes"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -153,33 +124,27 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::ForEach",
       "object": "Pathfinder",
       "conditions": [
         {
           "type": {
-            "inverted": false,
             "value": "ObjectVariableAsBoolean"
           },
           "parameters": [
             "Pathfinder",
             "Moved",
             "False"
-          ],
-          "subInstructions": []
+          ]
         },
         {
           "type": {
-            "inverted": false,
             "value": "BuiltinCommonInstructions::Or"
           },
           "parameters": [],
           "subInstructions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarObjet"
               },
               "parameters": [
@@ -187,12 +152,10 @@
                 "LastPos.x",
                 "!=",
                 "Pathfinder.X()"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "VarObjet"
               },
               "parameters": [
@@ -200,8 +163,7 @@
                 "LastPos.y",
                 "!=",
                 "Pathfinder.Y()"
-              ],
-              "subInstructions": []
+              ]
             }
           ]
         }
@@ -209,13 +171,10 @@
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarObjet"
               },
               "parameters": [
@@ -223,14 +182,12 @@
                 "LastPos.x",
                 "<",
                 "Pathfinder.X()"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -238,20 +195,15 @@
                 "Movement.x",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarObjet"
               },
               "parameters": [
@@ -259,14 +211,12 @@
                 "LastPos.x",
                 ">",
                 "Pathfinder.X()"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -274,20 +224,15 @@
                 "Movement.x",
                 "=",
                 "-1"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarObjet"
               },
               "parameters": [
@@ -295,14 +240,12 @@
                 "LastPos.y",
                 "<",
                 "Pathfinder.Y()"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -310,20 +253,15 @@
                 "Movement.y",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarObjet"
               },
               "parameters": [
@@ -331,14 +269,12 @@
                 "LastPos.y",
                 ">",
                 "Pathfinder.Y()"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarObjet"
               },
               "parameters": [
@@ -346,27 +282,21 @@
                 "Movement.y",
                 "=",
                 "-1"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "BuiltinCommonInstructions::Or"
               },
               "parameters": [],
               "subInstructions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "VarObjet"
                   },
                   "parameters": [
@@ -374,12 +304,10 @@
                     "Movement.x",
                     "!=",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "VarObjet"
                   },
                   "parameters": [
@@ -387,8 +315,7 @@
                     "Movement.y",
                     "!=",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ]
             }
@@ -396,47 +323,37 @@
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "SetObjectVariableAsBoolean"
               },
               "parameters": [
                 "Pathfinder",
                 "Moved",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
                 "Pathfinder",
                 "Moved",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "LinkedObjects::PickObjectsLinkedTo"
                   },
                   "parameters": [
@@ -444,14 +361,12 @@
                     "Enemies",
                     "Pathfinder",
                     ""
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarObjet"
                   },
                   "parameters": [
@@ -459,12 +374,10 @@
                     "Movement.x",
                     "=",
                     "Pathfinder.Variable(Movement.x)"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarObjet"
                   },
                   "parameters": [
@@ -472,19 +385,15 @@
                     "Movement.y",
                     "=",
                     "Pathfinder.Variable(Movement.y)"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "events": [
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "LinkedObjects::PickObjectsLinkedTo"
                       },
                       "parameters": [
@@ -492,62 +401,51 @@
                         "MoveDirectionMarker",
                         "Enemies",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "SetAngle"
                       },
                       "parameters": [
                         "MoveDirectionMarker",
                         "=",
                         "AngleBetweenPositions(0, 0, Enemies.Variable(Movement.x), Enemies.Variable(Movement.y)) + 90"
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Montre"
                       },
                       "parameters": [
                         "MoveDirectionMarker",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "SetSceneVariableAsBoolean"
                       },
                       "parameters": [
                         "ifelse",
                         "False"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "events": [
                     {
-                      "disabled": false,
-                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "BuiltinCommonInstructions::Or"
                           },
                           "parameters": [],
                           "subInstructions": [
                             {
                               "type": {
-                                "inverted": false,
                                 "value": "VarObjet"
                               },
                               "parameters": [
@@ -555,12 +453,10 @@
                                 "Movement.x",
                                 "<",
                                 "0"
-                              ],
-                              "subInstructions": []
+                              ]
                             },
                             {
                               "type": {
-                                "inverted": false,
                                 "value": "VarObjet"
                               },
                               "parameters": [
@@ -568,8 +464,7 @@
                                 "Movement.y",
                                 "<",
                                 "0"
-                              ],
-                              "subInstructions": []
+                              ]
                             }
                           ]
                         }
@@ -577,18 +472,15 @@
                       "actions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "SetSceneVariableAsBoolean"
                           },
                           "parameters": [
                             "ifelse",
                             "True"
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "MettreXY"
                           },
                           "parameters": [
@@ -597,44 +489,35 @@
                             "Enemies.Variable(Pos.x) * Variable(tileSize) + (abs(Enemies.Variable(Movement.y)) * (Variable(tileSize) / 2))",
                             "=",
                             "Enemies.Variable(Pos.y) * Variable(tileSize) + (abs(Enemies.Variable(Movement.x)) * (Variable(tileSize) / 2))"
-                          ],
-                          "subInstructions": []
+                          ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
-                      "disabled": false,
-                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "SceneVariableAsBoolean"
                           },
                           "parameters": [
                             "ifelse",
                             ""
-                          ],
-                          "subInstructions": []
+                          ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "SetSceneVariableAsBoolean"
                           },
                           "parameters": [
                             "ifelse",
                             "True"
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "MettreXY"
                           },
                           "parameters": [
@@ -643,22 +526,18 @@
                             "Enemies.Variable(Pos.x) * Variable(tileSize) + Enemies.Variable(Movement.x) * Variable(tileSize) + (abs(Enemies.Variable(Movement.y)) * (Variable(tileSize) / 2))",
                             "=",
                             "Enemies.Variable(Pos.y) * Variable(tileSize) + Enemies.Variable(Movement.y) * Variable(tileSize) + (abs(Enemies.Variable(Movement.x)) * (Variable(tileSize) / 2))"
-                          ],
-                          "subInstructions": []
+                          ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 },
                 {
                   "disabled": true,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "LinkedObjects::PickObjectsLinkedTo"
                       },
                       "parameters": [
@@ -666,23 +545,19 @@
                         "AttackDirectionMarker",
                         "Enemies",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "Cache"
                       },
                       "parameters": [
                         "AttackDirectionMarker"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             }
@@ -691,8 +566,6 @@
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -706,49 +579,38 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Projectile",
           "conditions": [],
           "actions": [],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Enemies",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ObjectVariableAsBoolean"
                   },
                   "parameters": [
                     "Enemies",
                     "ProjectileCaptured",
                     ""
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [],
               "events": [
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "CollisionNP"
                       },
                       "parameters": [
@@ -757,70 +619,58 @@
                         "",
                         "",
                         "yes"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "SetObjectVariableAsBoolean"
                       },
                       "parameters": [
                         "Enemies",
                         "ProjectileCaptured",
                         "True"
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "SetObjectVariableAsBoolean"
                       },
                       "parameters": [
                         "Enemies",
                         "CannotMove",
                         "True"
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "SetObjectVariableAsBoolean"
                       },
                       "parameters": [
                         "Projectile",
                         "HitEnemy",
                         "True"
-                      ],
-                      "subInstructions": []
+                      ]
                     },
                     {
                       "type": {
-                        "inverted": false,
                         "value": "LinkedObjects::LinkObjects"
                       },
                       "parameters": [
                         "",
                         "Enemies",
                         "Projectile"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "events": [
                     {
-                      "disabled": false,
-                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [],
                       "actions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "ModVarObjet"
                           },
                           "parameters": [
@@ -828,12 +678,10 @@
                             "Movement.x",
                             "=",
                             "0"
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "ModVarObjet"
                           },
                           "parameters": [
@@ -841,19 +689,15 @@
                             "Movement.y",
                             "=",
                             "0"
-                          ],
-                          "subInstructions": []
+                          ]
                         }
                       ],
                       "events": [
                         {
-                          "disabled": false,
-                          "folded": false,
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [
                             {
                               "type": {
-                                "inverted": false,
                                 "value": "LinkedObjects::PickObjectsLinkedTo"
                               },
                               "parameters": [
@@ -861,23 +705,19 @@
                                 "MoveDirectionMarker",
                                 "Enemies",
                                 ""
-                              ],
-                              "subInstructions": []
+                              ]
                             }
                           ],
                           "actions": [
                             {
                               "type": {
-                                "inverted": false,
                                 "value": "Cache"
                               },
                               "parameters": [
                                 "MoveDirectionMarker"
-                              ],
-                              "subInstructions": []
+                              ]
                             }
-                          ],
-                          "events": []
+                          ]
                         }
                       ]
                     }
@@ -888,34 +728,27 @@
           ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Projectile",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
                 "Projectile",
                 "HitEnemy",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "LinkedObjects::PickObjectsLinkedTo"
                   },
                   "parameters": [
@@ -923,14 +756,12 @@
                     "Enemies",
                     "Projectile",
                     ""
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "MettreXY"
                   },
                   "parameters": [
@@ -939,24 +770,20 @@
                     "Projectile.X()",
                     "=",
                     "Projectile.Y()"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarScene"
                   },
                   "parameters": [
                     "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].c",
                     "=",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarObjet"
                   },
                   "parameters": [
@@ -964,12 +791,10 @@
                     "Pos.x",
                     "=",
                     "abs(Enemies.X() / Variable(tileSize))"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarObjet"
                   },
                   "parameters": [
@@ -977,31 +802,25 @@
                     "Pos.y",
                     "=",
                     "abs(Enemies.Y() / Variable(tileSize))"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarScene"
                   },
                   "parameters": [
                     "Map[Enemies.Variable(Pos.x)][Enemies.Variable(Pos.y)].c",
                     "=",
                     "1"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "events": [
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "LinkedObjects::PickObjectsLinkedTo"
                       },
                       "parameters": [
@@ -1009,39 +828,32 @@
                         "AttackDirectionMarker",
                         "Enemies",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "SetSceneVariableAsBoolean"
                       },
                       "parameters": [
                         "ifelse2",
                         "False"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "events": [
                     {
-                      "disabled": false,
-                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "BuiltinCommonInstructions::Or"
                           },
                           "parameters": [],
                           "subInstructions": [
                             {
                               "type": {
-                                "inverted": false,
                                 "value": "VarObjet"
                               },
                               "parameters": [
@@ -1049,12 +861,10 @@
                                 "Attack.x",
                                 "<",
                                 "0"
-                              ],
-                              "subInstructions": []
+                              ]
                             },
                             {
                               "type": {
-                                "inverted": false,
                                 "value": "VarObjet"
                               },
                               "parameters": [
@@ -1062,8 +872,7 @@
                                 "Attack.y",
                                 "<",
                                 "0"
-                              ],
-                              "subInstructions": []
+                              ]
                             }
                           ]
                         }
@@ -1071,18 +880,15 @@
                       "actions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "SetSceneVariableAsBoolean"
                           },
                           "parameters": [
                             "ifelse2",
                             "True"
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "MettreXY"
                           },
                           "parameters": [
@@ -1091,44 +897,35 @@
                             "Enemies.Variable(Pos.x) * Variable(tileSize) + (abs(Enemies.Variable(Attack.y)) * (Variable(tileSize) / 2))",
                             "=",
                             "Enemies.Variable(Pos.y) * Variable(tileSize) + (abs(Enemies.Variable(Attack.x)) * (Variable(tileSize) / 2))"
-                          ],
-                          "subInstructions": []
+                          ]
                         }
-                      ],
-                      "events": []
+                      ]
                     },
                     {
-                      "disabled": false,
-                      "folded": false,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "SceneVariableAsBoolean"
                           },
                           "parameters": [
                             "ifelse2",
                             ""
-                          ],
-                          "subInstructions": []
+                          ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "inverted": false,
                             "value": "SetSceneVariableAsBoolean"
                           },
                           "parameters": [
                             "ifelse2",
                             "True"
-                          ],
-                          "subInstructions": []
+                          ]
                         },
                         {
                           "type": {
-                            "inverted": false,
                             "value": "MettreXY"
                           },
                           "parameters": [
@@ -1137,22 +934,17 @@
                             "Enemies.Variable(Pos.x) * Variable(tileSize) + Enemies.Variable(Attack.x) * Variable(tileSize) + (abs(Enemies.Variable(Attack.y)) * (Variable(tileSize) / 2))",
                             "=",
                             "Enemies.Variable(Pos.y) * Variable(tileSize) + Enemies.Variable(Attack.y) * Variable(tileSize) + (abs(Enemies.Variable(Attack.x)) * (Variable(tileSize) / 2))"
-                          ],
-                          "subInstructions": []
+                          ]
                         }
-                      ],
-                      "events": []
+                      ]
                     }
                   ]
                 },
                 {
-                  "disabled": false,
-                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "LinkedObjects::PickObjectsLinkedTo"
                       },
                       "parameters": [
@@ -1160,14 +952,12 @@
                         "AttackingMarker",
                         "Enemies",
                         ""
-                      ],
-                      "subInstructions": []
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
-                        "inverted": false,
                         "value": "MettreXY"
                       },
                       "parameters": [
@@ -1176,11 +966,9 @@
                         "Enemies.Variable(Pos.x) * Variable(tileSize)",
                         "=",
                         "Enemies.Variable(Pos.y) * Variable(tileSize) + 4"
-                      ],
-                      "subInstructions": []
+                      ]
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
             }
@@ -1189,8 +977,6 @@
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -1204,77 +990,61 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ModVarScene"
               },
               "parameters": [
                 "i",
                 "=",
                 "1"
-              ],
-              "subInstructions": []
+              ]
             }
-          ],
-          "events": []
+          ]
         },
         {
-          "disabled": false,
-          "folded": false,
           "infiniteLoopWarning": true,
           "type": "BuiltinCommonInstructions::While",
           "whileConditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "VarScene"
               },
               "parameters": [
                 "i",
                 "<=",
                 "Variable(LineIndex)"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "conditions": [],
           "actions": [],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ObjectVariableAsBoolean"
                   },
                   "parameters": [
                     "TrapDetectionLines",
                     "Lines[Variable(i)].Enable",
                     "True"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "PrimitiveDrawing::LineV2"
                   },
                   "parameters": [
@@ -1284,40 +1054,31 @@
                     "TrapDetectionLines.Variable(Lines[Variable(i)].x2)",
                     "TrapDetectionLines.Variable(Lines[Variable(i)].y2)",
                     "TrapDetectionLines.Variable(Lines[Variable(i)].Thickness)"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ModVarScene"
                   },
                   "parameters": [
                     "i",
                     "+",
                     "1"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
-              ],
-              "events": []
+              ]
             }
           ]
         }
       ]
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Comment",
       "color": {
         "b": 109,
@@ -1331,110 +1092,88 @@
       "comment2": ""
     },
     {
-      "disabled": false,
-      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [],
       "actions": [],
       "events": [
         {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::ForEach",
           "object": "Projectile",
           "conditions": [
             {
               "type": {
-                "inverted": false,
                 "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
                 "Projectile",
                 "Stopped",
                 "True"
-              ],
-              "subInstructions": []
+              ]
             },
             {
               "type": {
-                "inverted": false,
                 "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
                 "Projectile",
                 "HitEnemy",
                 "False"
-              ],
-              "subInstructions": []
+              ]
             }
           ],
           "actions": [],
           "events": [
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "SetAngle"
                   },
                   "parameters": [
                     "Projectile",
                     "+",
                     "10"
-                  ],
-                  "subInstructions": []
+                  ]
                 },
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ChangeScale"
                   },
                   "parameters": [
                     "Projectile",
                     "-",
                     "0.005"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
-              ],
-              "events": []
+              ]
             },
             {
-              "disabled": false,
-              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "ScaleWidth"
                   },
                   "parameters": [
                     "Projectile",
                     "<=",
                     "0"
-                  ],
-                  "subInstructions": []
+                  ]
                 }
               ],
               "actions": [
                 {
                   "type": {
-                    "inverted": false,
                     "value": "Delete"
                   },
                   "parameters": [
                     "Projectile",
                     ""
-                  ],
-                  "subInstructions": []
+                  ]
                 }
-              ],
-              "events": []
+              ]
             }
           ]
         }
